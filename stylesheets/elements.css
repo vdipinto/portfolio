@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 4, ../sass/elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 15, ../sass/elements.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 20, ../sass/elements.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 27, ../sass/elements.scss */
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 31, ../sass/elements.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 35, ../sass/elements.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 39, ../sass/elements.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 45, ../sass/elements.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 49, ../sass/elements.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 53, ../sass/elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 60, ../sass/elements.scss */
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* line 65, ../sass/elements.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}

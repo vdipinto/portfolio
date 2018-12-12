@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 4, ../../sass/content/comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 8, ../../sass/content/comments.scss */
+.bypostauthor {
+  display: block;
+}

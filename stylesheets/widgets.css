@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 4, ../sass/widgets.scss */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+
+/* line 9, ../sass/widgets.scss */
+.widget select {
+  max-width: 100%;
+}

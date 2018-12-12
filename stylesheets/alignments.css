@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 4, ../sass/alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 10, ../sass/alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 16, ../sass/alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

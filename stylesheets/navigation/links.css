@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 7, ../../sass/navigation/links.scss */
+a {
+  color: royalblue;
+}
+
+/* line 11, ../../sass/navigation/links.scss */
+a:visited {
+  color: purple;
+}
+
+/* line 15, ../../sass/navigation/links.scss */
+a:hover, a:focus, a:active {
+  color: midnightblue;
+}
+
+/* line 19, ../../sass/navigation/links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 23, ../../sass/navigation/links.scss */
+a:hover, a:active {
+  outline: 0;
+}
