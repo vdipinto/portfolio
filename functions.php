@@ -79,6 +79,18 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Remove word "category" from category pages
+		 *
+		 * @link https://catchthemes.com/support-forum/topic/remove-word-category-from-category-pages/
+		 */
+		add_filter( 'get_the_archive_title', function ( $title ) {
+			if( is_category() ) {
+				$title = single_cat_title( '', false );
+			}
+			return $title;
+		});
 	}
 endif;
 add_action( 'after_setup_theme', 'portfolio_setup' );

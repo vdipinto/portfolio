@@ -31,3 +31,8 @@
   clear: both;
   margin: 0 0 1.5em;
 }
+
+/* line 31, ../../sass/content/posts-and-pages.scss */
+.widget-area {
+  border: 2px solid #000;
+}
