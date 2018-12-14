@@ -2,12 +2,18 @@
 /**
  * The main template file
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * This is the most generic template for the category page. 
+ * It is used to display the category page. Remind you that the Template Hierachy for Category pages is as follow:
+ * 
+ * 1.category-slug.php
+ * 2.category-ID.php
+ * 3.category.ph
+ * 4.archive.php
+ * 5.index.php
+ * 
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @link https://codex.wordpress.org/Category_Templates
  *
  * @package portfolio
  */
@@ -57,3 +63,8 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+
+
+
+

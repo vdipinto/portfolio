@@ -31,3 +31,16 @@
 .widget-area {
 	border: 2px solid #000;
 }
+
+
+/*--------------------------------------------------------------
+## MA Category
+--------------------------------------------------------------*/
+
+
+.core_courses_MA {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
