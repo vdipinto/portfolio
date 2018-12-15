@@ -135,7 +135,7 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	//wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
