@@ -1,3 +1,4 @@
+@charset "UTF-8";
  /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -102,4 +103,22 @@
   float: right;
   text-align: right;
   width: 50%;
+}
+
+/* line 117, ../../sass/navigation/menu.scss */
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  /* #primary-menu is your theme’s original menu */
+  /* line 123, ../../sass/navigation/menu.scss */
+  #primary-menu {
+    display: none;
+  }
+
+  /* line 127, ../../sass/navigation/menu.scss */
+  .slicknav_menu {
+    display: block;
+  }
 }
