@@ -1,124 +1,64 @@
-@charset "UTF-8";
- /*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-/* line 4, ../../sass/navigation/menu.scss */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
+/*
+Error: Undefined variable: "$width-small".
+        on line 124 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss
 
-/* line 11, ../../sass/navigation/menu.scss */
-.main-navigation ul {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
+119: 
+120: .slicknav_menu {
+121: 	display:none;
+122: 	}
+123: 	
+124: @media screen and (max-width: $width-small) {
+125: /* #primary-menu is your theme’s original menu *\/
+126: 	#primary-menu {
+127: 	display:none;
+128: 	}
+129: 
 
-/* line 18, ../../sass/navigation/menu.scss */
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-
-/* line 23, ../../sass/navigation/menu.scss */
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
-/* line 28, ../../sass/navigation/menu.scss */
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-
-/* line 37, ../../sass/navigation/menu.scss */
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-/* line 42, ../../sass/navigation/menu.scss */
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-/* line 62, ../../sass/navigation/menu.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-/* line 67, ../../sass/navigation/menu.scss */
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-
-/* Small menu. */
-/* line 78, ../../sass/navigation/menu.scss */
-.main-navigation.toggled ul {
-  display: block;
-}
-
-/* line 81, ../../sass/navigation/menu.scss */
-.menu-toggle {
-  display: none;
-}
-
-@media screen and (min-width: 37.5em) {
-  /* line 87, ../../sass/navigation/menu.scss */
-  .main-navigation ul {
-    display: block;
-  }
-}
-/* line 92, ../../sass/navigation/menu.scss */
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-
-/* line 99, ../../sass/navigation/menu.scss */
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-/* line 106, ../../sass/navigation/menu.scss */
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
-/* line 117, ../../sass/navigation/menu.scss */
-.slicknav_menu {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  /* #primary-menu is your theme’s original menu */
-  /* line 123, ../../sass/navigation/menu.scss */
-  #primary-menu {
-    display: none;
-  }
-
-  /* line 127, ../../sass/navigation/menu.scss */
-  .slicknav_menu {
-    display: block;
-  }
-}
+Backtrace:
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss:124
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$width-small\".\A         on line 124 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss\A \A 119: \A 120: .slicknav_menu {\A 121: 	display:none;\A 122: 	}\A 123: 	\A 124: @media screen and (max-width: $width-small) {\A 125: /* #primary-menu is your theme’s original menu */\A 126: 	#primary-menu {\A 127: 	display:none;\A 128: 	}\A 129: "; }

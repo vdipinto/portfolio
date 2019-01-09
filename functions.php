@@ -138,7 +138,7 @@ function portfolio_scripts() {
 	// Load SlickNav
 	wp_enqueue_script( 'mobilenav-slickjs', get_template_directory_uri() . '/SlickNav-master/jquery.slicknav.js', array('jquery') );
 
-	wp_register_style( 'slicknav-css', get_stylesheet_directory_uri() . '/SlickNav-master/scss/slicknav.css');
+	wp_register_style( 'slicknav-css', get_stylesheet_directory_uri() . '/SlickNav-master/scss/slicknav.scss');
 	wp_enqueue_style( 'slicknav-css' );
 
 	// JS

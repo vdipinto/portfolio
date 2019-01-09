@@ -6,6 +6,67 @@
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
 
+
+.site {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+header {
+	display: none;
+
+	.site-branding {
+		margin: 0 auto;
+	}
+
+	@media screen and (min-width: $width-small + 1) {
+		display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 40px auto 40px;
+		grid-gap: 10px;
+		grid-auto-rows: minmax(100px, auto);
+		border: 1px solid #000;
+	}
+
+
+	// @media screen and (min-width: $width-small + 1) {
+	// 	display: grid;
+	// 	// grid-template-columns: repeat(3, 1fr);
+	// 	grid-template-columns: repeat(, minmax(150px, 400px));
+	// 	grid-gap: 10px;
+	// 	grid-auto-rows: minmax(100px, auto);
+	// 	border: 1px solid #000;
+	// }
+
+
+
+
+
+
+
+
+	.site-branding {
+		grid-column: 2;
+		grid-row: 1;
+
+		.custom-logo-link {
+		
+		}
+	}
+
+
+	.main-navigation {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	
+}
+
+
+
+
+
 .content-area {
 	float: left;
 	margin: 0 -25% 0 0;
