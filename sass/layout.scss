@@ -29,7 +29,7 @@ header {
 		grid-template-columns: 40px auto 40px;
 		grid-gap: 10px;
 		grid-auto-rows: minmax(100px, auto);
-		border: 1px solid #000;
+	
 	}
 
 
@@ -42,20 +42,9 @@ header {
 	// 	border: 1px solid #000;
 	// }
 
-
-
-
-
-
-
-
 	.site-branding {
 		grid-column: 2;
 		grid-row: 1;
-
-		.custom-logo-link {
-		
-		}
 	}
 
 
@@ -63,7 +52,6 @@ header {
 		grid-column: 2;
 		grid-row: 2;
 	}
-	
 }
 
 
