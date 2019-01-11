@@ -4,8 +4,16 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	// float: left;
+	// width: 100%;
+	margin: 0 auto;
+	font-family: 'Ropa Sans', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $width-medium + 100) {
+		font-size: 22px;
+	}
 }
 
 .main-navigation ul {
@@ -15,7 +23,7 @@
 	padding-left: 0;
 
 	li a {
-		margin-right: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -36,6 +44,7 @@
 	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
+	background: $white;
 }
 
 .main-navigation ul ul ul {
@@ -48,6 +57,7 @@
 }
 
 .main-navigation ul ul li {
+	font-size: 18px;
 }
 
 .main-navigation li:hover > a,
@@ -130,4 +140,11 @@
 	.slicknav_menu {
 	display:block;
 	}
+}
+
+
+// Image replacement technique applied to the main title an description inside the header
+.site-title, .site-description {
+	text-indent: -9999999px;
+	height: 0px;
 }

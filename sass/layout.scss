@@ -18,6 +18,9 @@ header {
 
 	.site-branding {
 		margin: 0 auto;
+		position: relative;
+		top: 20px;
+		font-family: 'Ropa Sans', sans-serif;
 	}
 
 	@media screen and (min-width: $width-small + 1) {

@@ -1,28 +1,41 @@
 /*
-Error: Undefined variable: "$width-small".
-        on line 124 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss
+Error: Undefined variable: "$width-medium".
+        on line 14 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss
 
-119: 
-120: .slicknav_menu {
-121: 	display:none;
-122: 	}
-123: 	
-124: @media screen and (max-width: $width-small) {
-125: /* #primary-menu is your theme’s original menu *\/
-126: 	#primary-menu {
-127: 	display:none;
-128: 	}
-129: 
+9: 	margin: 0 auto;
+10: 	font-family: 'Ropa Sans', sans-serif;
+11: 	font-size: 18px;
+12: 	text-transform: uppercase;
+13: 
+14: 	@media screen and (min-width: $width-medium + 100) {
+15: 		font-size: 22px;
+16: 	}
+17: }
+18: 
+19: .main-navigation ul {
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss:124
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss:14
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `map'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -61,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-small\".\A         on line 124 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss\A \A 119: \A 120: .slicknav_menu {\A 121: 	display:none;\A 122: 	}\A 123: 	\A 124: @media screen and (max-width: $width-small) {\A 125: /* #primary-menu is your theme’s original menu */\A 126: 	#primary-menu {\A 127: 	display:none;\A 128: 	}\A 129: "; }
+  content: "Error: Undefined variable: \"$width-medium\".\A         on line 14 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss\A \A 9: 	margin: 0 auto;\A 10: 	font-family: 'Ropa Sans', sans-serif;\A 11: 	font-size: 18px;\A 12: 	text-transform: uppercase;\A 13: \A 14: 	@media screen and (min-width: $width-medium + 100) {\A 15: 		font-size: 22px;\A 16: 	}\A 17: }\A 18: \A 19: .main-navigation ul {"; }
