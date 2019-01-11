@@ -22,6 +22,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Compass
+# Variables
 # Normalize
 # Typography
 	## Import Google Fonts	
@@ -30,6 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Navigation
 	## Links
 	## Menus
+# SlickNav
 # Accessibility
 # Alignments
 # Clearings
@@ -42,7 +45,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 # Layout
+ 
+
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Compass
+--------------------------------------------------------------*/
+
+@import "compass";
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+@import "variables";
 
 
 /*--------------------------------------------------------------
@@ -68,6 +85,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "forms";
 
 /*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+
+@import "layout";
+
+/*--------------------------------------------------------------
+
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -81,6 +107,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @import "navigation/menu";
+
+/*--------------------------------------------------------------
+## SlickNav
+--------------------------------------------------------------*/
+@import "slickNav/core.scss";
+@import "slickNav/theme.scss";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -128,8 +160,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "media/media";
 
 
-/*--------------------------------------------------------------
-## Layout
---------------------------------------------------------------*/
 
-@import "layout";

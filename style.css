@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: portfolio
 Theme URI: http://underscores.me/
@@ -22,6 +23,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Compass
+# Variables
 # Normalize
 # Typography
 	## Import Google Fonts	
@@ -30,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Navigation
 	## Links
 	## Menus
+# SlickNav
 # Accessibility
 # Alignments
 # Clearings
@@ -42,6 +46,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 # Layout
+ 
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Compass
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Variables
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -56,7 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Bungee|Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
 /* line 15, ../sass/normalize.scss */
 html {
   line-height: 1.15;
@@ -684,6 +696,93 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+/*
+ * Theme Name: portfolio
+ *
+ * Layout: Content-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+/* line 10, ../sass/layout.scss */
+.site {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 16, ../sass/layout.scss */
+header {
+  display: none;
+}
+/* line 19, ../sass/layout.scss */
+header .site-branding {
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  font-family: 'Ropa Sans', sans-serif;
+}
+@media screen and (min-width: 501px) {
+  /* line 16, ../sass/layout.scss */
+  header {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+/* line 45, ../sass/layout.scss */
+header .site-branding {
+  grid-column: 2;
+  grid-row: 1;
+}
+/* line 51, ../sass/layout.scss */
+header .main-navigation {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* line 61, ../sass/layout.scss */
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%;
+}
+
+/* line 66, ../sass/layout.scss */
+.site-main {
+  margin: 0 25% 0 0;
+}
+
+/* line 69, ../sass/layout.scss */
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%;
+}
+
+/* line 74, ../sass/layout.scss */
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+
+/* line 79, ../sass/layout.scss */
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 84, ../sass/layout.scss */
+.no-sidebar .site-main {
+  margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -697,17 +796,17 @@ textarea {
 --------------------------------------------------------------*/
 /* line 7, ../sass/navigation/links.scss */
 a {
-  color: royalblue;
+  color: #000;
 }
 
 /* line 11, ../sass/navigation/links.scss */
 a:visited {
-  color: purple;
+  color: #000;
 }
 
 /* line 15, ../sass/navigation/links.scss */
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #757070;
 }
 
 /* line 19, ../sass/navigation/links.scss */
@@ -723,114 +822,114 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 /* line 4, ../sass/navigation/menu.scss */
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%;
+  margin: 0 auto;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 869px) {
+  /* line 4, ../sass/navigation/menu.scss */
+  .main-navigation {
+    font-size: 22px;
+  }
 }
 
-/* line 11, ../sass/navigation/menu.scss */
+/* line 19, ../sass/navigation/menu.scss */
 .main-navigation ul {
-  display: none;
+  display: block;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-
-/* line 18, ../sass/navigation/menu.scss */
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
+/* line 25, ../sass/navigation/menu.scss */
+.main-navigation ul li a {
+  padding-right: 20px;
 }
 
-/* line 27, ../sass/navigation/menu.scss */
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-/* line 32, ../sass/navigation/menu.scss */
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-
-/* line 37, ../sass/navigation/menu.scss */
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-/* line 41, ../sass/navigation/menu.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-/* line 46, ../sass/navigation/menu.scss */
+/* line 30, ../sass/navigation/menu.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 51, ../sass/navigation/menu.scss */
+/* line 35, ../sass/navigation/menu.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
+/* line 40, ../sass/navigation/menu.scss */
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 1.5em;
+  left: -999em;
+  z-index: 99999;
+  background: #fff;
+}
+
+/* line 50, ../sass/navigation/menu.scss */
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+/* line 55, ../sass/navigation/menu.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+/* line 59, ../sass/navigation/menu.scss */
+.main-navigation ul ul li {
+  font-size: 18px;
+}
+
+/* line 75, ../sass/navigation/menu.scss */
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+/* line 80, ../sass/navigation/menu.scss */
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
 /* Small menu. */
-/* line 57, ../sass/navigation/menu.scss */
-.menu-toggle,
+/* line 91, ../sass/navigation/menu.scss */
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 62, ../sass/navigation/menu.scss */
+/* line 94, ../sass/navigation/menu.scss */
 .menu-toggle {
-  float: middle;
-  width: 90%;
-  margin-right: auto;
-  margin: 5%;
-  background-color: transparent;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #252323;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 17px;
-  padding: 1em 2em;
+  display: none;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 79, ../sass/navigation/menu.scss */
-  .menu-toggle {
-    display: none;
-  }
-
-  /* line 82, ../sass/navigation/menu.scss */
+  /* line 100, ../sass/navigation/menu.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 87, ../sass/navigation/menu.scss */
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+/* line 105, ../sass/navigation/menu.scss */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
 
-/* line 94, ../sass/navigation/menu.scss */
+/* line 112, ../sass/navigation/menu.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -838,13 +937,252 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 101, ../sass/navigation/menu.scss */
+/* line 119, ../sass/navigation/menu.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%;
+}
+
+/* line 130, ../sass/navigation/menu.scss */
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  /* #primary-menu is your theme’s original menu */
+  /* line 136, ../sass/navigation/menu.scss */
+  #primary-menu {
+    display: none;
+  }
+
+  /* line 140, ../sass/navigation/menu.scss */
+  .slicknav_menu {
+    display: block;
+  }
+}
+/* line 147, ../sass/navigation/menu.scss */
+.site-title, .site-description {
+  text-indent: -9999999px;
+  height: 0px;
+}
+
+/*--------------------------------------------------------------
+## SlickNav
+--------------------------------------------------------------*/
+/* line 1, ../sass/slickNav/core.scss */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer;
+}
+/* line 9, ../sass/slickNav/core.scss */
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em;
+}
+
+/* line 13, ../sass/slickNav/core.scss */
+.slicknav_menu {
+  *zoom: 1;
+}
+/* line 15, ../sass/slickNav/core.scss */
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left;
+}
+/* line 20, ../sass/slickNav/core.scss */
+.slicknav_menu .slicknav_icon {
+  float: left;
+  width: 1.125em;
+  height: 0.875em;
+  margin: 0.188em 0 0 0.438em;
+}
+/* line 25, ../sass/slickNav/core.scss */
+.slicknav_menu .slicknav_icon:before {
+  background: transparent;
+  width: 1.125em;
+  height: 0.875em;
+  display: block;
+  content: "";
+  position: absolute;
+}
+/* line 34, ../sass/slickNav/core.scss */
+.slicknav_menu .slicknav_no-text {
+  margin: 0;
+}
+/* line 37, ../sass/slickNav/core.scss */
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 48, ../sass/slickNav/core.scss */
+.slicknav_menu:before {
+  content: " ";
+  display: table;
+}
+/* line 52, ../sass/slickNav/core.scss */
+.slicknav_menu:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* line 58, ../sass/slickNav/core.scss */
+.slicknav_nav {
+  clear: both;
+}
+/* line 60, ../sass/slickNav/core.scss */
+.slicknav_nav ul {
+  display: block;
+}
+/* line 63, ../sass/slickNav/core.scss */
+.slicknav_nav li {
+  display: block;
+}
+/* line 66, ../sass/slickNav/core.scss */
+.slicknav_nav .slicknav_arrow {
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em;
+}
+/* line 70, ../sass/slickNav/core.scss */
+.slicknav_nav .slicknav_item {
+  cursor: pointer;
+}
+/* line 72, ../sass/slickNav/core.scss */
+.slicknav_nav .slicknav_item a {
+  display: inline;
+}
+/* line 76, ../sass/slickNav/core.scss */
+.slicknav_nav .slicknav_row {
+  display: block;
+}
+/* line 79, ../sass/slickNav/core.scss */
+.slicknav_nav a {
+  display: block;
+}
+/* line 82, ../sass/slickNav/core.scss */
+.slicknav_nav .slicknav_parent-link a {
+  display: inline;
+}
+
+/* line 86, ../sass/slickNav/core.scss */
+.slicknav_brand {
+  float: left;
+}
+
+/* line 10, ../sass/slickNav/theme.scss */
+.slicknav_menu {
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #4c4c4c;
+  padding: 5px;
+}
+/* line 15, ../sass/slickNav/theme.scss */
+.slicknav_menu * {
+  box-sizing: border-box;
+}
+/* line 18, ../sass/slickNav/theme.scss */
+.slicknav_menu .slicknav_menutxt {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000;
+}
+/* line 23, ../sass/slickNav/theme.scss */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #fff;
+}
+
+/* line 27, ../sass/slickNav/theme.scss */
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #222;
+}
+
+/* line 36, ../sass/slickNav/theme.scss */
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 43, ../sass/slickNav/theme.scss */
+.slicknav_nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+/* line 49, ../sass/slickNav/theme.scss */
+.slicknav_nav .slicknav_row {
+  padding: 5px 10px;
+  margin: 2px 5px;
+}
+/* line 52, ../sass/slickNav/theme.scss */
+.slicknav_nav .slicknav_row:hover {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff;
+}
+/* line 60, ../sass/slickNav/theme.scss */
+.slicknav_nav a {
+  padding: 5px 10px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 65, ../sass/slickNav/theme.scss */
+.slicknav_nav a:hover {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  color: #222;
+}
+/* line 73, ../sass/slickNav/theme.scss */
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 15px;
+}
+/* line 76, ../sass/slickNav/theme.scss */
+.slicknav_nav .slicknav_item a {
+  padding: 0;
+  margin: 0;
+}
+/* line 80, ../sass/slickNav/theme.scss */
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 85, ../sass/slickNav/theme.scss */
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px;
 }
 
 /*--------------------------------------------------------------
@@ -1190,51 +1528,4 @@ object {
 /* line 31, ../sass/media/media.scss */
 .custom-logo-link {
   display: inline-block;
-}
-
-/*--------------------------------------------------------------
-## Layout
---------------------------------------------------------------*/
-/*
- * Theme Name: portfolio
- *
- * Layout: Content-Sidebar
- *
- * Learn more: https://developer.wordpress.org/themes/basics/template-files/
-*/
-/* line 9, ../sass/layout.scss */
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
-}
-
-/* line 14, ../sass/layout.scss */
-.site-main {
-  margin: 0 25% 0 0;
-}
-
-/* line 17, ../sass/layout.scss */
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
-}
-
-/* line 22, ../sass/layout.scss */
-.site-footer {
-  clear: both;
-  width: 100%;
-}
-
-/* line 27, ../sass/layout.scss */
-.no-sidebar .content-area {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 32, ../sass/layout.scss */
-.no-sidebar .site-main {
-  margin-right: 0;
 }

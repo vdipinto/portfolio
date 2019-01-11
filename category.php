@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The main template file for category page
  *
  * This is the most generic template for the category page. 
  * It is used to display the category page. Remind you that the Template Hierachy for Category pages is as follow:

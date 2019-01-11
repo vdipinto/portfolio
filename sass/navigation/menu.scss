@@ -1,46 +1,30 @@
-/*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	// float: left;
+	// width: 100%;
+	margin: 0 auto;
+	font-family: 'Ropa Sans', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $width-medium + 100) {
+		font-size: 22px;
+	}
 }
 
 .main-navigation ul {
-	display: none;
+	display: block;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-}
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
+	li a {
+		padding-right: 20px;
+	}
 }
 
 .main-navigation li {
@@ -53,40 +37,74 @@
 	text-decoration: none;
 }
 
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+	background: $white;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+	font-size: 18px;
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a {
+}
+
 /* Small menu. */
-.menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
-
 .menu-toggle {
-	float: middle;
-    width: 90%;
-    margin-right: auto;
-    margin: 5%;
-	background-color: transparent;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    border: 1px solid rgb(37, 35, 35);
-    display: inline-block;
-    cursor: pointer;
-    font-size: 17px;
-    padding: 1em 2em;
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
+
 	.main-navigation ul {
 		display: block;
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
@@ -104,4 +122,29 @@
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+
+//SlickNAV
+
+.slicknav_menu {
+	display:none;
+	}
+	
+@media screen and (max-width: $width-small) {
+/* #primary-menu is your theme’s original menu */
+	#primary-menu {
+	display:none;
+	}
+
+	.slicknav_menu {
+	display:block;
+	}
+}
+
+
+// Image replacement technique applied to the main title an description inside the header
+.site-title, .site-description {
+	text-indent: -9999999px;
+	height: 0px;
 }
