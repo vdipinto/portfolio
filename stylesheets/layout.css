@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$width-small".
-        on line 26 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
+        on line 40 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
 
-21: 		position: relative;
-22: 		top: 20px;
-23: 		font-family: 'Ropa Sans', sans-serif;
-24: 	}
-25: 
-26: 	@media screen and (min-width: $width-small + 1) {
-27: 		display: grid;
-28: 		// grid-template-columns: repeat(3, 1fr);
-29: 		grid-template-columns: 40px auto 40px;
-30: 		grid-gap: 10px;
-31: 		grid-auto-rows: minmax(100px, auto);
+35: 		position: relative;
+36: 		top: 20px;
+37: 		font-family: 'Ropa Sans', sans-serif;
+38: 	}
+39: 
+40: 	@media screen and (min-width: $width-small + 1) {
+41: 		display: grid;
+42: 		// grid-template-columns: repeat(3, 1fr);
+43: 		grid-template-columns: 40px auto 40px;
+44: 		grid-gap: 10px;
+45: 		grid-auto-rows: minmax(100px, auto);
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:26
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:40
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-small\".\A         on line 26 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 21: 		position: relative;\A 22: 		top: 20px;\A 23: 		font-family: 'Ropa Sans', sans-serif;\A 24: 	}\A 25: \A 26: 	@media screen and (min-width: $width-small + 1) {\A 27: 		display: grid;\A 28: 		// grid-template-columns: repeat(3, 1fr);\A 29: 		grid-template-columns: 40px auto 40px;\A 30: 		grid-gap: 10px;\A 31: 		grid-auto-rows: minmax(100px, auto);"; }
+  content: "Error: Undefined variable: \"$width-small\".\A         on line 40 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 35: 		position: relative;\A 36: 		top: 20px;\A 37: 		font-family: 'Ropa Sans', sans-serif;\A 38: 	}\A 39: \A 40: 	@media screen and (min-width: $width-small + 1) {\A 41: 		display: grid;\A 42: 		// grid-template-columns: repeat(3, 1fr);\A 43: 		grid-template-columns: 40px auto 40px;\A 44: 		grid-gap: 10px;\A 45: 		grid-auto-rows: minmax(100px, auto);"; }

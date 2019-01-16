@@ -10,6 +10,7 @@
 	font-family: 'Ropa Sans', sans-serif;
 	font-size: 18px;
 	text-transform: uppercase;
+	
 
 	@media screen and (min-width: $width-medium + 100) {
 		font-size: 22px;
@@ -23,7 +24,7 @@
 	padding-left: 0;
 
 	li a {
-		padding-right: 20px;
+		padding: 0 20px 0 20px;
 	}
 }
 

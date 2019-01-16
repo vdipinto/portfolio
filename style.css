@@ -705,78 +705,66 @@ textarea {
  *
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
-/* line 10, ../sass/layout.scss */
-.site {
-  max-width: 1200px;
-  margin: 0 auto;
+/* line 11, ../sass/layout.scss */
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-/* line 16, ../sass/layout.scss */
-header {
+/* line 17, ../sass/layout.scss */
+.site {
+  margin: 0 auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+/*
+ *HEADER 
+*/
+/* line 30, ../sass/layout.scss */
+.site-header {
   display: none;
 }
-/* line 19, ../sass/layout.scss */
-header .site-branding {
+/* line 33, ../sass/layout.scss */
+.site-header .site-branding {
   margin: 0 auto;
   position: relative;
   top: 20px;
   font-family: 'Ropa Sans', sans-serif;
 }
 @media screen and (min-width: 501px) {
-  /* line 16, ../sass/layout.scss */
-  header {
+  /* line 30, ../sass/layout.scss */
+  .site-header {
     display: grid;
     grid-template-columns: 40px auto 40px;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
 }
-/* line 45, ../sass/layout.scss */
-header .site-branding {
+/* line 58, ../sass/layout.scss */
+.site-header .site-branding {
   grid-column: 2;
   grid-row: 1;
 }
-/* line 51, ../sass/layout.scss */
-header .main-navigation {
+/* line 64, ../sass/layout.scss */
+.site-header .main-navigation {
   grid-column: 2;
   grid-row: 2;
 }
 
-/* line 61, ../sass/layout.scss */
+/* line 72, ../sass/layout.scss */
 .content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
+  margin: 0 5%;
 }
 
-/* line 66, ../sass/layout.scss */
-.site-main {
-  margin: 0 25% 0 0;
-}
-
-/* line 69, ../sass/layout.scss */
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
-}
-
-/* line 74, ../sass/layout.scss */
+/* line 76, ../sass/layout.scss */
 .site-footer {
-  clear: both;
-  width: 100%;
-}
-
-/* line 79, ../sass/layout.scss */
-.no-sidebar .content-area {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 84, ../sass/layout.scss */
-.no-sidebar .site-main {
-  margin-right: 0;
+  background: #3333CC;
+  min-height: 200px;
+  color: #fff;
+  vertical-align: middle;
 }
 
 /*--------------------------------------------------------------
@@ -820,6 +808,14 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Footer Links
+--------------------------------------------------------------*/
+/* line 32, ../sass/navigation/links.scss */
+.site-footer a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
  /*--------------------------------------------------------------
@@ -841,31 +837,31 @@ a:hover, a:active {
   }
 }
 
-/* line 19, ../sass/navigation/menu.scss */
+/* line 20, ../sass/navigation/menu.scss */
 .main-navigation ul {
   display: block;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* line 25, ../sass/navigation/menu.scss */
+/* line 26, ../sass/navigation/menu.scss */
 .main-navigation ul li a {
-  padding-right: 20px;
+  padding: 0 20px 0 20px;
 }
 
-/* line 30, ../sass/navigation/menu.scss */
+/* line 31, ../sass/navigation/menu.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 35, ../sass/navigation/menu.scss */
+/* line 36, ../sass/navigation/menu.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
-/* line 40, ../sass/navigation/menu.scss */
+/* line 41, ../sass/navigation/menu.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -876,52 +872,52 @@ a:hover, a:active {
   background: #fff;
 }
 
-/* line 50, ../sass/navigation/menu.scss */
+/* line 51, ../sass/navigation/menu.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 55, ../sass/navigation/menu.scss */
+/* line 56, ../sass/navigation/menu.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 59, ../sass/navigation/menu.scss */
+/* line 60, ../sass/navigation/menu.scss */
 .main-navigation ul ul li {
   font-size: 18px;
 }
 
-/* line 75, ../sass/navigation/menu.scss */
+/* line 76, ../sass/navigation/menu.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 
-/* line 80, ../sass/navigation/menu.scss */
+/* line 81, ../sass/navigation/menu.scss */
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 
 /* Small menu. */
-/* line 91, ../sass/navigation/menu.scss */
+/* line 92, ../sass/navigation/menu.scss */
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 94, ../sass/navigation/menu.scss */
+/* line 95, ../sass/navigation/menu.scss */
 .menu-toggle {
   display: none;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 100, ../sass/navigation/menu.scss */
+  /* line 101, ../sass/navigation/menu.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 105, ../sass/navigation/menu.scss */
+/* line 106, ../sass/navigation/menu.scss */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -929,7 +925,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-/* line 112, ../sass/navigation/menu.scss */
+/* line 113, ../sass/navigation/menu.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -937,7 +933,7 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 119, ../sass/navigation/menu.scss */
+/* line 120, ../sass/navigation/menu.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -946,24 +942,24 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 130, ../sass/navigation/menu.scss */
+/* line 131, ../sass/navigation/menu.scss */
 .slicknav_menu {
   display: none;
 }
 
 @media screen and (max-width: 500px) {
   /* #primary-menu is your theme’s original menu */
-  /* line 136, ../sass/navigation/menu.scss */
+  /* line 137, ../sass/navigation/menu.scss */
   #primary-menu {
     display: none;
   }
 
-  /* line 140, ../sass/navigation/menu.scss */
+  /* line 141, ../sass/navigation/menu.scss */
   .slicknav_menu {
     display: block;
   }
 }
-/* line 147, ../sass/navigation/menu.scss */
+/* line 148, ../sass/navigation/menu.scss */
 .site-title, .site-description {
   text-indent: -9999999px;
   height: 0px;
@@ -1361,14 +1357,39 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-## MA Category
+## Work-post Category
 --------------------------------------------------------------*/
 /* line 41, ../sass/content/posts-and-pages.scss */
-.core_courses_MA {
+.work-posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 769px) {
+  /* line 41, ../sass/content/posts-and-pages.scss */
+  .work-posts {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+/* line 62, ../sass/content/posts-and-pages.scss */
+.work-posts .card {
+  display: grid;
+}
+/* line 65, ../sass/content/posts-and-pages.scss */
+.work-posts .card .entry-footer {
+  align-self: end;
+  background: #FFCCCC;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 72, ../sass/content/posts-and-pages.scss */
+.work-posts .card .entry-footer .btn {
+  display: inline-block;
+  min-width: 100%;
+  height: 100%;
+  padding: 10px 20px;
 }
 
 /*--------------------------------------------------------------
