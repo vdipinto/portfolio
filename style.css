@@ -811,16 +811,22 @@ a:hover, a:active {
 ## Cards Links
 --------------------------------------------------------------*/
 /* line 32, ../sass/navigation/links.scss */
-.entry-footer a {
-  font-weight: 500;
-  color: #333;
+.entry-title a {
   text-decoration: none;
+}
+
+/* line 38, ../sass/navigation/links.scss */
+.entry-footer a {
+  font-weight: 530;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
 ## Footer Links
 --------------------------------------------------------------*/
-/* line 44, ../sass/navigation/links.scss */
+/* line 51, ../sass/navigation/links.scss */
 .site-footer a {
   color: #fff;
 }
@@ -1387,12 +1393,21 @@ a:hover, a:active {
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-/* line 63, ../sass/content/posts-and-pages.scss */
+/* line 61, ../sass/content/posts-and-pages.scss */
+.work-posts .card p {
+  font-family: "Ropa Sans", sans-serif;
+  color: #000;
+  font-size: 22px;
+}
+/* line 69, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   grid-row: 2;
-  align-self: start;
 }
-/* line 68, ../sass/content/posts-and-pages.scss */
+/* line 72, ../sass/content/posts-and-pages.scss */
+.work-posts .card .entry-header .entry-title {
+  font-family: "Archivo Black", sans-serif;
+}
+/* line 77, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1400,7 +1415,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-/* line 75, ../sass/content/posts-and-pages.scss */
+/* line 84, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;

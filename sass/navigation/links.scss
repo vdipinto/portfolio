@@ -28,11 +28,18 @@ a:hover, a:active {
 ## Cards Links
 --------------------------------------------------------------*/
 
+.entry-title {
+	a {
+		text-decoration: none;
+	}
+}
+
 .entry-footer {
 	a {
-		font-weight: 500;
-		color:#333;
+		font-weight: 530;
+		color: $black;
 		text-decoration: none;
+		text-transform: uppercase;
 	}
 }
 

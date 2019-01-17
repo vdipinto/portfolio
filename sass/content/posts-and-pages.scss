@@ -58,11 +58,20 @@
 		border: 4px solid $white;
 		box-shadow: 0 0 3px 3px rgba(0,0,0,.15);
 
+		p {
+			font-family: $ropa-sans;
+			color: $black;
+			font-size: 22px;
+		}
+
 
 
 		.entry-header {
 			grid-row: 2;
-			align-self: start;
+
+			.entry-title {
+				font-family: $archivio;		
+			}
 		}
 
 		.entry-footer {

@@ -23,9 +23,4 @@
     <footer class="entry-footer">
         <a href="<?php esc_url( the_permalink() ) ?>" class="btn">See more</a>
 	</footer><!-- .entry-footer -->
-
-    
-    
-    
-
 </article><!-- #post-<?php the_ID(); ?> -->
