@@ -10,6 +10,10 @@
 }
 
 
+// Font Stacks variables
+$archivio: 'Archivo Black', sans-serif;
+$ropa-sans: 'Ropa Sans', sans-serif;
+$open-sans:'Open Sans', sans-serif;
 
 
 
@@ -82,5 +86,5 @@ big {
 ## Import Google Fonts	
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans|Ropa+Sans');
 

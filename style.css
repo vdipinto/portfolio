@@ -68,7 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans|Ropa+Sans");
 /* line 15, ../sass/normalize.scss */
 html {
   line-height: 1.15;
@@ -437,7 +437,7 @@ template {
   font-family: 'Radikal Black Italic';
   src: url("fonts/3792D1_0_0.woff2") format("woff2"), url("fonts/3792D1_0_0.woff") format("woff");
 }
-/* line 16, ../sass/typography.scss */
+/* line 20, ../sass/typography.scss */
 body,
 button,
 input,
@@ -451,32 +451,32 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 29, ../sass/typography.scss */
+/* line 33, ../sass/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 33, ../sass/typography.scss */
+/* line 37, ../sass/typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 37, ../sass/typography.scss */
+/* line 41, ../sass/typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 41, ../sass/typography.scss */
+/* line 45, ../sass/typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 45, ../sass/typography.scss */
+/* line 49, ../sass/typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 49, ../sass/typography.scss */
+/* line 53, ../sass/typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -489,26 +489,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 61, ../sass/typography.scss */
+/* line 65, ../sass/typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 67, ../sass/typography.scss */
+/* line 71, ../sass/typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 72, ../sass/typography.scss */
+/* line 76, ../sass/typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 77, ../sass/typography.scss */
+/* line 81, ../sass/typography.scss */
 big {
   font-size: 125%;
 }
@@ -808,9 +808,19 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-## Footer Links
+## Cards Links
 --------------------------------------------------------------*/
 /* line 32, ../sass/navigation/links.scss */
+.entry-footer a {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+## Footer Links
+--------------------------------------------------------------*/
+/* line 44, ../sass/navigation/links.scss */
 .site-footer a {
   color: #fff;
 }
@@ -1364,19 +1374,25 @@ a:hover, a:active {
   display: grid;
   grid-template-columns: 1fr;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 669px) {
   /* line 41, ../sass/content/posts-and-pages.scss */
   .work-posts {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
   }
 }
-/* line 62, ../sass/content/posts-and-pages.scss */
+/* line 56, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
+  border: 4px solid #fff;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-/* line 65, ../sass/content/posts-and-pages.scss */
+/* line 63, ../sass/content/posts-and-pages.scss */
+.work-posts .card .entry-header {
+  grid-row: 2;
+  align-self: start;
+}
+/* line 68, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1384,7 +1400,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-/* line 72, ../sass/content/posts-and-pages.scss */
+/* line 75, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;

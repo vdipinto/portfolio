@@ -1,12 +1,12 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans|Ropa+Sans");
 @font-face {
   font-family: 'Radikal Black Italic';
   src: url("fonts/3792D1_0_0.woff2") format("woff2"), url("fonts/3792D1_0_0.woff") format("woff");
 }
-/* line 16, ../sass/typography.scss */
+/* line 20, ../sass/typography.scss */
 body,
 button,
 input,
@@ -20,32 +20,32 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 29, ../sass/typography.scss */
+/* line 33, ../sass/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 33, ../sass/typography.scss */
+/* line 37, ../sass/typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 37, ../sass/typography.scss */
+/* line 41, ../sass/typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 41, ../sass/typography.scss */
+/* line 45, ../sass/typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 45, ../sass/typography.scss */
+/* line 49, ../sass/typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 49, ../sass/typography.scss */
+/* line 53, ../sass/typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -58,26 +58,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 61, ../sass/typography.scss */
+/* line 65, ../sass/typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 67, ../sass/typography.scss */
+/* line 71, ../sass/typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 72, ../sass/typography.scss */
+/* line 76, ../sass/typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 77, ../sass/typography.scss */
+/* line 81, ../sass/typography.scss */
 big {
   font-size: 125%;
 }
