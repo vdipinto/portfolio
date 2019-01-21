@@ -1,6 +1,7 @@
 /*
 Error: Invalid CSS after "...mns: repeat(4, ": expected function argument, was "[col] 100px ) ;"
         on line 44 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
+        from line 142 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss
 
 39: --------------------------------------------------------------*\/
 40: 
@@ -8,14 +9,15 @@ Error: Invalid CSS after "...mns: repeat(4, ": expected function argument, was "
 42: 	display: grid;
 43:     grid-gap: 10px;
 44: 	grid-template-columns: repeat(4, [col] 100px ) ;
-45: 	grid-template-rows: repeat(4, [row] auto  );
-46: 
-47: 	.alignleft {
-48: 		grid-column: col;
-49: 		grid-row: row ;
+45: 	grid-template-rows: repeat(3, [row] auto  );
+46: 	background-color: #fff;
+47: 	color: #444;
+48: }
+49: 
 
 Backtrace:
 /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:44
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss:142
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/lexer.rb:229:in `expected!'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:710:in `assert_expr'
@@ -55,6 +57,31 @@ Backtrace:
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
@@ -74,4 +101,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...mns: repeat(4, \": expected function argument, was \"[col] 100px ) ;\"\A         on line 44 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 39: --------------------------------------------------------------*/\A 40: \A 41: .front-page {\A 42: 	display: grid;\A 43:     grid-gap: 10px;\A 44: 	grid-template-columns: repeat(4, [col] 100px ) ;\A 45: 	grid-template-rows: repeat(4, [row] auto  );\A 46: \A 47: 	.alignleft {\A 48: 		grid-column: col;\A 49: 		grid-row: row ;"; }
+  content: "Error: Invalid CSS after \"...mns: repeat(4, \": expected function argument, was \"[col] 100px ) ;\"\A         on line 44 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A         from line 142 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss\A \A 39: --------------------------------------------------------------*/\A 40: \A 41: .front-page {\A 42: 	display: grid;\A 43:     grid-gap: 10px;\A 44: 	grid-template-columns: repeat(4, [col] 100px ) ;\A 45: 	grid-template-rows: repeat(3, [row] auto  );\A 46: 	background-color: #fff;\A 47: 	color: #444;\A 48: }\A 49: "; }
