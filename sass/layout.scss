@@ -70,8 +70,31 @@ html, body {
 
 
 .content-area {
-	margin: 0 5%;
+
+	.site-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 5px;
+		grid-auto-rows: minmax(100px, auto);
+
+		.category-header {
+			grid-row: 1;
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			background: #fafafb;
+			color: $black;
+		}
+
+		.work-posts {
+			grid-row: 2;	
+		}
+	}
 }
+
+
+
+
 
 .site-footer {
 	background: #3333CC;

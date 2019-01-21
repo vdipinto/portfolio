@@ -754,12 +754,28 @@ html, body {
   grid-row: 2;
 }
 
-/* line 72, ../sass/layout.scss */
-.content-area {
-  margin: 0 5%;
+/* line 74, ../sass/layout.scss */
+.content-area .site-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+}
+/* line 80, ../sass/layout.scss */
+.content-area .site-main .category-header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background: #fafafb;
+  color: #222228;
+}
+/* line 89, ../sass/layout.scss */
+.content-area .site-main .work-posts {
+  grid-row: 2;
 }
 
-/* line 76, ../sass/layout.scss */
+/* line 99, ../sass/layout.scss */
 .site-footer {
   background: #3333CC;
   min-height: 200px;
@@ -784,12 +800,12 @@ html, body {
 --------------------------------------------------------------*/
 /* line 7, ../sass/navigation/links.scss */
 a {
-  color: #000;
+  color: #222228;
 }
 
 /* line 11, ../sass/navigation/links.scss */
 a:visited {
-  color: #000;
+  color: #222228;
 }
 
 /* line 15, ../sass/navigation/links.scss */
@@ -818,7 +834,7 @@ a:hover, a:active {
 /* line 38, ../sass/navigation/links.scss */
 .entry-footer a {
   font-weight: 530;
-  color: #000;
+  color: #222228;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -1379,24 +1395,29 @@ a:hover, a:active {
 .work-posts {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
 }
 @media screen and (min-width: 669px) {
   /* line 41, ../sass/content/posts-and-pages.scss */
   .work-posts {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     grid-gap: 20px;
   }
 }
-/* line 56, ../sass/content/posts-and-pages.scss */
+/* line 52, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
+/* line 57, ../sass/content/posts-and-pages.scss */
+.work-posts .card .entry-header {
+  place-self: center;
+}
 /* line 61, ../sass/content/posts-and-pages.scss */
 .work-posts .card p {
   font-family: "Ropa Sans", sans-serif;
-  color: #000;
+  color: #222228;
   font-size: 22px;
 }
 /* line 69, ../sass/content/posts-and-pages.scss */
