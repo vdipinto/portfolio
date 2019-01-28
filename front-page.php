@@ -14,30 +14,50 @@
 
 get_header();
 ?>
-<div id="primary" class="content-area">
+
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		// Check if there are any posts to display
-		if ( have_posts() ) : ?>
-		
-		<div class="work-posts">
-            <?php
-            
-            // The Loop
-            
-            while ( have_posts() ) : the_post();
 
+        <?php 
+        // the query
+
+        $args = array (
+        'category_name' => 'frontpage'
+        );
+
+        $front_page_query = new WP_Query( $args ); ?>
+        
+        <?php if ( $front_page_query->have_posts() ) : ?>
+        
+            <!-- pagination here -->
+        
+            <!-- the loop -->
+            <?php while ( $front_page_query->have_posts() ) : $front_page_query->the_post();
                 get_template_part( 'template-parts/content-home', get_post_type() );
+            endwhile; ?>
+            <!-- end of the loop -->
+        
+            <!-- pagination here -->
+        
+            <?php wp_reset_postdata();
+        
+        else :
+        get_template_part( 'template-parts/content', 'none' );
             
-            endwhile; 
-            
-        else: ?>
-            <p>Sorry, no posts matched your criteria.</p>
-            
-            
-        <?php endif; ?>
-	    </div><!-- .work-posts -->
-    </div>
-    
-<?php get_footer(); ?>
+        endif; ?>
+
+		
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();
+
+
+
+
+
+
+

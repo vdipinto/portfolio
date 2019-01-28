@@ -1369,33 +1369,61 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## front-page
 --------------------------------------------------------------*/
+/* line 41, ../sass/content/posts-and-pages.scss */
+.front-page {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
+}
+/* line 48, ../sass/content/posts-and-pages.scss */
+.front-page .alignleft {
+  grid-column: 1;
+  grid-row: 1;
+  border: 3.5px solid #100;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-self: center;
+}
+/* line 57, ../sass/content/posts-and-pages.scss */
+.front-page .entry-header {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+/* line 62, ../sass/content/posts-and-pages.scss */
+.front-page .entry-content {
+  grid-column: 1/ 4;
+  grid-row: 2 / 3;
+}
+
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 59, ../sass/content/posts-and-pages.scss */
+/* line 74, ../sass/content/posts-and-pages.scss */
 .work-posts {
   display: grid;
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 669px) {
-  /* line 59, ../sass/content/posts-and-pages.scss */
+  /* line 74, ../sass/content/posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
   }
 }
-/* line 74, ../sass/content/posts-and-pages.scss */
+/* line 84, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-/* line 81, ../sass/content/posts-and-pages.scss */
+/* line 89, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   grid-row: 2;
   align-self: start;
 }
-/* line 86, ../sass/content/posts-and-pages.scss */
+/* line 94, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1403,7 +1431,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-/* line 93, ../sass/content/posts-and-pages.scss */
+/* line 101, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;
