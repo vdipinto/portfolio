@@ -28,7 +28,7 @@ get_header();
             
             while ( have_posts() ) : the_post();
 
-                get_template_part( 'template-parts/content-work', get_post_type() );
+                get_template_part( 'template-parts/content-home', get_post_type() );
             
             endwhile; 
             

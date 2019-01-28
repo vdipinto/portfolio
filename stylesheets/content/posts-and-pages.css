@@ -1,60 +1,60 @@
 /*
-Error: Invalid CSS after "...mns: repeat(4, ": expected function argument, was "[col] 100px ) ;"
-        on line 44 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
+Error: Undefined variable: "$width-medium".
+        on line 64 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
 
-39: --------------------------------------------------------------*\/
-40: 
-41: .front-page {
-42: 	display: grid;
-43:     grid-gap: 10px;
-44: 	grid-template-columns: repeat(4, [col] 100px ) ;
-45: 	grid-template-rows: repeat(4, [row] auto  );
-46: 
-47: 	.alignleft {
-48: 		grid-column: col;
-49: 		grid-row: row ;
+59: .work-posts {
+60: 	display: grid;
+61: 	grid-template-columns: 1fr;
+62: 	
+63: 
+64: 	@media screen and (min-width: $width-medium - 100) {
+65: 
+66: 
+67: 		// grid-template-columns: repeat(3, 1fr);
+68: 		// grid-gap: 20px;
+69: 		// grid-auto-rows: minmax(100px, auto);
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:44
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/lexer.rb:229:in `expected!'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:710:in `assert_expr'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:619:in `block in arglist'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:593:in `loop'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:593:in `arglist'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:578:in `fn_arglist'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:540:in `funcall'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:520:in `ident'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:309:in `unary_not'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:309:in `unary_div'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:309:in `unary_minus'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:309:in `unary_plus'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `times_div_or_mod'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `plus_or_minus'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `relational'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `eq_or_neq'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `and_expr'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:286:in `or_expr'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:494:in `space'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:434:in `interpolation'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:359:in `expr'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:708:in `assert_expr'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/parser.rb:75:in `parse'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1063:in `sass_script'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:909:in `value!'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:778:in `block in try_declaration'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1183:in `rethrow'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:791:in `try_declaration'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:64
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...mns: repeat(4, \": expected function argument, was \"[col] 100px ) ;\"\A         on line 44 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 39: --------------------------------------------------------------*/\A 40: \A 41: .front-page {\A 42: 	display: grid;\A 43:     grid-gap: 10px;\A 44: 	grid-template-columns: repeat(4, [col] 100px ) ;\A 45: 	grid-template-rows: repeat(4, [row] auto  );\A 46: \A 47: 	.alignleft {\A 48: 		grid-column: col;\A 49: 		grid-row: row ;"; }
+  content: "Error: Undefined variable: \"$width-medium\".\A         on line 64 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 59: .work-posts {\A 60: 	display: grid;\A 61: 	grid-template-columns: 1fr;\A 62: 	\A 63: \A 64: 	@media screen and (min-width: $width-medium - 100) {\A 65: \A 66: \A 67: 		// grid-template-columns: repeat(3, 1fr);\A 68: 		// grid-gap: 20px;\A 69: 		// grid-auto-rows: minmax(100px, auto);"; }

@@ -1372,30 +1372,30 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 46, ../sass/content/posts-and-pages.scss */
+/* line 59, ../sass/content/posts-and-pages.scss */
 .work-posts {
   display: grid;
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 669px) {
-  /* line 46, ../sass/content/posts-and-pages.scss */
+  /* line 59, ../sass/content/posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
   }
 }
-/* line 61, ../sass/content/posts-and-pages.scss */
+/* line 74, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-/* line 68, ../sass/content/posts-and-pages.scss */
+/* line 81, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   grid-row: 2;
   align-self: start;
 }
-/* line 73, ../sass/content/posts-and-pages.scss */
+/* line 86, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1403,7 +1403,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-/* line 80, ../sass/content/posts-and-pages.scss */
+/* line 93, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;

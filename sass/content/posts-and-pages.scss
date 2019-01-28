@@ -38,17 +38,17 @@
 ## front-page
 --------------------------------------------------------------*/
 
-.front-page {
-	display: grid;
-    grid-gap: 10px;
-	grid-template-columns: repeat(4, [col] 100px ) ;
-	grid-template-rows: repeat(4, [row] auto  );
+// .front-page {
+// 	display: grid;
+//     grid-gap: 10px;
+// 	grid-template-columns: repeat(4, [col] 100px ) ;
+// 	grid-template-rows: repeat(4, [row] auto  );
 
-	.alignleft {
-		grid-column: col;
-		grid-row: row ;
-	}
-}
+// 	// .alignleft {
+// 	// 	grid-column: col;
+// 	// 	grid-row: row ;
+// 	// }
+// }
 
 
 /*--------------------------------------------------------------
@@ -97,7 +97,6 @@
 				padding: 10px 20px;
 			}
 		}
-
-
 	} 
 }
+
