@@ -42,6 +42,7 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'category-thumb', 300, 300 ); // 300 pixels wide and 300 pixel high
+		add_image_size( 'profile-thumb', 220, 180 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -95,6 +96,7 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'portfolio_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
