@@ -1,41 +1,60 @@
 /*
-Error: Invalid CSS after "...(200px, 400px))": expected "{", was ";"
-        on line 82 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
+Error: Undefined variable: "$width-medium".
+        on line 85 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
 
-77: 	justify-content: center;
-78: 	
-79: 
-80: 	@media screen and (min-width: $width-medium - 100) {
-81: <<<<<<< HEAD
-82: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-83: =======
-84: 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-85: >>>>>>> new-homepage
-86: 		grid-gap: 20px;
-87: 	}
+80: 	display: grid;
+81: 	grid-template-columns: 1fr;
+82: 	justify-content: center;
+83: 	
+84: 
+85: 	@media screen and (min-width: $width-medium - 100) {
+86: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+87: 		grid-gap: 20px;
+88: 	}
+89: 
+90: 	.card {
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:82
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:665:in `block'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:674:in `block_contents'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:409:in `media_directive'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:222:in `special_directive'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:197:in `directive'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:85
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
 /usr/local/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
@@ -55,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...(200px, 400px))\": expected \"{\", was \";\"\A         on line 82 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 77: 	justify-content: center;\A 78: 	\A 79: \A 80: 	@media screen and (min-width: $width-medium - 100) {\A 81: <<<<<<< HEAD\A 82: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));\A 83: =======\A 84: 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\A 85: >>>>>>> new-homepage\A 86: 		grid-gap: 20px;\A 87: 	}"; }
+  content: "Error: Undefined variable: \"$width-medium\".\A         on line 85 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 80: 	display: grid;\A 81: 	grid-template-columns: 1fr;\A 82: 	justify-content: center;\A 83: 	\A 84: \A 85: 	@media screen and (min-width: $width-medium - 100) {\A 86: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));\A 87: 		grid-gap: 20px;\A 88: 	}\A 89: \A 90: 	.card {"; }

@@ -1422,56 +1422,47 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 74, ../sass/content/posts-and-pages.scss */
+/*--------------------------------------------------------------
+## Work-post Category
+--------------------------------------------------------------*/
+/* line 79, ../sass/content/posts-and-pages.scss */
 .work-posts {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
 }
 @media screen and (min-width: 669px) {
-  /* line 74, ../sass/content/posts-and-pages.scss */
+  /* line 79, ../sass/content/posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     grid-gap: 20px;
   }
 }
-<<<<<<< HEAD
-/* line 52, ../sass/content/posts-and-pages.scss */
-=======
-/* line 84, ../sass/content/posts-and-pages.scss */
->>>>>>> new-homepage
+/* line 90, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-<<<<<<< HEAD
-/* line 57, ../sass/content/posts-and-pages.scss */
+/* line 95, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   place-self: center;
 }
-/* line 61, ../sass/content/posts-and-pages.scss */
+/* line 99, ../sass/content/posts-and-pages.scss */
 .work-posts .card p {
   font-family: "Ropa Sans", sans-serif;
   color: #222228;
   font-size: 22px;
 }
-/* line 69, ../sass/content/posts-and-pages.scss */
-=======
-/* line 89, ../sass/content/posts-and-pages.scss */
->>>>>>> new-homepage
+/* line 107, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   grid-row: 2;
 }
-<<<<<<< HEAD
-/* line 72, ../sass/content/posts-and-pages.scss */
+/* line 110, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header .entry-title {
   font-family: "Archivo Black", sans-serif;
 }
-/* line 77, ../sass/content/posts-and-pages.scss */
-=======
-/* line 94, ../sass/content/posts-and-pages.scss */
->>>>>>> new-homepage
+/* line 115, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1479,11 +1470,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-<<<<<<< HEAD
-/* line 84, ../sass/content/posts-and-pages.scss */
-=======
-/* line 101, ../sass/content/posts-and-pages.scss */
->>>>>>> new-homepage
+/* line 122, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;
