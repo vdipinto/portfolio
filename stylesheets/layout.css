@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$width-small".
-        on line 40 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
+        on line 41 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
 
-35: 		position: relative;
-36: 		top: 20px;
-37: 		font-family: 'Ropa Sans', sans-serif;
-38: 	}
-39: 
-40: 	@media screen and (min-width: $width-small + 1) {
-41: 		display: grid;
-42: 		// grid-template-columns: repeat(3, 1fr);
-43: 		grid-template-columns: 40px auto 40px;
+36: 		position: relative;
+37: 		top: 20px;
+38: 		font-family: 'Ropa Sans', sans-serif;
+39: 	}
+40: 
+41: 	@media screen and (min-width: $width-small + 1) {
+42: 		display: grid;
+43: 		grid-template-columns: 20px 200px auto 20px;
 44: 		grid-gap: 10px;
 45: 		grid-auto-rows: minmax(100px, auto);
+46: 		justify-items: stretch;
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:40
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:41
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-small\".\A         on line 40 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 35: 		position: relative;\A 36: 		top: 20px;\A 37: 		font-family: 'Ropa Sans', sans-serif;\A 38: 	}\A 39: \A 40: 	@media screen and (min-width: $width-small + 1) {\A 41: 		display: grid;\A 42: 		// grid-template-columns: repeat(3, 1fr);\A 43: 		grid-template-columns: 40px auto 40px;\A 44: 		grid-gap: 10px;\A 45: 		grid-auto-rows: minmax(100px, auto);"; }
+  content: "Error: Undefined variable: \"$width-small\".\A         on line 41 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 36: 		position: relative;\A 37: 		top: 20px;\A 38: 		font-family: 'Ropa Sans', sans-serif;\A 39: 	}\A 40: \A 41: 	@media screen and (min-width: $width-small + 1) {\A 42: 		display: grid;\A 43: 		grid-template-columns: 20px 200px auto 20px;\A 44: 		grid-gap: 10px;\A 45: 		grid-auto-rows: minmax(100px, auto);\A 46: 		justify-items: stretch;"; }
