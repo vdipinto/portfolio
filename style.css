@@ -437,46 +437,50 @@ template {
   font-family: 'Radikal Black Italic';
   src: url("fonts/3792D1_0_0.woff2") format("woff2"), url("fonts/3792D1_0_0.woff") format("woff");
 }
-/* line 20, ../sass/typography.scss */
+@font-face {
+  font-family: 'dylovastuffregular';
+  src: url("assets/fonts/dylovastuff-webfont.woff2") format("woff2"), url("assets/fonts/dylovastuff-webfont.woff") format("woff");
+}
+/* line 26, ../sass/typography.scss */
 body,
 button,
 input,
 select,
 optgroup,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: 'dylovastuffregular';
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* line 33, ../sass/typography.scss */
+/* line 40, ../sass/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 37, ../sass/typography.scss */
+/* line 44, ../sass/typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 41, ../sass/typography.scss */
+/* line 48, ../sass/typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 45, ../sass/typography.scss */
+/* line 52, ../sass/typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 49, ../sass/typography.scss */
+/* line 56, ../sass/typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 53, ../sass/typography.scss */
+/* line 60, ../sass/typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -489,26 +493,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 65, ../sass/typography.scss */
+/* line 72, ../sass/typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 71, ../sass/typography.scss */
+/* line 78, ../sass/typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 76, ../sass/typography.scss */
+/* line 83, ../sass/typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 81, ../sass/typography.scss */
+/* line 88, ../sass/typography.scss */
 big {
   font-size: 125%;
 }
@@ -739,7 +743,7 @@ html, body {
   /* line 31, ../sass/layout.scss */
   .site-header {
     display: grid;
-    grid-template-columns: 20px 200px auto 20px;
+    grid-template-columns: "[first] 10px [line2] 10px [line3] auto [col4-start] 10px [end]";
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     justify-items: stretch;
@@ -748,23 +752,32 @@ html, body {
 }
 /* line 52, ../sass/layout.scss */
 .site-header .site-branding {
-  grid-column: 2;
+  grid-column: "line2";
   grid-row: 1;
+  justify-self: start;
+  width: 40px;
 }
-/* line 58, ../sass/layout.scss */
+@media screen and (min-width: 769px) {
+  /* line 52, ../sass/layout.scss */
+  .site-header .site-branding {
+    width: 200px;
+  }
+}
+/* line 64, ../sass/layout.scss */
 .site-header .main-navigation {
-  grid-column: 3;
+  grid-column: "line3 / col4-start";
   grid-row: 1;
+  font-size: 16px;
 }
 
-/* line 68, ../sass/layout.scss */
+/* line 75, ../sass/layout.scss */
 .content-area .site-main {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
 }
-/* line 74, ../sass/layout.scss */
+/* line 81, ../sass/layout.scss */
 .content-area .site-main .category-header {
   grid-row: 1;
   display: grid;
@@ -773,12 +786,12 @@ html, body {
   background: #fafafb;
   color: #222228;
 }
-/* line 83, ../sass/layout.scss */
+/* line 90, ../sass/layout.scss */
 .content-area .site-main .work-posts {
   grid-row: 2;
 }
 
-/* line 93, ../sass/layout.scss */
+/* line 100, ../sass/layout.scss */
 .site-footer {
   background: #3333CC;
   min-height: 200px;
@@ -803,12 +816,12 @@ html, body {
 --------------------------------------------------------------*/
 /* line 7, ../sass/navigation/links.scss */
 a {
-  color: #222228;
+  color: #fff;
 }
 
 /* line 11, ../sass/navigation/links.scss */
 a:visited {
-  color: #222228;
+  color: #fff;
 }
 
 /* line 15, ../sass/navigation/links.scss */
@@ -861,7 +874,6 @@ a:hover, a:active {
   clear: both;
   display: block;
   margin: 0 auto;
-  font-family: 'Ropa Sans', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -872,31 +884,31 @@ a:hover, a:active {
   }
 }
 
-/* line 20, ../sass/navigation/menu.scss */
+/* line 19, ../sass/navigation/menu.scss */
 .main-navigation ul {
   display: block;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* line 26, ../sass/navigation/menu.scss */
+/* line 25, ../sass/navigation/menu.scss */
 .main-navigation ul li a {
   padding: 0 20px 0 20px;
 }
 
-/* line 31, ../sass/navigation/menu.scss */
+/* line 30, ../sass/navigation/menu.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 36, ../sass/navigation/menu.scss */
+/* line 35, ../sass/navigation/menu.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
-/* line 41, ../sass/navigation/menu.scss */
+/* line 40, ../sass/navigation/menu.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -907,52 +919,52 @@ a:hover, a:active {
   background: #fff;
 }
 
-/* line 51, ../sass/navigation/menu.scss */
+/* line 50, ../sass/navigation/menu.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 56, ../sass/navigation/menu.scss */
+/* line 55, ../sass/navigation/menu.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 60, ../sass/navigation/menu.scss */
+/* line 59, ../sass/navigation/menu.scss */
 .main-navigation ul ul li {
   font-size: 18px;
 }
 
-/* line 76, ../sass/navigation/menu.scss */
+/* line 75, ../sass/navigation/menu.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 
-/* line 81, ../sass/navigation/menu.scss */
+/* line 80, ../sass/navigation/menu.scss */
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 
 /* Small menu. */
-/* line 92, ../sass/navigation/menu.scss */
+/* line 91, ../sass/navigation/menu.scss */
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 95, ../sass/navigation/menu.scss */
+/* line 94, ../sass/navigation/menu.scss */
 .menu-toggle {
   display: none;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 101, ../sass/navigation/menu.scss */
+  /* line 100, ../sass/navigation/menu.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 106, ../sass/navigation/menu.scss */
+/* line 105, ../sass/navigation/menu.scss */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -960,7 +972,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-/* line 113, ../sass/navigation/menu.scss */
+/* line 112, ../sass/navigation/menu.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -968,7 +980,7 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 120, ../sass/navigation/menu.scss */
+/* line 119, ../sass/navigation/menu.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -977,24 +989,24 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 131, ../sass/navigation/menu.scss */
+/* line 130, ../sass/navigation/menu.scss */
 .slicknav_menu {
   display: none;
 }
 
 @media screen and (max-width: 500px) {
   /* #primary-menu is your theme’s original menu */
-  /* line 137, ../sass/navigation/menu.scss */
+  /* line 136, ../sass/navigation/menu.scss */
   #primary-menu {
     display: none;
   }
 
-  /* line 141, ../sass/navigation/menu.scss */
+  /* line 140, ../sass/navigation/menu.scss */
   .slicknav_menu {
     display: block;
   }
 }
-/* line 148, ../sass/navigation/menu.scss */
+/* line 147, ../sass/navigation/menu.scss */
 .site-title, .site-description {
   text-indent: -9999999px;
   height: 0px;

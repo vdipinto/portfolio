@@ -9,6 +9,12 @@
 		  url('fonts/3792D1_0_0.woff') format('woff');
 }
 
+@font-face {
+	font-family: 'dylovastuffregular';
+	src: url('assets/fonts/dylovastuff-webfont.woff2') format('woff2'),
+		 url('assets/fonts/dylovastuff-webfont.woff') format('woff');
+}
+
 
 // Font Stacks variables
 $archivio: 'Archivo Black', sans-serif;
@@ -23,8 +29,9 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	// color: #404040;
+	color: $white;
+	font-family: 'dylovastuffregular';
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;

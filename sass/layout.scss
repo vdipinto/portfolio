@@ -40,7 +40,7 @@ html, body {
 
 	@media screen and (min-width: $width-small + 1) {
 		display: grid;
-		grid-template-columns: 20px 200px auto 20px;
+		grid-template-columns: $gridTplColsNavBar;
 		grid-gap: 10px;
 		grid-auto-rows: minmax(100px, auto);
 		justify-items: stretch;
@@ -50,14 +50,21 @@ html, body {
 
 
 	.site-branding {
-		grid-column: 2;
+		grid-column: $siteBrandingGridColumn;
 		grid-row: 1;
+		justify-self: start;
+		width: 40px;
+
+		@media screen and (min-width: $width-medium) {
+			width: 200px;
+		}
 	}
 
 
 	.main-navigation {
-		grid-column: 3;
-		grid-row: 1;	
+		grid-column: $mainNavGridColumn;
+		grid-row: 1;
+		font-size: 16px;
 	}
 }
 

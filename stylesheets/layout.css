@@ -9,7 +9,7 @@ Error: Undefined variable: "$width-small".
 40: 
 41: 	@media screen and (min-width: $width-small + 1) {
 42: 		display: grid;
-43: 		grid-template-columns: 20px 200px auto 20px;
+43: 		grid-template-columns: $gridTplColsNavBar;
 44: 		grid-gap: 10px;
 45: 		grid-auto-rows: minmax(100px, auto);
 46: 		justify-items: stretch;
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-small\".\A         on line 41 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 36: 		position: relative;\A 37: 		top: 20px;\A 38: 		font-family: 'Ropa Sans', sans-serif;\A 39: 	}\A 40: \A 41: 	@media screen and (min-width: $width-small + 1) {\A 42: 		display: grid;\A 43: 		grid-template-columns: 20px 200px auto 20px;\A 44: 		grid-gap: 10px;\A 45: 		grid-auto-rows: minmax(100px, auto);\A 46: 		justify-items: stretch;"; }
+  content: "Error: Undefined variable: \"$width-small\".\A         on line 41 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 36: 		position: relative;\A 37: 		top: 20px;\A 38: 		font-family: 'Ropa Sans', sans-serif;\A 39: 	}\A 40: \A 41: 	@media screen and (min-width: $width-small + 1) {\A 42: 		display: grid;\A 43: 		grid-template-columns: $gridTplColsNavBar;\A 44: 		grid-gap: 10px;\A 45: 		grid-auto-rows: minmax(100px, auto);\A 46: 		justify-items: stretch;"; }
