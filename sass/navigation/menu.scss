@@ -4,10 +4,6 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	// float: left;
-	// width: 100%;
-	margin: 0 auto;
-	font-size: 18px;
 	text-transform: uppercase;
 	
 
@@ -22,9 +18,25 @@
 	margin: 0;
 	padding-left: 0;
 
+
+	
+
 	li a {
 		padding: 0 20px 0 20px;
+
+		@media screen and (max-width: $width-small + 22px) {
+			padding:  0 8px 0 8px;
+		}
 	}
+
+
+	li:nth-child(4) {
+		
+		a {
+			padding-right: 0px;
+		}
+	}
+
 }
 
 .main-navigation li {

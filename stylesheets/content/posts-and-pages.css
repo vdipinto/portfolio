@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$width-medium".
-        on line 85 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
+        on line 89 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
 
-80: 	display: grid;
-81: 	grid-template-columns: 1fr;
-82: 	justify-content: center;
-83: 	
-84: 
-85: 	@media screen and (min-width: $width-medium - 100) {
-86: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-87: 		grid-gap: 20px;
-88: 	}
-89: 
-90: 	.card {
+84: 	display: grid;
+85: 	grid-template-columns: 1fr;
+86: 	justify-content: center;
+87: 	
+88: 
+89: 	@media screen and (min-width: $width-medium - 100) {
+90: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+91: 		grid-gap: 20px;
+92: 	}
+93: 
+94: 	.card {
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:85
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:89
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-medium\".\A         on line 85 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 80: 	display: grid;\A 81: 	grid-template-columns: 1fr;\A 82: 	justify-content: center;\A 83: 	\A 84: \A 85: 	@media screen and (min-width: $width-medium - 100) {\A 86: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));\A 87: 		grid-gap: 20px;\A 88: 	}\A 89: \A 90: 	.card {"; }
+  content: "Error: Undefined variable: \"$width-medium\".\A         on line 89 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 84: 	display: grid;\A 85: 	grid-template-columns: 1fr;\A 86: 	justify-content: center;\A 87: 	\A 88: \A 89: 	@media screen and (min-width: $width-medium - 100) {\A 90: 		grid-template-columns: repeat(auto-fit, minmax(200px, 400px));\A 91: 		grid-gap: 20px;\A 92: 	}\A 93: \A 94: 	.card {"; }

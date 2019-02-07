@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$width-medium".
-        on line 14 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss
+        on line 10 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss
 
-9: 	margin: 0 auto;
-10: 	font-size: 18px;
-11: 	text-transform: uppercase;
-12: 	
-13: 
-14: 	@media screen and (min-width: $width-medium + 100) {
-15: 		font-size: 22px;
-16: 	}
-17: }
-18: 
-19: .main-navigation ul {
+5: 	clear: both;
+6: 	display: block;
+7: 	text-transform: uppercase;
+8: 	
+9: 
+10: 	@media screen and (min-width: $width-medium + 100) {
+11: 		font-size: 22px;
+12: 	}
+13: }
+14: 
+15: .main-navigation ul {
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss:14
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss:10
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-medium\".\A         on line 14 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss\A \A 9: 	margin: 0 auto;\A 10: 	font-size: 18px;\A 11: 	text-transform: uppercase;\A 12: 	\A 13: \A 14: 	@media screen and (min-width: $width-medium + 100) {\A 15: 		font-size: 22px;\A 16: 	}\A 17: }\A 18: \A 19: .main-navigation ul {"; }
+  content: "Error: Undefined variable: \"$width-medium\".\A         on line 10 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/navigation/menu.scss\A \A 5: 	clear: both;\A 6: 	display: block;\A 7: 	text-transform: uppercase;\A 8: 	\A 9: \A 10: 	@media screen and (min-width: $width-medium + 100) {\A 11: 		font-size: 22px;\A 12: 	}\A 13: }\A 14: \A 15: .main-navigation ul {"; }
