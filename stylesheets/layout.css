@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$width-small".
-        on line 34 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
+        on line 26 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss
 
-29: *\/
-30: 
-31: .site-header {
-32: 	display: none;
-33: 
-34: 		@media screen and (min-width: $width-small + 1) {
-35: 		display: grid;
-36: 		grid-template-columns: 10px 80px 10px 1fr 10px;
-37: 		grid-auto-rows: minmax(100px, auto);
-38: 		align-items: center;
-39: 		justify-items: end;
+21: *\/
+22: 
+23: .site-header {
+24: 	display: none;
+25: 
+26: 		@media screen and (min-width: $width-small + 1) {
+27: 		display: grid;
+28: 		grid-template-columns: 20px 80px 10px 1fr 10px;
+29: 		grid-auto-rows: minmax(20px, auto);
+30: 		align-items: center;
+31: 		justify-items: end;
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:34
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss:26
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-small\".\A         on line 34 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 29: */\A 30: \A 31: .site-header {\A 32: 	display: none;\A 33: \A 34: 		@media screen and (min-width: $width-small + 1) {\A 35: 		display: grid;\A 36: 		grid-template-columns: 10px 80px 10px 1fr 10px;\A 37: 		grid-auto-rows: minmax(100px, auto);\A 38: 		align-items: center;\A 39: 		justify-items: end;"; }
+  content: "Error: Undefined variable: \"$width-small\".\A         on line 26 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/layout.scss\A \A 21: */\A 22: \A 23: .site-header {\A 24: 	display: none;\A 25: \A 26: 		@media screen and (min-width: $width-small + 1) {\A 27: 		display: grid;\A 28: 		grid-template-columns: 20px 80px 10px 1fr 10px;\A 29: 		grid-auto-rows: minmax(20px, auto);\A 30: 		align-items: center;\A 31: 		justify-items: end;"; }

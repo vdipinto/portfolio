@@ -719,48 +719,48 @@ html, body {
 /*
  *HEADER 
 */
-/* line 31, ../sass/layout.scss */
+/* line 23, ../sass/layout.scss */
 .site-header {
   display: none;
 }
 @media screen and (min-width: 501px) {
-  /* line 31, ../sass/layout.scss */
+  /* line 23, ../sass/layout.scss */
   .site-header {
     display: grid;
-    grid-template-columns: 10px 80px 10px 1fr 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 20px 80px 10px 1fr 10px;
+    grid-auto-rows: minmax(20px, auto);
     align-items: center;
     justify-items: end;
   }
 }
-/* line 44, ../sass/layout.scss */
+/* line 35, ../sass/layout.scss */
 .site-header .site-branding {
   grid-column: 2 / 3;
-  grid-row: 1;
+  grid-row: 2;
   justify-self: start;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 53, ../sass/layout.scss */
+/* line 44, ../sass/layout.scss */
 .site-header .site-branding .custom-logo-link {
   width: 120px;
 }
-/* line 59, ../sass/layout.scss */
+/* line 50, ../sass/layout.scss */
 .site-header .main-navigation {
   grid-column: 4 / 5;
-  grid-row: 1;
+  grid-row: 2;
 }
 
-/* line 69, ../sass/layout.scss */
+/* line 60, ../sass/layout.scss */
 .content-area .site-main {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
 }
-/* line 75, ../sass/layout.scss */
+/* line 66, ../sass/layout.scss */
 .content-area .site-main .category-header {
   grid-row: 1;
   display: grid;
@@ -769,12 +769,12 @@ html, body {
   background: #fafafb;
   color: #222228;
 }
-/* line 84, ../sass/layout.scss */
+/* line 75, ../sass/layout.scss */
 .content-area .site-main .work-posts {
   grid-row: 2;
 }
 
-/* line 91, ../sass/layout.scss */
+/* line 82, ../sass/layout.scss */
 .site-footer {
   background: #3333CC;
   min-height: 200px;
@@ -876,7 +876,7 @@ a:hover, a:active {
 .main-navigation ul li a {
   padding: 0 20px 0 20px;
 }
-@media screen and (max-width: 522px) {
+@media screen and (max-width: 700px) {
   /* line 24, ../sass/navigation/menu.scss */
   .main-navigation ul li a {
     padding: 0 8px 0 8px;
