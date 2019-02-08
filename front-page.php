@@ -21,12 +21,17 @@ get_header();
 
         <?php 
         // the query
-
+        
+        $sticky = get_option( 'sticky_posts' );
         $args = array (
-        'category_name' => 'frontpage'
+        'category_name' => 'frontpage',      
+        'wpse_is_home' => true,
         );
 
-        $front_page_query = new WP_Query( $args ); ?>
+
+        
+
+        $front_page_query = new WP_Query( $args,  'p=' . $sticky[0] ); ?>
         
         <?php if ( $front_page_query->have_posts() ) : ?>
         
@@ -41,6 +46,10 @@ get_header();
             <!-- pagination here -->
         
             <?php wp_reset_postdata();
+
+
+            
+
         
         else :
         get_template_part( 'template-parts/content', 'none' );

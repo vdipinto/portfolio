@@ -160,6 +160,15 @@ function portfolio_scripts() {
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
 
 /**
+ * manually set is_home to true via pre_get_posts
+ */
+add_action( 'pre_get_posts', function ( $q )
+{
+    if ( true === $q->get( 'wpse_is_home' ) ) 
+        $q->is_home = true;
+});
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
