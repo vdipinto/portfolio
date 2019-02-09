@@ -711,29 +711,27 @@ textarea {
 */
 /* line 11, ../sass/layout.scss */
 html, body {
-  width: 100%;
-  height: 100%;
   background: #66cccc;
 }
 
 /*
  *HEADER 
 */
-/* line 23, ../sass/layout.scss */
+/* line 22, ../sass/layout.scss */
 .site-header {
   display: none;
 }
 @media screen and (min-width: 501px) {
-  /* line 23, ../sass/layout.scss */
+  /* line 22, ../sass/layout.scss */
   .site-header {
     display: grid;
-    grid-template-columns: 20px 80px 10px 1fr 10px;
+    grid-template-columns: 20px 80px 10px 1fr 20px;
     grid-auto-rows: minmax(20px, auto);
     align-items: center;
     justify-items: end;
   }
 }
-/* line 35, ../sass/layout.scss */
+/* line 37, ../sass/layout.scss */
 .site-header .site-branding {
   grid-column: 2 / 3;
   grid-row: 2;
@@ -743,45 +741,40 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-/* line 44, ../sass/layout.scss */
+/* line 46, ../sass/layout.scss */
 .site-header .site-branding .custom-logo-link {
   width: 120px;
 }
-/* line 50, ../sass/layout.scss */
+/* line 52, ../sass/layout.scss */
 .site-header .main-navigation {
   grid-column: 4 / 5;
   grid-row: 2;
 }
 
-/* line 60, ../sass/layout.scss */
-.content-area .site-main {
+/*
+ *Content area 
+*/
+/* line 62, ../sass/layout.scss */
+.site-content {
+  padding: 20px 0 20px 0;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 5px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 20px auto 20px;
+  grid-auto-rows: minmax(20px, auto);
+  align-items: center;
 }
-/* line 66, ../sass/layout.scss */
-.content-area .site-main .category-header {
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  background: #fafafb;
-  color: #222228;
-}
+
+/*
+ *Site footer 
+*/
 /* line 75, ../sass/layout.scss */
-.content-area .site-main .work-posts {
-  grid-row: 2;
-}
-
-/* line 82, ../sass/layout.scss */
 .site-footer {
-  background: #3333CC;
-  min-height: 200px;
-  color: #fff;
-  vertical-align: middle;
+  background: #333333;
+  height: 50px;
 }
 
+/*
+ *front-page 
+*/
 /*--------------------------------------------------------------
 
 
@@ -1397,36 +1390,23 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## front-page
 --------------------------------------------------------------*/
-/* line 41, ../sass/content/posts-and-pages.scss */
-.front-page {
+/* line 72, ../sass/content/posts-and-pages.scss */
+.site-main {
   display: grid;
-  grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
-  align-items: center;
+  grid-template-rows: minmax(100px, auto);
 }
-/* line 48, ../sass/content/posts-and-pages.scss */
-.front-page .alignleft {
-  grid-column: 1;
-  grid-row: 1;
-  border: 3.5px solid #100;
-  border-radius: 50%;
-  overflow: hidden;
-  justify-self: center;
-}
-/* line 57, ../sass/content/posts-and-pages.scss */
-.front-page .entry-header {
-  grid-column: 2 / 4;
+/* line 77, ../sass/content/posts-and-pages.scss */
+.site-main .front-page:nth-of-type(1) {
   grid-row: 1;
 }
-/* line 62, ../sass/content/posts-and-pages.scss */
-.front-page .entry-content {
-  grid-column: 1/ 4;
-  grid-row: 2 / 3;
-}
-/* line 67, ../sass/content/posts-and-pages.scss */
-.front-page .site-footer {
+/* line 81, ../sass/content/posts-and-pages.scss */
+.site-main .front-page:nth-of-type(2) {
   grid-row: 3;
+}
+/* line 85, ../sass/content/posts-and-pages.scss */
+.site-main .front-page:nth-of-type(3) {
+  grid-row: 2;
 }
 
 /*--------------------------------------------------------------
@@ -1435,44 +1415,44 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 83, ../sass/content/posts-and-pages.scss */
+/* line 101, ../sass/content/posts-and-pages.scss */
 .work-posts {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
 }
 @media screen and (min-width: 669px) {
-  /* line 83, ../sass/content/posts-and-pages.scss */
+  /* line 101, ../sass/content/posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     grid-gap: 20px;
   }
 }
-/* line 94, ../sass/content/posts-and-pages.scss */
+/* line 112, ../sass/content/posts-and-pages.scss */
 .work-posts .card {
   display: grid;
   border: 4px solid #fff;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 }
-/* line 99, ../sass/content/posts-and-pages.scss */
+/* line 117, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   place-self: center;
 }
-/* line 103, ../sass/content/posts-and-pages.scss */
+/* line 121, ../sass/content/posts-and-pages.scss */
 .work-posts .card p {
   font-family: "Ropa Sans", sans-serif;
   color: #222228;
   font-size: 22px;
 }
-/* line 111, ../sass/content/posts-and-pages.scss */
+/* line 129, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header {
   grid-row: 2;
 }
-/* line 114, ../sass/content/posts-and-pages.scss */
+/* line 132, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-header .entry-title {
   font-family: "Archivo Black", sans-serif;
 }
-/* line 119, ../sass/content/posts-and-pages.scss */
+/* line 137, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer {
   align-self: end;
   background: #FFCCCC;
@@ -1480,7 +1460,7 @@ a:hover, a:active {
   text-align: center;
   vertical-align: middle;
 }
-/* line 126, ../sass/content/posts-and-pages.scss */
+/* line 144, ../sass/content/posts-and-pages.scss */
 .work-posts .card .entry-footer .btn {
   display: inline-block;
   min-width: 100%;
