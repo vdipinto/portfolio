@@ -74,31 +74,65 @@
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-template-rows: minmax(100px, auto);
 
+	
+
 	.front-page:nth-of-type(1) {
 		grid-row: 1;
+		height: 600px;
 	}
 	
 	.front-page:nth-of-type(2) {
 		grid-row: 3;
+		height: 300px;
 	}
 	
 	.front-page:nth-of-type(3) {
 		grid-row: 2;
+		height: 400px;
 	}
 }
 
 
+.front-page {
+	position: relative;
+	height: 500px;
+	background-image: linear-gradient(#ff9d2f, #ff6126);
+}
+
+svg {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10vw;
+	/* set height to pixels if you want angle to change with screen width */
+  }
+
+/*--------------------------------------------------------------
+## Work-post Category
+--------------------------------------------------------------*/
+
+.category-work {
+
+	.site-main {
+		
+		.category-header {
+			grid-row: 1;
+
+
+		}
+
+	}
+}
+
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
 
 
-/*--------------------------------------------------------------
-## Work-post Category
---------------------------------------------------------------*/
 
 
 .work-posts {
+	grid-row: 2;
 	display: grid;
 	grid-template-columns: 1fr;
 	justify-content: center;

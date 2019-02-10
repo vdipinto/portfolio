@@ -48,5 +48,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<polygon fill="#66cccc" points="0,100 100,0 100,100"/>
+		</svg>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

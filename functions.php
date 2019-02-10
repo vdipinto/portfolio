@@ -169,6 +169,19 @@ add_action( 'pre_get_posts', function ( $q )
 });
 
 /**
+ * manually dding a body class to a specific page template
+ */
+
+add_filter( 'body_class', 'custom_class' );
+function custom_class( $classes ) {
+    if ( is_page_template( 'category-work.php' ) ) {
+        $classes[] = 'work';
+    }
+    return $classes;
+}
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
