@@ -1431,66 +1431,89 @@ svg {
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 118, ../sass/content/posts-and-pages.scss */
-.category-work .site-main .category-header {
-  grid-row: 1;
-}
-
-/*--------------------------------------------------------------
-## Work-post Category
---------------------------------------------------------------*/
-/* line 134, ../sass/content/posts-and-pages.scss */
+/* line 119, ../sass/content/posts-and-pages.scss */
 .work-posts {
   grid-row: 2;
   display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
+  grid-gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  grid-gap: 20px;
 }
-@media screen and (min-width: 669px) {
-  /* line 134, ../sass/content/posts-and-pages.scss */
+
+@media only screen and (min-width: 400px) {
+  /* line 128, ../sass/content/posts-and-pages.scss */
   .work-posts {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-/* line 146, ../sass/content/posts-and-pages.scss */
-.work-posts .card {
-  display: grid;
-  border: 4px solid #fff;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
+
+@media only screen and (min-width: 769px) {
+  /* line 135, ../sass/content/posts-and-pages.scss */
+  .work-posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-/* line 151, ../sass/content/posts-and-pages.scss */
-.work-posts .card .entry-header {
-  place-self: center;
+
+/* line 143, ../sass/content/posts-and-pages.scss */
+.card {
+  display: flex;
+  flex-direction: column;
 }
-/* line 155, ../sass/content/posts-and-pages.scss */
-.work-posts .card p {
-  font-family: "Ropa Sans", sans-serif;
-  color: #222228;
-  font-size: 22px;
+/* line 147, ../sass/content/posts-and-pages.scss */
+.card .inner {
+  flex: 1 1 auto;
 }
-/* line 163, ../sass/content/posts-and-pages.scss */
-.work-posts .card .entry-header {
-  grid-row: 2;
+
+/* line 156, ../sass/content/posts-and-pages.scss */
+.card:nth-child(1) .entry-title,
+.card:nth-child(1) .inner,
+.card:nth-child(1) .entry-footer,
+.card:nth-child(2) .entry-title,
+.card:nth-child(2) .inner,
+.card:nth-child(2) .entry-footer,
+.card:nth-child(3) .entry-title,
+.card:nth-child(3) .inner,
+.card:nth-child(3) .entry-footer {
+  padding: 5px;
 }
-/* line 166, ../sass/content/posts-and-pages.scss */
-.work-posts .card .entry-header .entry-title {
-  font-family: "Archivo Black", sans-serif;
-}
-/* line 171, ../sass/content/posts-and-pages.scss */
-.work-posts .card .entry-footer {
-  align-self: end;
+
+/* line 167, ../sass/content/posts-and-pages.scss */
+.card:nth-child(1) .entry-footer,
+.card:nth-child(2) .entry-footer,
+.card:nth-child(3) .entry-footer {
   background: #FFCCCC;
   display: block;
   text-align: center;
   vertical-align: middle;
 }
-/* line 178, ../sass/content/posts-and-pages.scss */
-.work-posts .card .entry-footer .btn {
+/* line 173, ../sass/content/posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .btn,
+.card:nth-child(2) .entry-footer .btn,
+.card:nth-child(3) .entry-footer .btn {
   display: inline-block;
   min-width: 100%;
   height: 100%;
-  padding: 10px 20px;
+  padding: 5px 5px;
+}
+
+/* line 182, ../sass/content/posts-and-pages.scss */
+.card:nth-child(1) {
+  background: #fff;
+}
+/* line 185, ../sass/content/posts-and-pages.scss */
+.card:nth-child(1) .entry-title a, .card:nth-child(1) .inner {
+  color: #222228;
+}
+
+/* line 190, ../sass/content/posts-and-pages.scss */
+.card:nth-child(2) {
+  background: #000;
+}
+
+/* line 194, ../sass/content/posts-and-pages.scss */
+.card:nth-child(3) {
+  background: #000;
 }
 
 /*--------------------------------------------------------------

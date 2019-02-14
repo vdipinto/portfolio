@@ -19,7 +19,9 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;?>
 	</header><!-- .entry-header -->
-    <p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
+	<div class="inner">
+		<p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
+	</div><!-- .inner -->
     <footer class="entry-footer">
         <a href="<?php esc_url( the_permalink() ) ?>" class="btn">See more</a>
 	</footer><!-- .entry-footer -->
