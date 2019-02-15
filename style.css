@@ -69,7 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans|Ropa+Sans");
-/* line 15, ../sass/normalize.scss */
+/* line 15, ../sass/_normalize.scss */
 html {
   line-height: 1.15;
   /* 1 */
@@ -82,7 +82,7 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-/* line 27, ../sass/normalize.scss */
+/* line 27, ../sass/_normalize.scss */
 body {
   margin: 0;
 }
@@ -91,7 +91,7 @@ body {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-/* line 36, ../sass/normalize.scss */
+/* line 36, ../sass/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -103,7 +103,7 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-/* line 49, ../sass/normalize.scss */
+/* line 49, ../sass/_normalize.scss */
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -117,7 +117,7 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-/* line 60, ../sass/normalize.scss */
+/* line 60, ../sass/_normalize.scss */
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -130,7 +130,7 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-/* line 72, ../sass/normalize.scss */
+/* line 72, ../sass/_normalize.scss */
 a {
   background-color: transparent;
 }
@@ -139,7 +139,7 @@ a {
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 81, ../sass/normalize.scss */
+/* line 81, ../sass/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -152,7 +152,7 @@ abbr[title] {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-/* line 91, ../sass/normalize.scss */
+/* line 91, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bolder;
@@ -162,7 +162,7 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-/* line 101, ../sass/normalize.scss */
+/* line 101, ../sass/_normalize.scss */
 code,
 kbd,
 samp {
@@ -175,7 +175,7 @@ samp {
 /**
  * Add the correct font size in all browsers.
  */
-/* line 112, ../sass/normalize.scss */
+/* line 112, ../sass/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -184,7 +184,7 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-/* line 121, ../sass/normalize.scss */
+/* line 121, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -193,12 +193,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 129, ../sass/normalize.scss */
+/* line 129, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 133, ../sass/normalize.scss */
+/* line 133, ../sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
@@ -208,7 +208,7 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
-/* line 144, ../sass/normalize.scss */
+/* line 144, ../sass/_normalize.scss */
 img {
   border-style: none;
 }
@@ -219,7 +219,7 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-/* line 156, ../sass/normalize.scss */
+/* line 156, ../sass/_normalize.scss */
 button,
 input,
 optgroup,
@@ -239,7 +239,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-/* line 172, ../sass/normalize.scss */
+/* line 172, ../sass/_normalize.scss */
 button,
 input {
   /* 1 */
@@ -250,7 +250,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-/* line 182, ../sass/normalize.scss */
+/* line 182, ../sass/_normalize.scss */
 button,
 select {
   /* 1 */
@@ -260,7 +260,7 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-/* line 191, ../sass/normalize.scss */
+/* line 191, ../sass/_normalize.scss */
 button,
 [type="button"],
 [type="reset"],
@@ -271,7 +271,7 @@ button,
 /**
  * Remove the inner border and padding in Firefox.
  */
-/* line 202, ../sass/normalize.scss */
+/* line 202, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -283,7 +283,7 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-/* line 214, ../sass/normalize.scss */
+/* line 214, ../sass/_normalize.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -294,7 +294,7 @@ button:-moz-focusring,
 /**
  * Correct the padding in Firefox.
  */
-/* line 225, ../sass/normalize.scss */
+/* line 225, ../sass/_normalize.scss */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
@@ -305,7 +305,7 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *		`fieldset` elements in all browsers.
  */
-/* line 236, ../sass/normalize.scss */
+/* line 236, ../sass/_normalize.scss */
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -324,7 +324,7 @@ legend {
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-/* line 249, ../sass/normalize.scss */
+/* line 249, ../sass/_normalize.scss */
 progress {
   vertical-align: baseline;
 }
@@ -332,7 +332,7 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-/* line 257, ../sass/normalize.scss */
+/* line 257, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -341,7 +341,7 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-/* line 266, ../sass/normalize.scss */
+/* line 266, ../sass/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -353,7 +353,7 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-/* line 276, ../sass/normalize.scss */
+/* line 276, ../sass/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -363,7 +363,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-/* line 286, ../sass/normalize.scss */
+/* line 286, ../sass/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -374,7 +374,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-/* line 295, ../sass/normalize.scss */
+/* line 295, ../sass/_normalize.scss */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -383,7 +383,7 @@ textarea {
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-/* line 304, ../sass/normalize.scss */
+/* line 304, ../sass/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -396,7 +396,7 @@ textarea {
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
-/* line 316, ../sass/normalize.scss */
+/* line 316, ../sass/_normalize.scss */
 details {
   display: block;
 }
@@ -404,7 +404,7 @@ details {
 /*
  * Add the correct display in all browsers.
  */
-/* line 324, ../sass/normalize.scss */
+/* line 324, ../sass/_normalize.scss */
 summary {
   display: list-item;
 }
@@ -414,7 +414,7 @@ summary {
 /**
  * Add the correct display in IE 10+.
  */
-/* line 335, ../sass/normalize.scss */
+/* line 335, ../sass/_normalize.scss */
 template {
   display: none;
 }
@@ -422,7 +422,7 @@ template {
 /**
  * Add the correct display in IE 10.
  */
-/* line 343, ../sass/normalize.scss */
+/* line 343, ../sass/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -441,7 +441,7 @@ template {
   font-family: 'dylovastuffregular';
   src: url("assets/fonts/dylovastuff-webfont.woff2") format("woff2"), url("assets/fonts/dylovastuff-webfont.woff") format("woff");
 }
-/* line 26, ../sass/typography.scss */
+/* line 26, ../sass/_typography.scss */
 body,
 button,
 input,
@@ -455,32 +455,32 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 40, ../sass/typography.scss */
+/* line 40, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 44, ../sass/typography.scss */
+/* line 44, ../sass/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 48, ../sass/typography.scss */
+/* line 48, ../sass/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 52, ../sass/typography.scss */
+/* line 52, ../sass/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 56, ../sass/typography.scss */
+/* line 56, ../sass/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 60, ../sass/typography.scss */
+/* line 60, ../sass/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -493,26 +493,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 72, ../sass/typography.scss */
+/* line 72, ../sass/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 78, ../sass/typography.scss */
+/* line 78, ../sass/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 83, ../sass/typography.scss */
+/* line 83, ../sass/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 88, ../sass/typography.scss */
+/* line 88, ../sass/_typography.scss */
 big {
   font-size: 125%;
 }
@@ -526,12 +526,12 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-/* line 4, ../sass/elements.scss */
+/* line 4, ../sass/_elements.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 8, ../sass/elements.scss */
+/* line 8, ../sass/_elements.scss */
 *,
 *:before,
 *:after {
@@ -539,13 +539,13 @@ html {
   box-sizing: inherit;
 }
 
-/* line 15, ../sass/elements.scss */
+/* line 15, ../sass/_elements.scss */
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
 }
 
-/* line 20, ../sass/elements.scss */
+/* line 20, ../sass/_elements.scss */
 hr {
   background-color: #ccc;
   border: 0;
@@ -553,39 +553,39 @@ hr {
   margin-bottom: 1.5em;
 }
 
-/* line 27, ../sass/elements.scss */
+/* line 27, ../sass/_elements.scss */
 ul, ol {
   margin: 0 0 1.5em 3em;
 }
 
-/* line 31, ../sass/elements.scss */
+/* line 31, ../sass/_elements.scss */
 ul {
   list-style: disc;
 }
 
-/* line 35, ../sass/elements.scss */
+/* line 35, ../sass/_elements.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 39, ../sass/elements.scss */
+/* line 39, ../sass/_elements.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 45, ../sass/elements.scss */
+/* line 45, ../sass/_elements.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 49, ../sass/elements.scss */
+/* line 49, ../sass/_elements.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-/* line 53, ../sass/elements.scss */
+/* line 53, ../sass/_elements.scss */
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -593,13 +593,13 @@ img {
   /* Adhere to container width. */
 }
 
-/* line 60, ../sass/elements.scss */
+/* line 60, ../sass/_elements.scss */
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-/* line 65, ../sass/elements.scss */
+/* line 65, ../sass/_elements.scss */
 table {
   margin: 0 0 1.5em;
   width: 100%;
@@ -611,7 +611,7 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-/* line 4, ../sass/forms.scss */
+/* line 4, ../sass/_forms.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -627,7 +627,7 @@ input[type="submit"] {
   padding: .6em 1em .4em;
 }
 
-/* line 19, ../sass/forms.scss */
+/* line 19, ../sass/_forms.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -635,7 +635,7 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
-/* line 26, ../sass/forms.scss */
+/* line 26, ../sass/_forms.scss */
 button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
@@ -646,7 +646,7 @@ input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
-/* line 36, ../sass/forms.scss */
+/* line 36, ../sass/_forms.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -669,7 +669,7 @@ textarea {
   padding: 3px;
 }
 
-/* line 58, ../sass/forms.scss */
+/* line 58, ../sass/_forms.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -689,12 +689,12 @@ textarea:focus {
   color: #111;
 }
 
-/* line 77, ../sass/forms.scss */
+/* line 77, ../sass/_forms.scss */
 select {
   border: 1px solid #ccc;
 }
 
-/* line 81, ../sass/forms.scss */
+/* line 81, ../sass/_forms.scss */
 textarea {
   width: 100%;
 }
@@ -709,7 +709,7 @@ textarea {
  *
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
-/* line 11, ../sass/layout.scss */
+/* line 11, ../sass/_layout.scss */
 html, body {
   background: #66cccc;
 }
@@ -717,12 +717,12 @@ html, body {
 /*
  *HEADER 
 */
-/* line 22, ../sass/layout.scss */
+/* line 22, ../sass/_layout.scss */
 .site-header {
   display: none;
 }
 @media screen and (min-width: 501px) {
-  /* line 22, ../sass/layout.scss */
+  /* line 22, ../sass/_layout.scss */
   .site-header {
     display: grid;
     grid-template-columns: 20px 80px 10px 1fr 20px;
@@ -731,7 +731,7 @@ html, body {
     justify-items: end;
   }
 }
-/* line 37, ../sass/layout.scss */
+/* line 37, ../sass/_layout.scss */
 .site-header .site-branding {
   grid-column: 2 / 3;
   grid-row: 2;
@@ -741,11 +741,11 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-/* line 46, ../sass/layout.scss */
+/* line 46, ../sass/_layout.scss */
 .site-header .site-branding .custom-logo-link {
   width: 120px;
 }
-/* line 52, ../sass/layout.scss */
+/* line 52, ../sass/_layout.scss */
 .site-header .main-navigation {
   grid-column: 4 / 5;
   grid-row: 2;
@@ -754,7 +754,7 @@ html, body {
 /*
  *Content area 
 */
-/* line 62, ../sass/layout.scss */
+/* line 62, ../sass/_layout.scss */
 .site-content {
   padding: 20px 0 20px 0;
   display: grid;
@@ -766,7 +766,7 @@ html, body {
 /*
  *Site footer 
 */
-/* line 75, ../sass/layout.scss */
+/* line 75, ../sass/_layout.scss */
 .site-footer {
   background: #333333;
   height: 50px;
@@ -790,27 +790,27 @@ html, body {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-/* line 7, ../sass/navigation/links.scss */
+/* line 7, ../sass/navigation/_links.scss */
 a {
   color: #fff;
 }
 
-/* line 11, ../sass/navigation/links.scss */
+/* line 11, ../sass/navigation/_links.scss */
 a:visited {
   color: #fff;
 }
 
-/* line 15, ../sass/navigation/links.scss */
+/* line 15, ../sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
   color: #757070;
 }
 
-/* line 19, ../sass/navigation/links.scss */
+/* line 19, ../sass/navigation/_links.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 23, ../sass/navigation/links.scss */
+/* line 23, ../sass/navigation/_links.scss */
 a:hover, a:active {
   outline: 0;
 }
@@ -818,12 +818,12 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Cards Links
 --------------------------------------------------------------*/
-/* line 32, ../sass/navigation/links.scss */
+/* line 32, ../sass/navigation/_links.scss */
 .entry-title a {
   text-decoration: none;
 }
 
-/* line 38, ../sass/navigation/links.scss */
+/* line 38, ../sass/navigation/_links.scss */
 .entry-footer a {
   font-weight: 530;
   color: #222228;
@@ -834,7 +834,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Footer Links
 --------------------------------------------------------------*/
-/* line 51, ../sass/navigation/links.scss */
+/* line 51, ../sass/navigation/_links.scss */
 .site-footer a {
   color: #fff;
 }
@@ -845,54 +845,54 @@ a:hover, a:active {
  /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/* line 4, ../sass/navigation/menu.scss */
+/* line 4, ../sass/navigation/_menu.scss */
 .main-navigation {
   clear: both;
   display: block;
   text-transform: uppercase;
 }
 @media screen and (min-width: 869px) {
-  /* line 4, ../sass/navigation/menu.scss */
+  /* line 4, ../sass/navigation/_menu.scss */
   .main-navigation {
     font-size: 22px;
   }
 }
 
-/* line 15, ../sass/navigation/menu.scss */
+/* line 15, ../sass/navigation/_menu.scss */
 .main-navigation ul {
   display: block;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* line 24, ../sass/navigation/menu.scss */
+/* line 24, ../sass/navigation/_menu.scss */
 .main-navigation ul li a {
   padding: 0 20px 0 20px;
 }
 @media screen and (max-width: 700px) {
-  /* line 24, ../sass/navigation/menu.scss */
+  /* line 24, ../sass/navigation/_menu.scss */
   .main-navigation ul li a {
     padding: 0 8px 0 8px;
   }
 }
-/* line 35, ../sass/navigation/menu.scss */
+/* line 35, ../sass/navigation/_menu.scss */
 .main-navigation ul li:nth-child(4) a {
   padding-right: 0px;
 }
 
-/* line 42, ../sass/navigation/menu.scss */
+/* line 42, ../sass/navigation/_menu.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 47, ../sass/navigation/menu.scss */
+/* line 47, ../sass/navigation/_menu.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
-/* line 52, ../sass/navigation/menu.scss */
+/* line 52, ../sass/navigation/_menu.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -903,52 +903,52 @@ a:hover, a:active {
   background: #fff;
 }
 
-/* line 62, ../sass/navigation/menu.scss */
+/* line 62, ../sass/navigation/_menu.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 67, ../sass/navigation/menu.scss */
+/* line 67, ../sass/navigation/_menu.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 71, ../sass/navigation/menu.scss */
+/* line 71, ../sass/navigation/_menu.scss */
 .main-navigation ul ul li {
   font-size: 18px;
 }
 
-/* line 87, ../sass/navigation/menu.scss */
+/* line 87, ../sass/navigation/_menu.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 
-/* line 92, ../sass/navigation/menu.scss */
+/* line 92, ../sass/navigation/_menu.scss */
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 
 /* Small menu. */
-/* line 103, ../sass/navigation/menu.scss */
+/* line 103, ../sass/navigation/_menu.scss */
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 106, ../sass/navigation/menu.scss */
+/* line 106, ../sass/navigation/_menu.scss */
 .menu-toggle {
   display: none;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 112, ../sass/navigation/menu.scss */
+  /* line 112, ../sass/navigation/_menu.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 117, ../sass/navigation/menu.scss */
+/* line 117, ../sass/navigation/_menu.scss */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -956,7 +956,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-/* line 124, ../sass/navigation/menu.scss */
+/* line 124, ../sass/navigation/_menu.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -964,7 +964,7 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 131, ../sass/navigation/menu.scss */
+/* line 131, ../sass/navigation/_menu.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -973,24 +973,24 @@ a:hover, a:active {
   width: 50%;
 }
 
-/* line 142, ../sass/navigation/menu.scss */
+/* line 142, ../sass/navigation/_menu.scss */
 .slicknav_menu {
   display: none;
 }
 
 @media screen and (max-width: 500px) {
   /* #primary-menu is your theme’s original menu */
-  /* line 148, ../sass/navigation/menu.scss */
+  /* line 148, ../sass/navigation/_menu.scss */
   #primary-menu {
     display: none;
   }
 
-  /* line 152, ../sass/navigation/menu.scss */
+  /* line 152, ../sass/navigation/_menu.scss */
   .slicknav_menu {
     display: block;
   }
 }
-/* line 159, ../sass/navigation/menu.scss */
+/* line 159, ../sass/navigation/_menu.scss */
 .site-title, .site-description {
   text-indent: -9999999px;
   height: 0px;
@@ -999,7 +999,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## SlickNav
 --------------------------------------------------------------*/
-/* line 1, ../sass/slickNav/core.scss */
+/* line 1, ../sass/slickNav/_core.scss */
 .slicknav_btn {
   position: relative;
   display: block;
@@ -1009,29 +1009,29 @@ a:hover, a:active {
   line-height: 1.125em;
   cursor: pointer;
 }
-/* line 9, ../sass/slickNav/core.scss */
+/* line 9, ../sass/slickNav/_core.scss */
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
   margin-top: 0.188em;
 }
 
-/* line 13, ../sass/slickNav/core.scss */
+/* line 13, ../sass/slickNav/_core.scss */
 .slicknav_menu {
   *zoom: 1;
 }
-/* line 15, ../sass/slickNav/core.scss */
+/* line 15, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_menutxt {
   display: block;
   line-height: 1.188em;
   float: left;
 }
-/* line 20, ../sass/slickNav/core.scss */
+/* line 20, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon {
   float: left;
   width: 1.125em;
   height: 0.875em;
   margin: 0.188em 0 0 0.438em;
 }
-/* line 25, ../sass/slickNav/core.scss */
+/* line 25, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon:before {
   background: transparent;
   width: 1.125em;
@@ -1040,11 +1040,11 @@ a:hover, a:active {
   content: "";
   position: absolute;
 }
-/* line 34, ../sass/slickNav/core.scss */
+/* line 34, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_no-text {
   margin: 0;
 }
-/* line 37, ../sass/slickNav/core.scss */
+/* line 37, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon-bar {
   display: block;
   width: 1.125em;
@@ -1056,84 +1056,84 @@ a:hover, a:active {
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
-/* line 48, ../sass/slickNav/core.scss */
+/* line 48, ../sass/slickNav/_core.scss */
 .slicknav_menu:before {
   content: " ";
   display: table;
 }
-/* line 52, ../sass/slickNav/core.scss */
+/* line 52, ../sass/slickNav/_core.scss */
 .slicknav_menu:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-/* line 58, ../sass/slickNav/core.scss */
+/* line 58, ../sass/slickNav/_core.scss */
 .slicknav_nav {
   clear: both;
 }
-/* line 60, ../sass/slickNav/core.scss */
+/* line 60, ../sass/slickNav/_core.scss */
 .slicknav_nav ul {
   display: block;
 }
-/* line 63, ../sass/slickNav/core.scss */
+/* line 63, ../sass/slickNav/_core.scss */
 .slicknav_nav li {
   display: block;
 }
-/* line 66, ../sass/slickNav/core.scss */
+/* line 66, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_arrow {
   font-size: 0.8em;
   margin: 0 0 0 0.4em;
 }
-/* line 70, ../sass/slickNav/core.scss */
+/* line 70, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_item {
   cursor: pointer;
 }
-/* line 72, ../sass/slickNav/core.scss */
+/* line 72, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_item a {
   display: inline;
 }
-/* line 76, ../sass/slickNav/core.scss */
+/* line 76, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_row {
   display: block;
 }
-/* line 79, ../sass/slickNav/core.scss */
+/* line 79, ../sass/slickNav/_core.scss */
 .slicknav_nav a {
   display: block;
 }
-/* line 82, ../sass/slickNav/core.scss */
+/* line 82, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_parent-link a {
   display: inline;
 }
 
-/* line 86, ../sass/slickNav/core.scss */
+/* line 86, ../sass/slickNav/_core.scss */
 .slicknav_brand {
   float: left;
 }
 
-/* line 10, ../sass/slickNav/theme.scss */
+/* line 10, ../sass/slickNav/_theme.scss */
 .slicknav_menu {
   font-size: 16px;
   box-sizing: border-box;
   background: #4c4c4c;
   padding: 5px;
 }
-/* line 15, ../sass/slickNav/theme.scss */
+/* line 15, ../sass/slickNav/_theme.scss */
 .slicknav_menu * {
   box-sizing: border-box;
 }
-/* line 18, ../sass/slickNav/theme.scss */
+/* line 18, ../sass/slickNav/_theme.scss */
 .slicknav_menu .slicknav_menutxt {
   color: #fff;
   font-weight: bold;
   text-shadow: 0 1px 3px #000;
 }
-/* line 23, ../sass/slickNav/theme.scss */
+/* line 23, ../sass/slickNav/_theme.scss */
 .slicknav_menu .slicknav_icon-bar {
   background-color: #fff;
 }
 
-/* line 27, ../sass/slickNav/theme.scss */
+/* line 27, ../sass/slickNav/_theme.scss */
 .slicknav_btn {
   margin: 5px 5px 6px;
   text-decoration: none;
@@ -1144,7 +1144,7 @@ a:hover, a:active {
   background-color: #222;
 }
 
-/* line 36, ../sass/slickNav/theme.scss */
+/* line 36, ../sass/slickNav/_theme.scss */
 .slicknav_nav {
   color: #fff;
   margin: 0;
@@ -1153,19 +1153,19 @@ a:hover, a:active {
   list-style: none;
   overflow: hidden;
 }
-/* line 43, ../sass/slickNav/theme.scss */
+/* line 43, ../sass/slickNav/_theme.scss */
 .slicknav_nav ul {
   list-style: none;
   overflow: hidden;
   padding: 0;
   margin: 0 0 0 20px;
 }
-/* line 49, ../sass/slickNav/theme.scss */
+/* line 49, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_row {
   padding: 5px 10px;
   margin: 2px 5px;
 }
-/* line 52, ../sass/slickNav/theme.scss */
+/* line 52, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_row:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -1173,14 +1173,14 @@ a:hover, a:active {
   background: #ccc;
   color: #fff;
 }
-/* line 60, ../sass/slickNav/theme.scss */
+/* line 60, ../sass/slickNav/_theme.scss */
 .slicknav_nav a {
   padding: 5px 10px;
   margin: 2px 5px;
   text-decoration: none;
   color: #fff;
 }
-/* line 65, ../sass/slickNav/theme.scss */
+/* line 65, ../sass/slickNav/_theme.scss */
 .slicknav_nav a:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -1188,22 +1188,22 @@ a:hover, a:active {
   background: #ccc;
   color: #222;
 }
-/* line 73, ../sass/slickNav/theme.scss */
+/* line 73, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_txtnode {
   margin-left: 15px;
 }
-/* line 76, ../sass/slickNav/theme.scss */
+/* line 76, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_item a {
   padding: 0;
   margin: 0;
 }
-/* line 80, ../sass/slickNav/theme.scss */
+/* line 80, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_parent-link a {
   padding: 0;
   margin: 0;
 }
 
-/* line 85, ../sass/slickNav/theme.scss */
+/* line 85, ../sass/slickNav/_theme.scss */
 .slicknav_brand {
   color: #fff;
   font-size: 18px;
@@ -1219,7 +1219,7 @@ a:hover, a:active {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-/* line 5, ../sass/accessibility.scss */
+/* line 5, ../sass/_accessibility.scss */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1234,7 +1234,7 @@ a:hover, a:active {
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-/* line 18, ../sass/accessibility.scss */
+/* line 18, ../sass/_accessibility.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -1258,7 +1258,7 @@ a:hover, a:active {
 }
 
 /* Do not show the outline on the skip link target. */
-/* line 41, ../sass/accessibility.scss */
+/* line 41, ../sass/_accessibility.scss */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -1269,21 +1269,21 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-/* line 4, ../sass/alignments.scss */
+/* line 4, ../sass/_alignments.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 10, ../sass/alignments.scss */
+/* line 10, ../sass/_alignments.scss */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-/* line 16, ../sass/alignments.scss */
+/* line 16, ../sass/_alignments.scss */
 .aligncenter {
   clear: both;
   display: block;
@@ -1297,7 +1297,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-/* line 4, ../sass/clearings.scss */
+/* line 4, ../sass/_clearings.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -1315,7 +1315,7 @@ a:hover, a:active {
   table-layout: fixed;
 }
 
-/* line 21, ../sass/clearings.scss */
+/* line 21, ../sass/_clearings.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -1331,13 +1331,13 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-/* line 4, ../sass/widgets.scss */
+/* line 4, ../sass/_widgets.scss */
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
 }
 
-/* line 9, ../sass/widgets.scss */
+/* line 9, ../sass/_widgets.scss */
 .widget select {
   max-width: 100%;
 }
@@ -1354,35 +1354,35 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-/* line 7, ../sass/content/posts-and-pages.scss */
+/* line 7, ../sass/content/_posts-and-pages.scss */
 .sticky {
   display: block;
 }
 
-/* line 11, ../sass/content/posts-and-pages.scss */
+/* line 11, ../sass/content/_posts-and-pages.scss */
 .hentry {
   margin: 0 0 1.5em;
 }
 
-/* line 15, ../sass/content/posts-and-pages.scss */
+/* line 15, ../sass/content/_posts-and-pages.scss */
 .updated:not(.published) {
   display: none;
 }
 
-/* line 19, ../sass/content/posts-and-pages.scss */
+/* line 19, ../sass/content/_posts-and-pages.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 25, ../sass/content/posts-and-pages.scss */
+/* line 25, ../sass/content/_posts-and-pages.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 31, ../sass/content/posts-and-pages.scss */
+/* line 31, ../sass/content/_posts-and-pages.scss */
 .widget-area {
   border: 2px solid #000;
 }
@@ -1390,48 +1390,66 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## front-page
 --------------------------------------------------------------*/
-/* line 72, ../sass/content/posts-and-pages.scss */
+/* line 72, ../sass/content/_posts-and-pages.scss */
 .site-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: minmax(100px, auto);
+  grid-row-gap: 50px;
 }
-/* line 79, ../sass/content/posts-and-pages.scss */
+/* line 80, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(1) {
   grid-row: 1;
-  height: 600px;
+  height: 800px;
 }
-/* line 84, ../sass/content/posts-and-pages.scss */
+/* line 86, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(2) {
   grid-row: 3;
-  height: 300px;
+  height: 400px;
+  background: green;
 }
-/* line 89, ../sass/content/posts-and-pages.scss */
+/* line 93, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(3) {
   grid-row: 2;
-  height: 400px;
+  height: 600px;
+  background: yellow;
+}
+@media only screen and (min-width: 769px) {
+  /* line 102, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(1) {
+    height: 500px;
+  }
+  /* line 107, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(2) {
+    height: 400px;
+  }
+  /* line 112, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(3) {
+    height: 500px;
+  }
 }
 
-/* line 96, ../sass/content/posts-and-pages.scss */
+/* line 124, ../sass/content/_posts-and-pages.scss */
 .front-page {
   position: relative;
-  height: 500px;
   background-image: linear-gradient(#ff9d2f, #ff6126);
+  padding: 10px;
 }
 
-/* line 102, ../sass/content/posts-and-pages.scss */
+/* line 131, ../sass/content/_posts-and-pages.scss */
 svg {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 10vw;
+  min-height: 10px;
   /* set height to pixels if you want angle to change with screen width */
 }
 
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 119, ../sass/content/posts-and-pages.scss */
+/* line 149, ../sass/content/_posts-and-pages.scss */
 .work-posts {
   grid-row: 2;
   display: grid;
@@ -1442,30 +1460,30 @@ svg {
 }
 
 @media only screen and (min-width: 400px) {
-  /* line 128, ../sass/content/posts-and-pages.scss */
+  /* line 158, ../sass/content/_posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 135, ../sass/content/posts-and-pages.scss */
+  /* line 165, ../sass/content/_posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* line 143, ../sass/content/posts-and-pages.scss */
+/* line 172, ../sass/content/_posts-and-pages.scss */
 .card {
   display: flex;
   flex-direction: column;
 }
-/* line 147, ../sass/content/posts-and-pages.scss */
+/* line 176, ../sass/content/_posts-and-pages.scss */
 .card .inner {
   flex: 1 1 auto;
 }
 
-/* line 156, ../sass/content/posts-and-pages.scss */
+/* line 185, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-title,
 .card:nth-child(1) .inner,
 .card:nth-child(1) .entry-footer,
@@ -1478,40 +1496,44 @@ svg {
   padding: 5px;
 }
 
-/* line 167, ../sass/content/posts-and-pages.scss */
-.card:nth-child(1) .entry-footer,
-.card:nth-child(2) .entry-footer,
-.card:nth-child(3) .entry-footer {
-  background: #FFCCCC;
-  display: block;
-  text-align: center;
-  vertical-align: middle;
+/* line 211, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer a,
+.card:nth-child(2) .entry-footer a,
+.card:nth-child(3) .entry-footer a {
+  text-decoration: none;
 }
-/* line 173, ../sass/content/posts-and-pages.scss */
-.card:nth-child(1) .entry-footer .btn,
-.card:nth-child(2) .entry-footer .btn,
-.card:nth-child(3) .entry-footer .btn {
-  display: inline-block;
-  min-width: 100%;
-  height: 100%;
-  padding: 5px 5px;
+/* line 214, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer a:hover, .card:nth-child(1) .entry-footer a:focus, .card:nth-child(1) .entry-footer a:active,
+.card:nth-child(2) .entry-footer a:hover,
+.card:nth-child(2) .entry-footer a:focus,
+.card:nth-child(2) .entry-footer a:active,
+.card:nth-child(3) .entry-footer a:hover,
+.card:nth-child(3) .entry-footer a:focus,
+.card:nth-child(3) .entry-footer a:active {
+  text-decoration: none;
+}
+/* line 231, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .bg-gradient4 span,
+.card:nth-child(2) .bg-gradient4 span,
+.card:nth-child(3) .bg-gradient4 span {
+  text-transform: capitalize;
 }
 
-/* line 182, ../sass/content/posts-and-pages.scss */
+/* line 238, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) {
   background: #fff;
 }
-/* line 185, ../sass/content/posts-and-pages.scss */
+/* line 241, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-title a, .card:nth-child(1) .inner {
   color: #222228;
 }
 
-/* line 190, ../sass/content/posts-and-pages.scss */
+/* line 246, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(2) {
   background: #000;
 }
 
-/* line 194, ../sass/content/posts-and-pages.scss */
+/* line 250, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(3) {
   background: #000;
 }
@@ -1522,12 +1544,12 @@ svg {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 4, ../sass/content/comments.scss */
+/* line 4, ../sass/content/_comments.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 8, ../sass/content/comments.scss */
+/* line 8, ../sass/content/_comments.scss */
 .bypostauthor {
   display: block;
 }
@@ -1539,7 +1561,7 @@ svg {
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 5, ../sass/infinite-scroll.scss */
+/* line 5, ../sass/_infinite-scroll.scss */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
@@ -1547,7 +1569,7 @@ svg {
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-/* line 12, ../sass/infinite-scroll.scss */
+/* line 12, ../sass/_infinite-scroll.scss */
 .infinity-end.neverending .site-footer {
   display: block;
 }
@@ -1564,25 +1586,25 @@ svg {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-/* line 5, ../sass/media/captions.scss */
+/* line 5, ../sass/media/_captions.scss */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 
-/* line 10, ../sass/media/captions.scss */
+/* line 10, ../sass/media/_captions.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 16, ../sass/media/captions.scss */
+/* line 16, ../sass/media/_captions.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 20, ../sass/media/captions.scss */
+/* line 20, ../sass/media/_captions.scss */
 .wp-caption-text {
   text-align: center;
 }
@@ -1593,12 +1615,12 @@ svg {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-/* line 4, ../sass/media/galleries.scss */
+/* line 4, ../sass/media/_galleries.scss */
 .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 8, ../sass/media/galleries.scss */
+/* line 8, ../sass/media/_galleries.scss */
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -1606,52 +1628,52 @@ svg {
   width: 100%;
 }
 
-/* line 15, ../sass/media/galleries.scss */
+/* line 15, ../sass/media/_galleries.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-/* line 19, ../sass/media/galleries.scss */
+/* line 19, ../sass/media/_galleries.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
 
-/* line 23, ../sass/media/galleries.scss */
+/* line 23, ../sass/media/_galleries.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-/* line 27, ../sass/media/galleries.scss */
+/* line 27, ../sass/media/_galleries.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-/* line 31, ../sass/media/galleries.scss */
+/* line 31, ../sass/media/_galleries.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
 
-/* line 35, ../sass/media/galleries.scss */
+/* line 35, ../sass/media/_galleries.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
 
-/* line 39, ../sass/media/galleries.scss */
+/* line 39, ../sass/media/_galleries.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 43, ../sass/media/galleries.scss */
+/* line 43, ../sass/media/_galleries.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
-/* line 47, ../sass/media/galleries.scss */
+/* line 47, ../sass/media/_galleries.scss */
 .gallery-caption {
   display: block;
 }
 
-/* line 14, ../sass/media/media.scss */
+/* line 14, ../sass/media/_media.scss */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1662,7 +1684,7 @@ svg {
 }
 
 /* Make sure embeds and iframes fit their containers. */
-/* line 24, ../sass/media/media.scss */
+/* line 24, ../sass/media/_media.scss */
 embed,
 iframe,
 object {
@@ -1670,7 +1692,7 @@ object {
 }
 
 /* Make sure logo link wraps around logo image. */
-/* line 31, ../sass/media/media.scss */
+/* line 31, ../sass/media/_media.scss */
 .custom-logo-link {
   display: inline-block;
 }

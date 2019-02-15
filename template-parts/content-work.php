@@ -23,6 +23,6 @@
 		<p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
 	</div><!-- .inner -->
     <footer class="entry-footer">
-        <a href="<?php esc_url( the_permalink() ) ?>" class="btn">See more</a>
+        <a href="<?php esc_url( the_permalink() ) ?>" class="fancy-button pop-onhover bg-gradient4"><span>see more</span></a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

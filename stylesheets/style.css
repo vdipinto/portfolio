@@ -1,39 +1,30 @@
 /*
-Error: Undefined variable: "$width-medium".
-        on line 99 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss
+Error: It's not clear which file to import for '@import "content/posts-and-pages"'.
+       Candidates:
+         content/_posts-and-pages.scss
+         content/posts-and-pages.scss
+       Please delete or rename all but one of these files.
+        on line 142 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss
 
-94: 		grid-row: 2;
-95: 		height: 600px;
-96: 		background: yellow;
-97: 	}
-98: 
-99: 	@media only screen and (min-width: $width-medium)  {
-100: 
-101: 		// Hello! I’m Vito. Front-end designer.
-102: 		.front-page:nth-of-type(1)  {
-103: 			height: 500px;
-104: 		}
+137: # Content
+138: --------------------------------------------------------------*\/
+139: /*--------------------------------------------------------------
+140: ## Posts and pages
+141: --------------------------------------------------------------*\/
+142: @import "content/posts-and-pages";
+143: 
+144: /*--------------------------------------------------------------
+145: ## Comments
+146: --------------------------------------------------------------*\/
+147: 
 
 Backtrace:
-/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss:99
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `map'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
+/Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss:142
+/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
+/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
 /Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/Vito/.rvm/gems/ruby-2.4.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -72,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$width-medium\".\A         on line 99 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/content/posts-and-pages.scss\A \A 94: 		grid-row: 2;\A 95: 		height: 600px;\A 96: 		background: yellow;\A 97: 	}\A 98: \A 99: 	@media only screen and (min-width: $width-medium)  {\A 100: \A 101: 		// Hello! I’m Vito. Front-end designer.\A 102: 		.front-page:nth-of-type(1)  {\A 103: 			height: 500px;\A 104: 		}"; }
+  content: "Error: It's not clear which file to import for '@import \"content/posts-and-pages\"'.\A        Candidates:\A          content/_posts-and-pages.scss\A          content/posts-and-pages.scss\A        Please delete or rename all but one of these files.\A         on line 142 of /Applications/MAMP/htdocs/portfolio/wp-content/themes/portfolio/sass/style.scss\A \A 137: # Content\A 138: --------------------------------------------------------------*/\A 139: /*--------------------------------------------------------------\A 140: ## Posts and pages\A 141: --------------------------------------------------------------*/\A 142: @import \"content/posts-and-pages\";\A 143: \A 144: /*--------------------------------------------------------------\A 145: ## Comments\A 146: --------------------------------------------------------------*/\A 147: "; }
