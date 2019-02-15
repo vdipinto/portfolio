@@ -56,6 +56,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Variables
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+/* Mixins */
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1459,7 +1463,7 @@ svg {
   grid-gap: 20px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
   /* line 158, ../sass/content/_posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(2, 1fr);
@@ -1496,13 +1500,23 @@ svg {
   padding: 5px;
 }
 
-/* line 211, ../sass/content/_posts-and-pages.scss */
+/* line 223, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer,
+.card:nth-child(2) .entry-footer,
+.card:nth-child(3) .entry-footer {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  /* fancy Button */
+}
+/* line 229, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer a,
 .card:nth-child(2) .entry-footer a,
 .card:nth-child(3) .entry-footer a {
   text-decoration: none;
+  text-transform: uppercase;
 }
-/* line 214, ../sass/content/_posts-and-pages.scss */
+/* line 235, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer a:hover, .card:nth-child(1) .entry-footer a:focus, .card:nth-child(1) .entry-footer a:active,
 .card:nth-child(2) .entry-footer a:hover,
 .card:nth-child(2) .entry-footer a:focus,
@@ -1512,28 +1526,193 @@ svg {
 .card:nth-child(3) .entry-footer a:active {
   text-decoration: none;
 }
-/* line 231, ../sass/content/_posts-and-pages.scss */
-.card:nth-child(1) .bg-gradient4 span,
-.card:nth-child(2) .bg-gradient4 span,
-.card:nth-child(3) .bg-gradient4 span {
-  text-transform: capitalize;
+/* line 243, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button,
+.card:nth-child(2) .entry-footer .fancy-button,
+.card:nth-child(3) .entry-footer .fancy-button {
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 0.07em;
+  line-height: 24px;
+  color: #ffffff;
+  position: relative;
+}
+/* line 251, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.bg-gradient1,
+.card:nth-child(2) .entry-footer .fancy-button.bg-gradient1,
+.card:nth-child(3) .entry-footer .fancy-button.bg-gradient1 {
+  text-shadow: 0px 0px 1px #BF4C28;
+}
+/* line 255, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.bg-gradient2,
+.card:nth-child(2) .entry-footer .fancy-button.bg-gradient2,
+.card:nth-child(3) .entry-footer .fancy-button.bg-gradient2 {
+  text-shadow: 0px 0px 1px #227270;
+}
+/* line 259, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.bg-gradient3,
+.card:nth-child(2) .entry-footer .fancy-button.bg-gradient3,
+.card:nth-child(3) .entry-footer .fancy-button.bg-gradient3 {
+  text-shadow: 0 0 1px #546082;
+}
+/* line 263, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button:before,
+.card:nth-child(2) .entry-footer .fancy-button:before,
+.card:nth-child(3) .entry-footer .fancy-button:before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  position: absolute;
+  bottom: -1px;
+  left: 10px;
+  right: 10px;
+  z-index: -1;
+  border-radius: 2em;
+  filter: blur(14px) brightness(0.9);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+/* line 278, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button span,
+.card:nth-child(2) .entry-footer .fancy-button span,
+.card:nth-child(3) .entry-footer .fancy-button span {
+  display: inline-block;
+  padding: 16px 20px;
+  padding: 8px 10px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+}
+/* line 292, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button:active span,
+.card:nth-child(2) .entry-footer .fancy-button:active span,
+.card:nth-child(3) .entry-footer .fancy-button:active span {
+  filter: brightness(0.75) contrast(1.7);
+}
+/* line 296, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover span,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover span,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover span {
+  border-radius: 4px;
+}
+/* line 299, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover:before,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover:before,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover:before {
+  opacity: 0;
+  bottom: 10px;
+}
+/* line 304, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:before,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:before,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:before {
+  bottom: -7px;
+  opacity: 1;
+  filter: blur(16px);
+}
+/* line 309, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover span,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover span,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover span {
+  transform: scale(1);
+}
+/* line 314, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:active span,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:active span,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:active span {
+  filter: brightness(1) contrast(1);
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+/* line 319, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:active:before,
+.card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:active:before,
+.card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:active:before {
+  bottom: 0;
+  filter: blur(5px) brightness(0.85);
+  transition: all 0.2s ease-out;
+}
+/* line 333, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4:before,
+.card:nth-child(2) .entry-footer .bg-gradient4:before,
+.card:nth-child(3) .entry-footer .bg-gradient4:before {
+  bottom: 2px;
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
+}
+/* line 339, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4,
+.card:nth-child(2) .entry-footer .bg-gradient4,
+.card:nth-child(3) .entry-footer .bg-gradient4 {
+  transition: all 1s ease;
+}
+/* line 341, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4 span,
+.card:nth-child(2) .entry-footer .bg-gradient4 span,
+.card:nth-child(3) .entry-footer .bg-gradient4 span {
+  outline: 0px solid transparent;
+}
+/* line 344, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4:hover span,
+.card:nth-child(2) .entry-footer .bg-gradient4:hover span,
+.card:nth-child(3) .entry-footer .bg-gradient4:hover span {
+  background: #FC3D7C;
+  background: -moz-linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+  background: -webkit-linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+  background: linear-gradient(-25deg, #fc3d7c 0%, #f76a34 80%, #f76a34 100%);
+}
+/* line 347, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4:focus span, .card:nth-child(1) .entry-footer .bg-gradient4:active span,
+.card:nth-child(2) .entry-footer .bg-gradient4:focus span,
+.card:nth-child(2) .entry-footer .bg-gradient4:active span,
+.card:nth-child(3) .entry-footer .bg-gradient4:focus span,
+.card:nth-child(3) .entry-footer .bg-gradient4:active span {
+  background: #FC3D7C;
+  background: -moz-linear-gradient(25deg, #FC3D7C 0%, rgba(247, 107, 52, 0.781) 80%, rgba(247, 107, 52, 0.781) 100%);
+  background: -webkit-linear-gradient(25deg, #FC3D7C 0%, rgba(247, 107, 52, 0.781) 80%, rgba(247, 107, 52, 0.781) 100%);
+  background: linear-gradient(25deg, #fc3d7c 0%, rgba(247, 107, 52, 0.781) 80%, rgba(247, 107, 52, 0.781) 100%);
+}
+/* line 350, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4:focus span,
+.card:nth-child(2) .entry-footer .bg-gradient4:focus span,
+.card:nth-child(3) .entry-footer .bg-gradient4:focus span {
+  box-shadow: 0 0 9px #00FFF8;
+}
+/* line 354, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4:active span,
+.card:nth-child(2) .entry-footer .bg-gradient4:active span,
+.card:nth-child(3) .entry-footer .bg-gradient4:active span {
+  filter: brightness(0.85) contrast(1.3);
+}
+/* line 360, ../sass/content/_posts-and-pages.scss */
+.card:nth-child(1) .entry-footer .bg-gradient4 span,
+.card:nth-child(2) .entry-footer .bg-gradient4 span,
+.card:nth-child(3) .entry-footer .bg-gradient4 span {
+  background: #F6682F;
+  background: -moz-linear-gradient(180deg, #F6682F 0%, #F6682F 80%, #F6682F 100%);
+  background: -webkit-linear-gradient(180deg, #F6682F 0%, #F6682F 80%, #F6682F 100%);
+  background: linear-gradient(180deg, #f6682f 0%, #f6682f 80%, #f6682f 100%);
 }
 
-/* line 238, ../sass/content/_posts-and-pages.scss */
+/* line 366, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) {
   background: #fff;
 }
-/* line 241, ../sass/content/_posts-and-pages.scss */
+/* line 369, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-title a, .card:nth-child(1) .inner {
   color: #222228;
 }
 
-/* line 246, ../sass/content/_posts-and-pages.scss */
+/* line 374, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(2) {
   background: #000;
 }
 
-/* line 250, ../sass/content/_posts-and-pages.scss */
+/* line 378, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(3) {
   background: #000;
 }
