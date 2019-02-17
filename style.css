@@ -1394,128 +1394,153 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## front-page
 --------------------------------------------------------------*/
-/* line 72, ../sass/content/_posts-and-pages.scss */
+/* line 75, ../sass/content/_posts-and-pages.scss */
 .site-main {
   display: grid;
-  grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
+  grid-gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
   grid-template-rows: minmax(100px, auto);
   grid-row-gap: 50px;
 }
-/* line 78, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page {
-  grid-column: 2 / 17;
-  display: grid;
-  grid-template-columns: repeat(15, minmax(10px, 400px));
-  grid-auto-rows: min-content;
-}
-/* line 87, ../sass/content/_posts-and-pages.scss */
+/* line 85, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(1) {
   grid-row: 1;
 }
-/* line 91, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(1) .alignleft {
-  grid-column: 1 / span 4;
-  grid-row: 1;
-}
-/* line 96, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(1) .entry-header {
-  grid-column: 6 / span 16;
-  grid-row: 1;
-}
-/* line 101, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(1) .entry-content {
-  grid-column: 1 / span 16;
-  grid-row: 2;
-}
-/* line 112, ../sass/content/_posts-and-pages.scss */
+/* line 90, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(2) {
   grid-row: 3;
-  background: black;
 }
-/* line 117, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(2) .entry-header {
-  grid-column: 1 / 16;
-  grid-row: 1;
-  align-self: center;
-  justify-self: center;
-}
-/* line 124, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(2) .entry-content {
-  grid-column: 1 / 16;
-  grid-row: 2;
-}
-/* line 132, ../sass/content/_posts-and-pages.scss */
+/* line 95, ../sass/content/_posts-and-pages.scss */
 .site-main .front-page:nth-of-type(3) {
   grid-row: 2;
-  background: black;
 }
-/* line 137, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(3) .entry-header {
-  grid-column: 1 / 16;
-  grid-row: 1;
-  align-self: center;
-  justify-self: center;
-}
-/* line 144, ../sass/content/_posts-and-pages.scss */
-.site-main .front-page:nth-of-type(3) .entry-content {
-  grid-column: 1 / span 16;
-  grid-row: 2;
+@media only screen and (min-width: 769px) {
+  /* line 75, ../sass/content/_posts-and-pages.scss */
+  .site-main {
+    grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
+  }
+  /* line 105, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page {
+    grid-column: 2 / 17;
+    display: grid;
+    grid-template-columns: repeat(15, minmax(10px, 400px));
+    grid-auto-rows: minmax(150px, auto);
+  }
+  /* line 117, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(1) .alignleft {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+  }
+  /* line 122, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(1) .entry-header {
+    grid-column: 6 / span 16;
+    grid-row: 1;
+  }
+  /* line 127, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(1) .entry-content {
+    grid-column: 1 / span 16;
+    grid-row: 2;
+  }
+  /* line 132, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(1) .link-to-page {
+    grid-column: 1 / span 16;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+  }
+  /* line 145, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(2) {
+    background: black;
+  }
+  /* line 148, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(2) .entry-header {
+    grid-column: 1 / 16;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+  }
+  /* line 155, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(2) .entry-content {
+    grid-column: 1 / 16;
+    grid-row: 2;
+  }
+  /* line 160, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(2) .link-to-page {
+    grid-column: 1 / span 16;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+  }
+  /* line 170, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(3) {
+    background: black;
+  }
+  /* line 173, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(3) .entry-header {
+    grid-column: 1 / 16;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+  }
+  /* line 180, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(3) .entry-content {
+    grid-column: 1 / span 16;
+    grid-row: 2;
+  }
+  /* line 185, ../sass/content/_posts-and-pages.scss */
+  .site-main .front-page:nth-of-type(3) .link-to-page {
+    grid-column: 1 / span 16;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+  }
 }
 
-/* line 153, ../sass/content/_posts-and-pages.scss */
+/* line 196, ../sass/content/_posts-and-pages.scss */
 .front-page {
   background-image: linear-gradient(#ff9d2f, #ff6126);
   padding: 10px;
 }
 
-/* line 159, ../sass/content/_posts-and-pages.scss */
-svg {
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  height: 10vw;
-  min-height: 10px;
-  /* set height to pixels if you want angle to change with screen width */
-}
-
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-/* line 177, ../sass/content/_posts-and-pages.scss */
+/* line 217, ../sass/content/_posts-and-pages.scss */
 .work-posts {
   grid-row: 2;
   display: grid;
   grid-gap: 20px;
   max-width: 960px;
   margin: 0 auto;
-  grid-gap: 20px;
 }
 
 @media only screen and (min-width: 500px) {
-  /* line 186, ../sass/content/_posts-and-pages.scss */
+  /* line 225, ../sass/content/_posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 193, ../sass/content/_posts-and-pages.scss */
+  /* line 232, ../sass/content/_posts-and-pages.scss */
   .work-posts {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* line 200, ../sass/content/_posts-and-pages.scss */
+/* line 239, ../sass/content/_posts-and-pages.scss */
 .card {
   display: flex;
   flex-direction: column;
 }
-/* line 204, ../sass/content/_posts-and-pages.scss */
+/* line 243, ../sass/content/_posts-and-pages.scss */
 .card .inner {
   flex: 1 1 auto;
 }
 
-/* line 213, ../sass/content/_posts-and-pages.scss */
+/* line 252, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-title,
 .card:nth-child(1) .inner,
 .card:nth-child(1) .entry-footer,
@@ -1528,7 +1553,7 @@ svg {
   padding: 5px;
 }
 
-/* line 251, ../sass/content/_posts-and-pages.scss */
+/* line 290, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer,
 .card:nth-child(2) .entry-footer,
 .card:nth-child(3) .entry-footer {
@@ -1537,14 +1562,14 @@ svg {
   vertical-align: middle;
   /* fancy Button */
 }
-/* line 257, ../sass/content/_posts-and-pages.scss */
+/* line 296, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer a,
 .card:nth-child(2) .entry-footer a,
 .card:nth-child(3) .entry-footer a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 263, ../sass/content/_posts-and-pages.scss */
+/* line 302, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer a:hover, .card:nth-child(1) .entry-footer a:focus, .card:nth-child(1) .entry-footer a:active,
 .card:nth-child(2) .entry-footer a:hover,
 .card:nth-child(2) .entry-footer a:focus,
@@ -1554,7 +1579,7 @@ svg {
 .card:nth-child(3) .entry-footer a:active {
   text-decoration: none;
 }
-/* line 271, ../sass/content/_posts-and-pages.scss */
+/* line 310, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button,
 .card:nth-child(2) .entry-footer .fancy-button,
 .card:nth-child(3) .entry-footer .fancy-button {
@@ -1565,25 +1590,25 @@ svg {
   color: #ffffff;
   position: relative;
 }
-/* line 279, ../sass/content/_posts-and-pages.scss */
+/* line 318, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.bg-gradient1,
 .card:nth-child(2) .entry-footer .fancy-button.bg-gradient1,
 .card:nth-child(3) .entry-footer .fancy-button.bg-gradient1 {
   text-shadow: 0px 0px 1px #BF4C28;
 }
-/* line 283, ../sass/content/_posts-and-pages.scss */
+/* line 322, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.bg-gradient2,
 .card:nth-child(2) .entry-footer .fancy-button.bg-gradient2,
 .card:nth-child(3) .entry-footer .fancy-button.bg-gradient2 {
   text-shadow: 0px 0px 1px #227270;
 }
-/* line 287, ../sass/content/_posts-and-pages.scss */
+/* line 326, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.bg-gradient3,
 .card:nth-child(2) .entry-footer .fancy-button.bg-gradient3,
 .card:nth-child(3) .entry-footer .fancy-button.bg-gradient3 {
   text-shadow: 0 0 1px #546082;
 }
-/* line 291, ../sass/content/_posts-and-pages.scss */
+/* line 330, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button:before,
 .card:nth-child(2) .entry-footer .fancy-button:before,
 .card:nth-child(3) .entry-footer .fancy-button:before {
@@ -1600,7 +1625,7 @@ svg {
   transform-style: preserve-3d;
   transition: all 0.3s ease-out;
 }
-/* line 306, ../sass/content/_posts-and-pages.scss */
+/* line 345, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button span,
 .card:nth-child(2) .entry-footer .fancy-button span,
 .card:nth-child(3) .entry-footer .fancy-button span {
@@ -1615,26 +1640,26 @@ svg {
   transition: all 0.3s ease-out;
   text-transform: uppercase;
 }
-/* line 320, ../sass/content/_posts-and-pages.scss */
+/* line 359, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button:active span,
 .card:nth-child(2) .entry-footer .fancy-button:active span,
 .card:nth-child(3) .entry-footer .fancy-button:active span {
   filter: brightness(0.75) contrast(1.7);
 }
-/* line 324, ../sass/content/_posts-and-pages.scss */
+/* line 363, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover span,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover span,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover span {
   border-radius: 4px;
 }
-/* line 327, ../sass/content/_posts-and-pages.scss */
+/* line 366, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover:before,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover:before,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover:before {
   opacity: 0;
   bottom: 10px;
 }
-/* line 332, ../sass/content/_posts-and-pages.scss */
+/* line 371, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:before,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:before,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:before {
@@ -1642,13 +1667,13 @@ svg {
   opacity: 1;
   filter: blur(16px);
 }
-/* line 337, ../sass/content/_posts-and-pages.scss */
+/* line 376, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover span,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover span,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover span {
   transform: scale(1);
 }
-/* line 342, ../sass/content/_posts-and-pages.scss */
+/* line 381, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:active span,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:active span,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:active span {
@@ -1656,7 +1681,7 @@ svg {
   transform: scale(1);
   transition: all 0.2s ease-out;
 }
-/* line 347, ../sass/content/_posts-and-pages.scss */
+/* line 386, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .fancy-button.pop-onhover:hover:active:before,
 .card:nth-child(2) .entry-footer .fancy-button.pop-onhover:hover:active:before,
 .card:nth-child(3) .entry-footer .fancy-button.pop-onhover:hover:active:before {
@@ -1664,7 +1689,7 @@ svg {
   filter: blur(5px) brightness(0.85);
   transition: all 0.2s ease-out;
 }
-/* line 361, ../sass/content/_posts-and-pages.scss */
+/* line 400, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4:before,
 .card:nth-child(2) .entry-footer .bg-gradient4:before,
 .card:nth-child(3) .entry-footer .bg-gradient4:before {
@@ -1672,19 +1697,19 @@ svg {
   opacity: 0.6;
   transition: all 0.3s ease-out;
 }
-/* line 367, ../sass/content/_posts-and-pages.scss */
+/* line 406, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4,
 .card:nth-child(2) .entry-footer .bg-gradient4,
 .card:nth-child(3) .entry-footer .bg-gradient4 {
   transition: all 1s ease;
 }
-/* line 369, ../sass/content/_posts-and-pages.scss */
+/* line 408, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4 span,
 .card:nth-child(2) .entry-footer .bg-gradient4 span,
 .card:nth-child(3) .entry-footer .bg-gradient4 span {
   outline: 0px solid transparent;
 }
-/* line 372, ../sass/content/_posts-and-pages.scss */
+/* line 411, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4:hover span,
 .card:nth-child(2) .entry-footer .bg-gradient4:hover span,
 .card:nth-child(3) .entry-footer .bg-gradient4:hover span {
@@ -1693,7 +1718,7 @@ svg {
   background: -webkit-linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
   background: linear-gradient(-25deg, #fc3d7c 0%, #f76a34 80%, #f76a34 100%);
 }
-/* line 375, ../sass/content/_posts-and-pages.scss */
+/* line 414, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4:focus span, .card:nth-child(1) .entry-footer .bg-gradient4:active span,
 .card:nth-child(2) .entry-footer .bg-gradient4:focus span,
 .card:nth-child(2) .entry-footer .bg-gradient4:active span,
@@ -1704,19 +1729,19 @@ svg {
   background: -webkit-linear-gradient(25deg, #FC3D7C 0%, rgba(247, 107, 52, 0.781) 80%, rgba(247, 107, 52, 0.781) 100%);
   background: linear-gradient(25deg, #fc3d7c 0%, rgba(247, 107, 52, 0.781) 80%, rgba(247, 107, 52, 0.781) 100%);
 }
-/* line 378, ../sass/content/_posts-and-pages.scss */
+/* line 417, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4:focus span,
 .card:nth-child(2) .entry-footer .bg-gradient4:focus span,
 .card:nth-child(3) .entry-footer .bg-gradient4:focus span {
   box-shadow: 0 0 9px #00FFF8;
 }
-/* line 382, ../sass/content/_posts-and-pages.scss */
+/* line 421, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4:active span,
 .card:nth-child(2) .entry-footer .bg-gradient4:active span,
 .card:nth-child(3) .entry-footer .bg-gradient4:active span {
   filter: brightness(0.85) contrast(1.3);
 }
-/* line 388, ../sass/content/_posts-and-pages.scss */
+/* line 427, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-footer .bg-gradient4 span,
 .card:nth-child(2) .entry-footer .bg-gradient4 span,
 .card:nth-child(3) .entry-footer .bg-gradient4 span {
@@ -1726,21 +1751,21 @@ svg {
   background: linear-gradient(180deg, #f6682f 0%, #f6682f 80%, #f6682f 100%);
 }
 
-/* line 394, ../sass/content/_posts-and-pages.scss */
+/* line 433, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) {
   background: #fff;
 }
-/* line 397, ../sass/content/_posts-and-pages.scss */
+/* line 436, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(1) .entry-title a, .card:nth-child(1) .inner {
   color: #222228;
 }
 
-/* line 402, ../sass/content/_posts-and-pages.scss */
+/* line 441, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(2) {
   background: #000;
 }
 
-/* line 406, ../sass/content/_posts-and-pages.scss */
+/* line 445, ../sass/content/_posts-and-pages.scss */
 .card:nth-child(3) {
   background: #000;
 }

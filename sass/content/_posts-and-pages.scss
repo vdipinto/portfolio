@@ -69,33 +69,112 @@
 // 	}
 // }
 
+
+
+
 .site-main {
 	display: grid;
-	grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
+	grid-gap: 20px;
+	max-width: 960px;
+	margin: 0 auto;
+	grid-template-columns: 1fr;
 	grid-template-rows: minmax(100px, auto);
 	grid-row-gap: 50px;
 
-	.front-page {
-		grid-column: 2 / 17;
-		display: grid;
-		grid-template-columns: repeat(15, minmax(10px, 400px));
-		grid-auto-rows: min-content;
-	}
-
-	
 	// Hello! I’m Vito. Front-end designer.
 	.front-page:nth-of-type(1) {
 		grid-row: 1;
-		// height: 500px;
+	}
 
-			.alignleft {
-				grid-column: 1 / span 4;
-				grid-row: 1
-			}
+	// FEATURED WORK
+	.front-page:nth-of-type(2) {
+		grid-row: 3;
+	}
+
+	// WHAT I DO
+	.front-page:nth-of-type(3) {
+		grid-row: 2;
+	}
+
+
+
+	@media only screen and (min-width: $width-medium)  {
+
+		grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
+
+		.front-page {
+			grid-column: 2 / 17;
+			display: grid;
+			grid-template-columns: repeat(15, minmax(10px, 400px));
+			// grid-auto-rows: min-content;
+			grid-auto-rows: minmax(150px, auto);
+		}
+
+		
+		// Hello! I’m Vito. Front-end designer.
+		.front-page:nth-of-type(1) {
+
+				.alignleft {
+					grid-column: 1 / span 4;
+					grid-row: 1
+				}
+
+				.entry-header {
+					grid-column: 6 / span 16;
+					grid-row: 1
+				}
+
+				.entry-content {
+					grid-column: 1 / span 16;
+					grid-row: 2;
+				}
+
+				.link-to-page {
+					grid-column: 1 / span 16;
+					grid-row: 3;
+					align-self: center;
+					justify-self: center;		
+				}
+
+				
+
+
+		}
+		
+		// FEATURED WORK
+		.front-page:nth-of-type(2) {
+			background: black;
 
 			.entry-header {
-				grid-column: 6 / span 16;
-				grid-row: 1
+				grid-column: 1 / 16;
+				grid-row: 1;
+				align-self: center;
+				justify-self: center;
+			}
+
+			.entry-content {
+				grid-column: 1 / 16;
+				grid-row: 2;
+			}
+
+			.link-to-page {
+				grid-column: 1 / span 16;
+				grid-row: 3;
+				align-self: center;
+				justify-self: center;
+			}
+
+		}
+		
+		// WHAT I DO
+		.front-page:nth-of-type(3) {
+			background: black;
+
+			.entry-header {
+				grid-column: 1 / 16;
+				grid-row: 1;
+				align-self: center;
+				justify-self: center;
 			}
 
 			.entry-content {
@@ -103,50 +182,14 @@
 				grid-row: 2;
 			}
 
-			
-
-
-	}
-	
-	// FEATURED WORK
-	.front-page:nth-of-type(2) {
-		grid-row: 3;
-		// height: 200px;
-		background: black;
-
-		.entry-header {
-			grid-column: 1 / 16;
-			grid-row: 1;
-			align-self: center;
-			justify-self: center;
-		}
-
-		.entry-content {
-			grid-column: 1 / 16;
-			grid-row: 2;
-		}
-
-	}
-	
-	// WHAT I DO
-	.front-page:nth-of-type(3) {
-		grid-row: 2;
-		// height: 200px;
-		background: black;
-
-		.entry-header {
-			grid-column: 1 / 16;
-			grid-row: 1;
-			align-self: center;
-			justify-self: center;
-		}
-
-		.entry-content {
-			grid-column: 1 / span 16;
-			grid-row: 2;
+			.link-to-page {
+				grid-column: 1 / span 16;
+				grid-row: 3;
+				align-self: center;
+				justify-self: center;
+			}
 		}
 	}
-
 }
 
 
@@ -156,21 +199,18 @@
 	padding: 10px;
 }
 
-svg {
-	position: absolute;
-	bottom: -1px;
-	width: 100%;
-	height: 10vw;
-	min-height: 10px;
-	/* set height to pixels if you want angle to change with screen width */
-  }
+// svg {
+// 	position: absolute;
+// 	bottom: -1px;
+// 	width: 100%;
+// 	height: 10vw;
+// 	min-height: 10px;
+// 	/* set height to pixels if you want angle to change with screen width */
+//   }
 
 /*--------------------------------------------------------------
 ## Work-post Category
 --------------------------------------------------------------*/
-
-
-
 
 
 
@@ -180,7 +220,6 @@ svg {
 	grid-gap: 20px;
 	max-width: 960px;
 	margin: 0 auto;
-	grid-gap: 20px;
 }
 	
 .work-posts {

@@ -47,6 +47,68 @@
 		?>
 	</div><!-- .entry-content -->
 
+
+	<div class="link-to-page">
+		<?php if ($post->ID == 594) : ?><!-- Resume' -->				
+				<svg width="120" height="120">
+					<a href="<?php echo get_page_link(112); ?>">
+						<circle cx="60"
+								cy="60"
+								r="60"
+								fill="#007BFF" />
+					
+						<text x="60"
+							y="60"
+							fill="#FFFFFF"
+							text-anchor="middle"
+							alignment-baseline="middle">
+							Resume'
+						</text>
+					</a>
+				</svg>
+
+				
+		<?php elseif ($post->ID == 609) : ?><!-- What I Do -->
+			<svg width="120" height="120">
+				<a href="<?php echo get_page_link(115); ?>">
+					<circle cx="60"
+							cy="60"
+							r="60"
+							fill="#007BFF" />
+				
+					<text x="60"
+						y="60"
+						fill="#FFFFFF"
+						text-anchor="middle"
+						alignment-baseline="middle">
+						Send me a message
+					</text>
+				</a>
+			</svg>
+
+
+		<!-- Featured work -->
+		<?php elseif ($post->ID == 611) : ?><!-- Featured work -->
+			<svg width="120" height="120">
+				<a href="<?php echo get_page_link(112); ?>">
+					<circle cx="60"
+							cy="60"
+							r="60"
+							fill="#007BFF" />
+				
+					<text x="60"
+						y="60"
+						fill="#FFFFFF"
+						text-anchor="middle"
+						alignment-baseline="middle">
+						Check my work
+					</text>
+				</a>
+			</svg>
+
+		<?php endif;  ?>
+	</div><!-- .link-to-page -->
+
 	<footer class="entry-footer">
 		<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
 		<polygon fill="#66cccc" points="0,100 100,0 100,100"/>
