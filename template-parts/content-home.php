@@ -45,26 +45,11 @@
 	</div><!-- .entry-content -->
 
 
-	<div class="link-to-page">		
-		<div class="archive-meta"><?php echo category_description(); ?></div>	
-				<svg width="120" height="120">
-					<!-- <a href="<?php //echo get_page_link(112); ?>"> -->
-					<a href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>">
-						<circle cx="60"
-								cy="60"
-								r="60"
-								fill="#007BFF" />
-					
-						<text x="60"
-							y="60"
-							fill="#FFFFFF"
-							text-anchor="middle"
-							alignment-baseline="middle">
-							<?php echo get_post_meta($post->ID, 'linkedpagename', true); ?>
-						</text>
-					</a>
-				</svg>
+	<div class="link-to-page">			
+					<a href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
 	</div><!-- .link-to-page -->
+
+
 
 	<footer class="entry-footer">
 		<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">

@@ -17,44 +17,46 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+            <div class="container">
 
 
-        <?php 
-        // the query
-        
-        $sticky = get_option( 'sticky_posts' );
-        $args = array (
-        'category_name' => 'frontpage',      
-        'wpse_is_home' => true,
-        );
+                <?php 
+                // the query
+                
+                $sticky = get_option( 'sticky_posts' );
+                $args = array (
+                'category_name' => 'frontpage',      
+                'wpse_is_home' => true,
+                );
 
 
-        
+                
 
-        $front_page_query = new WP_Query( $args,  'p=' . $sticky[0] ); ?>
-        
-        <?php if ( $front_page_query->have_posts() ) : ?>
-        
-            <!-- pagination here -->
-        
-            <!-- the loop -->
-            <?php while ( $front_page_query->have_posts() ) : $front_page_query->the_post();
-                get_template_part( 'template-parts/content-home', get_post_type() );
-            endwhile; ?>
-            <!-- end of the loop -->
-        
-            <!-- pagination here -->
-        
-            <?php wp_reset_postdata();
+                $front_page_query = new WP_Query( $args,  'p=' . $sticky[0] ); ?>
+                
+                <?php if ( $front_page_query->have_posts() ) : ?>
+                
+                    <!-- pagination here -->
+                
+                    <!-- the loop -->
+                    <?php while ( $front_page_query->have_posts() ) : $front_page_query->the_post();
+                        get_template_part( 'template-parts/content-home', get_post_type() );
+                    endwhile; ?>
+                    <!-- end of the loop -->
+                
+                    <!-- pagination here -->
+                
+                    <?php wp_reset_postdata();
 
 
-            
+                    
 
-        
-        else :
-        get_template_part( 'template-parts/content', 'none' );
-            
-        endif; ?>
+                
+                else :
+                get_template_part( 'template-parts/content', 'none' );
+                    
+                endif; ?>
+            </div><!-- .container -->
 
 		
 
