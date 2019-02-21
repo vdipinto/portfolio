@@ -10,11 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('front-page'); ?>>
-	
-
-	
     <?php the_post_thumbnail( 'profile-thumb' , array( 'class' => 'alignleft' ) ); ?>
-	
+	 
 
 	<header class="entry-header">
 		<?php
@@ -48,10 +45,11 @@
 	</div><!-- .entry-content -->
 
 
-	<div class="link-to-page">
-		<?php if ($post->ID == 594) : ?><!-- Resume' -->				
+	<div class="link-to-page">		
+		<div class="archive-meta"><?php echo category_description(); ?></div>	
 				<svg width="120" height="120">
-					<a href="<?php echo get_page_link(112); ?>">
+					<!-- <a href="<?php //echo get_page_link(112); ?>"> -->
+					<a href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>">
 						<circle cx="60"
 								cy="60"
 								r="60"
@@ -62,51 +60,10 @@
 							fill="#FFFFFF"
 							text-anchor="middle"
 							alignment-baseline="middle">
-							Resume'
+							<?php echo get_post_meta($post->ID, 'linkedpagename', true); ?>
 						</text>
 					</a>
 				</svg>
-
-				
-		<?php elseif ($post->ID == 609) : ?><!-- What I Do -->
-			<svg width="120" height="120">
-				<a href="<?php echo get_page_link(115); ?>">
-					<circle cx="60"
-							cy="60"
-							r="60"
-							fill="#007BFF" />
-				
-					<text x="60"
-						y="60"
-						fill="#FFFFFF"
-						text-anchor="middle"
-						alignment-baseline="middle">
-						Send me a message
-					</text>
-				</a>
-			</svg>
-
-
-		<!-- Featured work -->
-		<?php elseif ($post->ID == 611) : ?><!-- Featured work -->
-			<svg width="120" height="120">
-				<a href="<?php echo get_page_link(112); ?>">
-					<circle cx="60"
-							cy="60"
-							r="60"
-							fill="#007BFF" />
-				
-					<text x="60"
-						y="60"
-						fill="#FFFFFF"
-						text-anchor="middle"
-						alignment-baseline="middle">
-						Check my work
-					</text>
-				</a>
-			</svg>
-
-		<?php endif;  ?>
 	</div><!-- .link-to-page -->
 
 	<footer class="entry-footer">

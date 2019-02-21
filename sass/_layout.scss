@@ -59,6 +59,13 @@ html, body {
  *Content area 
 */
 
+.category-header {
+	grid-column: 1 / 18;
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+}
+
 .site-content {
 	padding: 20px 0 20px 0;
 	display: grid;
