@@ -117,7 +117,7 @@
 				grid-template-columns: repeat(15, minmax(10px, 400px));
 				
 				.link-to-page {
-					grid-column: 1 / span 16;
+					grid-column: 1 / span 80;
 					grid-row: 4;
 				}		
 
@@ -211,36 +211,54 @@
 	.card {
 		display: flex;
 		flex-direction: column;
+		box-shadow: 0 3px 4px 0 rgba(0,0,0,.35);
+
+		.entry-title,
+		.inner,
+		.entry-footer {
+			padding: 5px;
+
+			a {
+				color: transparent;
+				@include background-image(linear-gradient(to right, #f12711, #f5af19));
+				color:transparent;
+				-webkit-background-clip: text;
+				background-clip: text;
+				
+
+				.underline {
+					border-bottom: 2px solid #f12711;
+
+					&:hover {
+						border-bottom: 2px solid $white;
+					}
+				}
+			}
+
+		  }
 
 		.inner {
 			flex: 1 1 auto;
 		}
 	}
 
-	.card:nth-child(1),
-	.card:nth-child(2),
-	.card:nth-child(3) {
-		
-		.entry-title,
-		.inner,
-		.entry-footer {
-			padding: 5px;
-		  }
-	}
+	
 
-
+	// Dead Pharaoh Project
 	.card:nth-child(1) {
 		background: $white;
 
+		// make tile of the card and description color white
 		.entry-title a, .inner {
 			color: $black;
 		}
 	}
-
+		// Dogtown and z boys project
 	  .card:nth-child(2) {
 		background: $black;
 	  }
 
+	//   Ready Player One Project
 	  .card:nth-child(3) {
 		background: $black;
 	  }
