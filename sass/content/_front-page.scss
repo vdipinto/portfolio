@@ -1,0 +1,192 @@
+/*--------------------------------------------------------------
+## front-page
+--------------------------------------------------------------*/
+
+
+.site-main {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(100px, auto);
+		grid-row-gap: 50px;
+	
+
+		// Hello! I’m Vito. Front-end designer.
+		.front-page:nth-of-type(1) {
+			grid-row: 1;
+		}
+
+		// FEATURED WORK
+		.front-page:nth-of-type(2){
+			grid-row: 3;
+		}
+
+		// WHAT I DO
+		.front-page:nth-of-type(3) {
+			grid-row: 2;
+		}
+
+
+		.front-page {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-auto-rows: min-content;
+			padding: 10px;
+			border: 10px solid $orange;
+			border-radius: 25px;
+			place-items: center;
+
+			.thumbnail-frontpage {
+				grid-column: 1;
+				width: 180px;
+
+			}
+
+			&:not(:nth-child(1)) {
+
+				.thumbnail-frontpage {
+					align-self: center;
+					justify-self: center;
+					max-width: 30%;
+				}
+	
+			}
+
+			.entry-header {
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+			.entry-content {
+				grid-column: 1;
+				grid-row: 3;
+			}
+
+		
+			.link-to-page {
+				grid-column: 1;
+				grid-row: 4;
+				align-self: center;
+				justify-self: center;
+
+				a {
+					display: inline-block;
+					@include button-style;
+				}
+			}	
+		}
+
+		
+	}
+
+	
+
+	@media only screen and (min-width: $width-medium)  {
+		grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
+
+		.container {
+
+			.front-page {
+				grid-column: 2 / 17;
+				grid-template-columns: repeat(15, minmax(10px, 400px));
+				grid-template-rows: minmax(20px, auto);
+				place-items: start;
+				
+
+
+				&:not(:nth-child(1)) {
+
+					.thumbnail-frontpage {
+						grid-column: 1 / span 80;
+						grid-row: 1;
+						max-width: 10%;
+					}
+		
+				}
+
+				
+				.link-to-page {
+					grid-column: 1 / span 80;
+					grid-row: 4;
+				}		
+
+			}
+
+			
+			// Hello! I’m Vito. Front-end designer.
+			.front-page:nth-of-type(1) {
+
+
+					.thumbnail-frontpage {
+						grid-column: 1 / span 6;
+						grid-row: 1
+						
+					}
+
+					.entry-header {
+						grid-column: 5 / span 16;
+						grid-row: 1
+					}
+
+					.entry-content {
+						grid-column: 5 / span 16;
+						grid-row: 1;
+						padding-top: 40px;
+					}
+			}
+			
+			// FEATURED WORK
+			.front-page:nth-of-type(2) {
+
+				&:not(:nth-child(1)) {
+
+					.thumbnail-frontpage {
+						grid-column: 1 / span 80;
+						grid-row: 1;
+						max-width: 10%;
+					}
+		
+				}
+				
+
+				.entry-header {
+					grid-column: 1 / 16;
+					grid-row: 2;
+					align-self: center;
+					justify-self: center;
+				}
+
+				
+
+				.entry-content {
+					grid-column: 1 / 16;
+					grid-row: 3;
+				}
+			}
+			
+			// WHAT I DO
+			.front-page:nth-of-type(3) {
+				
+
+				.entry-header {
+					grid-column: 1 / 16;
+					grid-row: 2;
+					align-self: center;
+					justify-self: center;
+				}
+
+				.entry-content {
+					grid-column: 1 / span 16;
+					grid-row: 3;
+				}
+			}
+		}
+	}
+}
+
+

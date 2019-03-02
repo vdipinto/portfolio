@@ -9,7 +9,7 @@
 
 
 html, body {
-	background: #66cccc;
+	background: $vanilla;
 }
 
 
@@ -24,40 +24,43 @@ html, body {
 
 
 		@media screen and (min-width: $width-small + 1) {
-		// grid-column: 2;
-		// grid-row: 2;
 		display: grid;
-		grid-template-columns: 20px 80px 10px 1fr 20px;
-		grid-auto-rows: minmax(20px, auto);
+		grid-template-columns: 20px 100px 10px 1fr 20px;
+		grid-auto-rows: minmax(30px, auto);
 		align-items: center;
 		justify-items: end;
+		background: $orange;
 	}
 
 
 	.site-branding {
-		grid-column: 2 / 3;
+		grid-column: 2;
 		grid-row: 2;
 		justify-self: start;
-		height: 50%;
+		// height: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	
 
-		.custom-logo-link {
-			width: 120px;
-		}
+		// .custom-logo-link {
+		// 	width: 120px;
+		// }
 	}
 
 
 	.main-navigation {
 		grid-column: 4 / 5;
 		grid-row: 2;
+		
 	}
 }
 
 /*
  *Content area 
 */
+
+
 
 .category-header {
 	grid-column: 1 / 18;
@@ -82,27 +85,10 @@ html, body {
 .site-footer {
 	background: #333333;
 	height: 50px;
+	color: $white;
 }
 
 
 
-
-// .category-header {
-// 	grid-row: 1;
-// 	display: grid;
-// 	grid-template-columns: 1fr;
-// 	justify-items: center;
-// 	background: #fafafb;
-// 	color: $black;
-// }
-
-// .work-posts {
-// 	grid-row: 2;	
-// }
-
-
-/*
- *front-page 
-*/
 
 

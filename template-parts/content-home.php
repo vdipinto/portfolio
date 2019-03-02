@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('front-page'); ?>>
-    <?php the_post_thumbnail( 'profile-thumb' , array( 'class' => 'alignleft' ) ); ?>
+    <?php the_post_thumbnail( 'profile-thumb' , array( 'class' => 'thumbnail-frontpage' ) ); ?>
 	 
 
 	<header class="entry-header">
@@ -46,9 +46,9 @@
 
 
 	<div class="link-to-page">			
-					<a href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
+					<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
 	</div><!-- .link-to-page -->
-
+			
 
 
 	<footer class="entry-footer">

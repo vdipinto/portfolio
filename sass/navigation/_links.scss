@@ -13,7 +13,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: $gray;
+	color: $white;
 }
 
 a:focus {
@@ -31,15 +31,16 @@ a:hover, a:active {
 .entry-title {
 	a {
 		text-decoration: none;
+		color: $black;
 	}
 }
 
 .entry-footer {
 	a {
-		font-weight: 530;
 		color: $black;
 		text-decoration: none;
 		text-transform: uppercase;
+		font-size: 14px;
 	}
 }
 

@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('contact-form'); ?>>
-  <form action="http://localhost:8888/portfolio/sample-page/contact/" method="post">
+  <form action="http://localhost:8888/portfolio/contact/" method="post">
     <label for="first-name">First Name</label>
     <input type="text" id="first-name" name="first-name" maxlength="60" required>
 

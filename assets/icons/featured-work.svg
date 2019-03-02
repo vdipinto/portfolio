@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="412px" height="412px" viewBox="0 0 412 412" style="enable-background:new 0 0 412 412;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E95D2A;}
+</style>
+<g>
+	<g>
+		<g>
+			<rect x="179.6" y="106" class="st0" width="177" height="22"/>
+		</g>
+		<polygon class="st0" points="144,92.7 130.1,80.5 88.5,127.5 67.6,108.9 55.3,122.8 90.1,153.6 		"/>
+	</g>
+	<g>
+		<g>
+			<rect x="179.6" y="200" class="st0" width="156" height="22"/>
+		</g>
+		<polygon class="st0" points="88.5,221.4 67.6,202.9 55.3,216.8 89.8,247.2 90.1,247.6 144,186.7 130.1,174.5 		"/>
+	</g>
+	<g>
+		<g>
+			<rect x="179.6" y="294" class="st0" width="140" height="22"/>
+		</g>
+		<polygon class="st0" points="88.5,315.4 67.6,296.9 55.3,310.8 89.8,341.2 90.1,341.5 144,280.7 130.1,268.4 		"/>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M337,412H75c-41.4,0-75-33.7-75-75V75C0,33.7,33.7,0,75,0h262c41.4,0,75,33.7,75,75v262
+		C412,378.3,378.3,412,337,412z M75,32c-23.7,0-43,19.3-43,43v262c0,23.7,19.3,43,43,43h262c23.7,0,43-19.3,43-43V75
+		c0-23.7-19.3-43-43-43H75z"/>
+</g>
+</svg>
