@@ -128,7 +128,21 @@ function portfolio_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+    /* Register the 'sidebar-2' sidebar for resume. */
+    register_sidebar(
+        array(
+			'name'          => esc_html__( 'Resume Widget Area', 'portfolio' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'portfolio' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+        )
+	);
 }
+
 add_action( 'widgets_init', 'portfolio_widgets_init' );
 
 /**
