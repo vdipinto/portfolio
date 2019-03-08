@@ -10,10 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
+    <h2><?php the_title(); ?></h2>
+    <?php the_meta(); ?>
+</article>
 	
 
 
 
 
-    <?php get_sidebar( 'resume' ); ?>
+    <?php //get_sidebar( 'resume' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -135,10 +135,10 @@ function portfolio_widgets_init() {
 			'name'          => esc_html__( 'Resume Widget Area', 'portfolio' ),
 			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add widgets here.', 'portfolio' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div class="sidebar-box">',
+    		'after_widget' => '</div></div>',
+			'before_title'  => '<div class="title">',
+			'after_title'   => '</div><div class="content-side-resume">',
         )
 	);
 }
@@ -182,8 +182,53 @@ add_action( 'pre_get_posts', function ( $q )
         $q->is_home = true;
 });
 
+
+add_action( 'init', 'codex_course_init' );
 /**
- * manually dding a body class to a specific page template
+ * Register a book post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_course_init() {
+	$labels = array(
+		'name'               => _x( 'Course', 'post type general name', 'your-plugin-textdomain' ),
+		'singular_name'      => _x( 'Course', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Course', 'admin menu', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Course', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New', 'course', 'your-plugin-textdomain' ),
+		'add_new_item'       => __( 'Add New Course', 'your-plugin-textdomain' ),
+		'new_item'           => __( 'New Course', 'your-plugin-textdomain' ),
+		'edit_item'          => __( 'Edit Course', 'your-plugin-textdomain' ),
+		'view_item'          => __( 'View Course', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Courses', 'your-plugin-textdomain' ),
+		'search_items'       => __( 'Search Course', 'your-plugin-textdomain' ),
+		'parent_item_colon'  => __( 'Parent Courses:', 'your-plugin-textdomain' ),
+		'not_found'          => __( 'No courses found.', 'your-plugin-textdomain' ),
+		'not_found_in_trash' => __( 'No courses found in Trash.', 'your-plugin-textdomain' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'description'        => __( 'Description.', 'your-plugin-textdomain' ),
+		'exclude_from_search'=> true,
+		'public'             => true,
+		'publicly_queryable' => false,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'course' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'page-attributes', 'custom-fields')
+	);
+
+	register_post_type( 'course', $args );
+}
+
+/**
+ * manually adding a body class to a specific page template
  */
 
 add_filter( 'body_class', 'custom_class' );

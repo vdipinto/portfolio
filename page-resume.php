@@ -18,17 +18,26 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+			$args = array(
+				'post_type'  	=> 'course',
+				'post_per_page' => 10,
+				'meta_key'		=> 'date',
+				'orderby'		=> 'meta_value',
+				'order'			=> 'DESC'
+			);
+			$courses = new WP_Query( $args );?>
 
-			get_template_part( 'template-parts/content', 'resume' );
+	<!-- the loop -->
+	<?php if ( $courses->have_posts() ) : while ( $courses->have_posts() ) : $courses->the_post(); 
+			get_template_part( 'template-parts/content-resume', get_post_type() );
+	endwhile; ?>
+	<!-- end of the loop -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+	<?php wp_reset_postdata(); ?>
 
-		endwhile; // End of the loop.
+	<?php else : ?>
+		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+	<?php endif;
 		?>
 
 		</main><!-- #main -->

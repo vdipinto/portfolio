@@ -46,7 +46,7 @@
 
 
 	<div class="link-to-page">			
-					<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
+		<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
 	</div><!-- .link-to-page -->
 			
 
