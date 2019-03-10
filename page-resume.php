@@ -18,31 +18,40 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-			$args = array(
-				'post_type'  	=> 'course',
-				'post_per_page' => 10,
-				'meta_key'		=> 'date',
-				'orderby'		=> 'meta_value',
-				'order'			=> 'DESC'
-			);
-			$courses = new WP_Query( $args );?>
 
-	<!-- the loop -->
-	<?php if ( $courses->have_posts() ) : while ( $courses->have_posts() ) : $courses->the_post(); 
-			get_template_part( 'template-parts/content-resume', get_post_type() );
-	endwhile; ?>
-	<!-- end of the loop -->
+		$args = array(
+			'post_type'  	=> 'course',
+			'post_per_page' => 10,
+			'meta_key'		=> 'date',
+			'orderby'		=> 'meta_value',
+			'order'			=> 'DESC'
+		);
+		
+		$courses = new WP_Query( $args ); ?>
 
-	<?php wp_reset_postdata(); ?>
+		<?php if ( $courses->have_posts() ) : ?>
 
-	<?php else : ?>
-		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif;
-		?>
+		<?php while ( $courses->have_posts() ) : $courses->the_post();
+			get_template_part( 'template-parts/content', 'ma' );
+		endwhile; ?>
+		<!-- end of the loop -->
+                
+        <!-- pagination here -->
+		
+		<?php wp_reset_postdata();
+		
+		else :
+        get_template_part( 'template-parts/content', 'none' );
+                    
+        endif; ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer();
+
+
+
+

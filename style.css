@@ -797,17 +797,17 @@ html, body {
 --------------------------------------------------------------*/
 /* line 7, ../sass/navigation/_links.scss */
 a {
-  color: #fff;
+  color: #222228;
 }
 
 /* line 11, ../sass/navigation/_links.scss */
 a:visited {
-  color: #fff;
+  color: #222228;
 }
 
 /* line 15, ../sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: #fff;
+  color: #222228;
 }
 
 /* line 19, ../sass/navigation/_links.scss */
