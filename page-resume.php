@@ -19,12 +19,14 @@ get_header();
 
 		<?php
 
+		
+
 		$args = array(
-			'post_type'  	=> 'course',
+			'post_type' => 'Course',
 			'post_per_page' => 10,
-			'meta_key'		=> 'date',
-			'orderby'		=> 'meta_value',
-			'order'			=> 'DESC'
+			// 'meta_key'		=> 'date',
+			// 'orderby'		=> 'meta_value',
+			// 'order'			=> 'DESC'
 		);
 		
 		$courses = new WP_Query( $args ); ?>

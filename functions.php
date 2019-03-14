@@ -185,7 +185,9 @@ add_action( 'pre_get_posts', function ( $q )
 });
 
 
+
 add_action( 'init', 'codex_course_init' );
+
 /**
  * Register a book post type.
  *
@@ -223,15 +225,15 @@ function codex_course_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'page-attributes', 'custom-fields')
+		'supports'           => array( 'title', 'editor', 'page-attributes', 'custom-fields'),
+		'taxonomies'          => array( 'category' ),
 	);
 
 	register_post_type( 'course', $args );
+	
 }
 
-/**
- * manually adding a body class to a specific page template
- */
+
 
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
