@@ -189,49 +189,74 @@ add_action( 'pre_get_posts', function ( $q )
 add_action( 'init', 'codex_course_init' );
 
 /**
- * Register a book post type.
+ * Register custom post types
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
-function codex_course_init() {
+
+add_action('init', 'all_custom_post_types');
+
+
+function all_custom_post_types() {
+
+	$types = array(
+
+		// News and Events
+		array('the_type' => 'education',
+					'single' => 'course',
+					'plural' => 'courses'),
+
+		// Careers
+		array('the_type' => 'careers',
+					'single' => 'job',
+					'plural' => 'jobs'),
+
+		// Faculty
+		array('the_type' => 'interests',
+					'single' => 'interest',
+					'plural' => 'interests')
+
+	);
+
+foreach ($types as $type) {
+
+	$the_type = $type['the_type'];
+	  $single = $type['single'];
+	  $plural = $type['plural'];
+
 	$labels = array(
-		'name'               => _x( 'Course', 'post type general name', 'your-plugin-textdomain' ),
-		'singular_name'      => _x( 'Course', 'post type singular name', 'your-plugin-textdomain' ),
-		'menu_name'          => _x( 'Course', 'admin menu', 'your-plugin-textdomain' ),
-		'name_admin_bar'     => _x( 'Course', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'course', 'your-plugin-textdomain' ),
-		'add_new_item'       => __( 'Add New Course', 'your-plugin-textdomain' ),
-		'new_item'           => __( 'New Course', 'your-plugin-textdomain' ),
-		'edit_item'          => __( 'Edit Course', 'your-plugin-textdomain' ),
-		'view_item'          => __( 'View Course', 'your-plugin-textdomain' ),
-		'all_items'          => __( 'All Courses', 'your-plugin-textdomain' ),
-		'search_items'       => __( 'Search Course', 'your-plugin-textdomain' ),
-		'parent_item_colon'  => __( 'Parent Courses:', 'your-plugin-textdomain' ),
-		'not_found'          => __( 'No courses found.', 'your-plugin-textdomain' ),
-		'not_found_in_trash' => __( 'No courses found in Trash.', 'your-plugin-textdomain' )
-	);
+		'name' => _x($plural, 'post type general name'),
+		'singular_name' => _x($single, 'post type singular name'),
+		'add_new' => _x('Add New', $single),
+		'add_new_item' => __('Add New '. $single),
+		'edit_item' => __('Edit '.$single),
+		'new_item' => __('New '.$single),
+		'view_item' => __('View '.$single),
+		'search_items' => __('Search '.$plural),
+		'not_found' =>  __('No '.$plural.' found'),
+		'not_found_in_trash' => __('No '.$plural.' found in Trash'),
+		'parent_item_colon' => ''
+	  );
 
-	$args = array(
-		'labels'             => $labels,
-		'description'        => __( 'Description.', 'your-plugin-textdomain' ),
-		'exclude_from_search'=> true,
-		'public'             => true,
-		'publicly_queryable' => false,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'course' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'page-attributes', 'custom-fields'),
-		'taxonomies'          => array( 'category' ),
-	);
+	  $args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => 5,
+		'supports' => array('title','editor','thumbnail','custom-fields', 'page-attributes')
+	  );
 
-	register_post_type( 'course', $args );
-	
+	  register_post_type($the_type, $args);
+
 }
+
+}
+
 
 
 
