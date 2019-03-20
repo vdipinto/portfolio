@@ -19,7 +19,7 @@ get_header();
 
 		<?php
 
-		$post_types = array('education', 'careers', 'interests');
+		$post_types = array('education', 'careers', 'interests'); //$post_types = array('courses', 'jobs', 'interests');
 
 		$args = array(
 			'post_type'		=> $post_types,
@@ -33,19 +33,32 @@ get_header();
 		if ( $resume_items->have_posts() ) :
 
 			foreach ($post_types as $post_type) : ?>
+				<div id='<?php echo $post_type?>'>
 
-			<div id='<?php echo $post_type?>'>
+					<?php //$post_types = get_post_types(); ?>
 
-			<?php while ( $resume_items->have_posts() ) : $resume_items->the_post(); ?>
-				
-					<?php if(get_post_type() == "{$post_type}") {
-						get_template_part( 'template-parts/content', 'ma' );
+					<?php switch($post_type) {
+						case "education": //case "courses":
+							echo "<h2>Education</h2>";
+							break;
+						case "careers": //case "jobs":
+							echo "<h2>Employment History</h2>";
+							break;
+						case "interests":
+							echo "<h2>Interests</h2>";
+							break;
 					} ?>
-					
-				<?php endwhile; ?>
-				<!-- end of the loop -->
 
-			</div>
+					<?php while ( $resume_items->have_posts() ) : $resume_items->the_post(); ?>
+						
+							<?php if(get_post_type() == "{$post_type}") {
+								get_template_part( 'template-parts/content', 'ma' );
+							} ?>
+							
+					<?php endwhile; ?>
+					<!-- end of the loop -->
+
+				</div>
 
 			<?php endforeach;
 

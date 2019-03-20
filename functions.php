@@ -202,19 +202,19 @@ function all_custom_post_types() {
 	$types = array(
 
 		// News and Events
-		array('the_type' => 'education',
-					'single' => 'course',
-					'plural' => 'courses'),
+		array('the_type' => 'education', //courses
+					'single' => 'course', //Course
+					'plural' => 'courses'), //Courses
 
 		// Careers
-		array('the_type' => 'careers',
-					'single' => 'job',
-					'plural' => 'jobs'),
+		array('the_type' => 'careers', //jobs
+					'single' => 'job', //Job
+					'plural' => 'jobs'), //Jobs
 
 		// Faculty
 		array('the_type' => 'interests',
-					'single' => 'interest',
-					'plural' => 'interests')
+					'single' => 'interest', //Interest
+					'plural' => 'interests') //Interests
 
 	);
 
