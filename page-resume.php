@@ -17,6 +17,14 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'social-nav-resume',
+			) );
+		?>
+
 		<?php
 
 		$post_types = array('education', 'careers', 'interests'); //$post_types = array('courses', 'jobs', 'interests');
