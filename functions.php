@@ -202,20 +202,20 @@ function all_custom_post_types() {
 
 	$types = array(
 
-		// News and Events
-		array('the_type' => 'education', //courses
-					'single' => 'course', //Course
-					'plural' => 'courses'), //Courses
+		// Courses
+		array('the_type' => 'courses', //courses
+					'single' => 'Course', //Course
+					'plural' => 'Courses'), //Courses
 
 		// Careers
-		array('the_type' => 'careers', //jobs
-					'single' => 'job', //Job
-					'plural' => 'jobs'), //Jobs
+		array('the_type' => 'jobs', //jobs
+					'single' => 'Job', //Job
+					'plural' => 'Jobs'), //Jobs
 
-		// Faculty
-		array('the_type' => 'interests',
-					'single' => 'interest', //Interest
-					'plural' => 'interests') //Interests
+		// Interests
+		array('the_type' => 'interests', //interests
+					'single' => 'Interest', //Interest
+					'plural' => 'Interests') //Interests
 
 	);
 
@@ -258,6 +258,37 @@ foreach ($types as $type) {
 
 }
 
+// Add the custom columns to the Courses post type:
+
+function portfolio_courses_custom_columns ($columns) {
+	$cols = array(
+		$columns['course_title'] = __( 'Course Title', 'portfolio' ),
+		$columns['university'] = __( 'University or School', 'portfolio' ),
+		$columns['period'] = __( 'Period of study', 'portfolio' ),
+	);
+	return $columns;
+}
+
+add_filter( 'manage_courses_posts_columns', 'portfolio_courses_custom_columns' );
+
+
+// Add the data to the custom columns for the book post type:
+
+function custom_course_column( $column, $post_id ) {
+	switch ( $column ) {
+
+		case 'period' :
+			echo get_post_meta( $post_id, 'period_of_study', true );
+			break;
+
+		case 'university' :
+			echo get_post_meta( $post_id , 'university_or_school' , true ); 
+			break;
+
+	}
+}
+
+add_action( 'manage_courses_posts_custom_column' , 'custom_course_column', 10, 2 );
 
 
 
