@@ -27,7 +27,7 @@ get_header();
 
 		<?php
 
-		$post_types = array('education', 'careers', 'interests'); //$post_types = array('courses', 'jobs', 'interests');
+		$post_types = array('courses', 'jobs', 'interests'); //$post_types = array('courses', 'jobs', 'interests');
 
 		$args = array(
 			'post_type'		=> $post_types,
@@ -46,10 +46,10 @@ get_header();
 					<?php //$post_types = get_post_types(); ?>
 
 					<?php switch($post_type) {
-						case "education": //case "courses":
+						case "courses": //case "courses":
 							echo "<h2>Education</h2>";
 							break;
-						case "careers": //case "jobs":
+						case "jobs": //case "jobs":
 							echo "<h2>Employment History</h2>";
 							break;
 						case "interests":

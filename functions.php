@@ -261,13 +261,31 @@ foreach ($types as $type) {
 // Add the custom columns to the Courses post type:
 
 function portfolio_courses_custom_columns ($columns) {
+	unset($columns['date']);
 	$cols = array(
-		$columns['course_title'] = __( 'Course Title', 'portfolio' ),
 		$columns['university'] = __( 'University or School', 'portfolio' ),
 		$columns['period'] = __( 'Period of study', 'portfolio' ),
 	);
+
+
+
+
+	$new = array();
+
+    foreach($columns as $key => $title) {
+        if ($key=='title') 
+        $new['course-of-study'] = 'Course of study'; // Our New Colomn Name
+        $new[$key] = $title;
+    }
+
+		unset($new['title']);
+		unset($columns['date']);
+		
+		
+	return $new;
 	return $columns;
 }
+
 
 add_filter( 'manage_courses_posts_columns', 'portfolio_courses_custom_columns' );
 
@@ -285,12 +303,27 @@ function custom_course_column( $column, $post_id ) {
 			echo get_post_meta( $post_id , 'university_or_school' , true ); 
 			break;
 
+		case 'course-of-study' :
+			$oldtitle = get_the_title();
+			$newtitle = str_replace(array("<span class='sub-title'>", "</span>"), array("", ""),$oldtitle);
+			$title = esc_attr($newtitle); 
+			echo $title; 
+			break;
 	}
 }
+
 
 add_action( 'manage_courses_posts_custom_column' , 'custom_course_column', 10, 2 );
 
 
+// function portfolio_register_widgets() {
+// 	register-widget('resumeSkills_Widget');
+// }
+
+// add_action( 'widgets_init', 'portfolio_register_widgets' );
+
+
+// add a class work for the category-work.php file
 
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
