@@ -1,6 +1,13 @@
+
+
+
+
+
+
+
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,51 +16,57 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('front-page'); ?>>
-    <?php the_post_thumbnail( 'profile-thumb' , array( 'class' => 'thumbnail-frontpage' ) ); ?>
-	 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="column-1">
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+		
+		<div class="entry-content">
+			<?php
+			the_content();
 
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;?>
-	</header><!-- .entry-header -->
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'portfolio' ),
-				array(
-					'span' => array(
-						'class' => array(),
+		</div><!-- .entry-content -->
+
+		<div class="link-to-page">			
+				<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
+		</div><!-- .link-to-page -->
+
+		<?php if ( get_edit_post_link() ) : ?>
+			<footer class="entry-footer">
+				<?php
+				edit_post_link(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'portfolio' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						get_the_title()
 					),
-				)
-			),
-			get_the_title()
-		) );
+					'<span class="edit-link">',
+					'</span>'
+				);
+				?>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+				
+			</footer><!-- .entry-footer -->
+		<?php endif; ?>
+	</div><!-- .column-1 -->
 
-
-	<div class="link-to-page">			
-		<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
-	</div><!-- .link-to-page -->
-			
-
-
-	<footer class="entry-footer">
-		<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-		<polygon fill="#66cccc" points="0,100 100,0 100,100"/>
-		</svg> -->
-	</footer><!-- .entry-footer -->
+	<div class="column-2">
+		<?php portfolio_post_thumbnail('profile-thumb' , array( 'class' => 'thumbnail-frontpage')) ; ?>
+	</div><!-- .column-2 -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->
+

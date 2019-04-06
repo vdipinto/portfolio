@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Space+Mono");
 /* line 15, ../sass/_normalize.scss */
 html {
   line-height: 1.15;
@@ -1394,6 +1394,29 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Front page
 --------------------------------------------------------------*/
+/* line 198, ../sass/content/_front-page.scss */
+#front-page article, #front-page article:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+/* line 205, ../sass/content/_front-page.scss */
+#front-page article .column-1, #front-page article:nth-of-type(3) .column-1 {
+  grid-column: 1 / 3;
+}
+/* line 209, ../sass/content/_front-page.scss */
+#front-page article .column-2, #front-page article:nth-of-type(3) .column-2 {
+  grid-column: 3;
+}
+/* line 217, ../sass/content/_front-page.scss */
+#front-page article:nth-of-type(2) .column-1 {
+  grid-column: 2 / 4;
+}
+/* line 221, ../sass/content/_front-page.scss */
+#front-page article:nth-of-type(2) .column-2 {
+  grid-column: 1;
+}
+
 /*--------------------------------------------------------------
 ## Work Posts Category
 --------------------------------------------------------------*/
@@ -1447,7 +1470,6 @@ a:hover, a:active {
   flex-direction: column;
   background: #fff;
   color: #222228;
-  font-family: "Archivo Black", sans-serif;
 }
 /* line 51, ../sass/content/_work-post-category.scss */
 .card .card-container .description-work {

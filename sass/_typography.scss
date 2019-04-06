@@ -12,9 +12,9 @@
 
 
 // Font Stacks variables
-$archivio: 'Archivo Black', sans-serif;
-$ropa-sans: 'Ropa Sans', sans-serif;
-$open-sans:'Open Sans', sans-serif;
+$Space: 'Space Mono', monospace;
+$Mont: 'Montserrat', sans-serif;
+
 
 
 
@@ -88,5 +88,5 @@ big {
 ## Import Google Fonts	
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Space+Mono');
 
