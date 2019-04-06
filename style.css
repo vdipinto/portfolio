@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans|Ropa+Sans");
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
 /* line 15, ../sass/_normalize.scss */
 html {
   line-height: 1.15;
@@ -436,15 +436,7 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@font-face {
-  font-family: 'Radikal Black Italic';
-  src: url("fonts/3792D1_0_0.woff2") format("woff2"), url("fonts/3792D1_0_0.woff") format("woff");
-}
-@font-face {
-  font-family: 'dylovastuffregular';
-  src: url("assets/fonts/dylovastuff-webfont.woff2") format("woff2"), url("assets/fonts/dylovastuff-webfont.woff") format("woff");
-}
-/* line 26, ../sass/_typography.scss */
+/* line 21, ../sass/_typography.scss */
 body,
 button,
 input,
@@ -452,38 +444,38 @@ select,
 optgroup,
 textarea {
   color: #222228;
-  font-family: 'dylovastuffregular';
+  font-family: 'Space Mono', monospace;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* line 40, ../sass/_typography.scss */
+/* line 35, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 44, ../sass/_typography.scss */
+/* line 39, ../sass/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 48, ../sass/_typography.scss */
+/* line 43, ../sass/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 52, ../sass/_typography.scss */
+/* line 47, ../sass/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 56, ../sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 60, ../sass/_typography.scss */
+/* line 55, ../sass/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -496,26 +488,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 72, ../sass/_typography.scss */
+/* line 67, ../sass/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 78, ../sass/_typography.scss */
+/* line 73, ../sass/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 83, ../sass/_typography.scss */
+/* line 78, ../sass/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 88, ../sass/_typography.scss */
+/* line 83, ../sass/_typography.scss */
 big {
   font-size: 125%;
 }
@@ -753,15 +745,21 @@ html, body {
 /*
  *Content area 
 */
-/* line 65, ../sass/_layout.scss */
-.category-header {
+/* line 62, ../sass/_layout.scss */
+.site-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 69, ../sass/_layout.scss */
+.category-header, .page-header {
   grid-column: 1 / 18;
   align-self: center;
   justify-self: center;
   text-align: center;
 }
 
-/* line 72, ../sass/_layout.scss */
+/* line 76, ../sass/_layout.scss */
 .site-content {
   padding: 20px 0 20px 0;
   display: grid;
@@ -773,7 +771,7 @@ html, body {
 /*
  *Site footer 
 */
-/* line 85, ../sass/_layout.scss */
+/* line 89, ../sass/_layout.scss */
 .site-footer {
   background: #333333;
   height: 50px;
@@ -1397,167 +1395,6 @@ a:hover, a:active {
 ## Front page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## front-page
---------------------------------------------------------------*/
-/* line 6, ../sass/content/_front-page.scss */
-.site-main {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-/* line 10, ../sass/content/_front-page.scss */
-.site-main .container {
-  max-width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(100px, auto);
-  grid-row-gap: 50px;
-}
-/* line 20, ../sass/content/_front-page.scss */
-.site-main .container .front-page:nth-of-type(1) {
-  grid-row: 1;
-}
-/* line 25, ../sass/content/_front-page.scss */
-.site-main .container .front-page:nth-of-type(2) {
-  grid-row: 3;
-}
-/* line 30, ../sass/content/_front-page.scss */
-.site-main .container .front-page:nth-of-type(3) {
-  grid-row: 2;
-}
-/* line 35, ../sass/content/_front-page.scss */
-.site-main .container .front-page {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: min-content;
-  padding: 10px;
-  border: 10px solid #e95d2a;
-  border-radius: 25px;
-  place-items: center;
-}
-/* line 44, ../sass/content/_front-page.scss */
-.site-main .container .front-page .thumbnail-frontpage {
-  grid-column: 1;
-  width: 180px;
-}
-/* line 52, ../sass/content/_front-page.scss */
-.site-main .container .front-page:not(:nth-child(1)) .thumbnail-frontpage {
-  align-self: center;
-  justify-self: center;
-  max-width: 30%;
-}
-/* line 60, ../sass/content/_front-page.scss */
-.site-main .container .front-page .entry-header {
-  grid-column: 1;
-  grid-row: 2;
-}
-/* line 65, ../sass/content/_front-page.scss */
-.site-main .container .front-page .entry-content {
-  grid-column: 1;
-  grid-row: 3;
-}
-/* line 71, ../sass/content/_front-page.scss */
-.site-main .container .front-page .link-to-page {
-  grid-column: 1;
-  grid-row: 4;
-  align-self: center;
-  justify-self: center;
-}
-/* line 77, ../sass/content/_front-page.scss */
-.site-main .container .front-page .link-to-page a {
-  display: inline-block;
-  display: inline-block;
-  font-size: 15px;
-  line-height: 18px;
-  cursor: pointer;
-  padding: .5em 1em;
-  outline: none;
-  border-radius: 4px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  background: #e95d2a;
-}
-/* line 51, ../sass/_mixins.scss */
-.site-main .container .front-page .link-to-page a:hover {
-  background: #d34e2a;
-}
-/* line 55, ../sass/_mixins.scss */
-.site-main .container .front-page .link-to-page a:active {
-  background: #d34e2a;
-}
-@media only screen and (min-width: 769px) {
-  /* line 6, ../sass/content/_front-page.scss */
-  .site-main {
-    grid-template-columns: 100px repeat(15, minmax(10px, 400px)) 100px;
-  }
-  /* line 94, ../sass/content/_front-page.scss */
-  .site-main .container .front-page {
-    grid-column: 2 / 17;
-    grid-template-columns: repeat(15, minmax(10px, 400px));
-    grid-template-rows: minmax(20px, auto);
-    place-items: start;
-  }
-  /* line 104, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:not(:nth-child(1)) .thumbnail-frontpage {
-    grid-column: 1 / span 80;
-    grid-row: 1;
-    max-width: 10%;
-  }
-  /* line 113, ../sass/content/_front-page.scss */
-  .site-main .container .front-page .link-to-page {
-    grid-column: 1 / span 80;
-    grid-row: 4;
-  }
-  /* line 125, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(1) .thumbnail-frontpage {
-    grid-column: 1 / span 6;
-    grid-row: 1;
-  }
-  /* line 131, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(1) .entry-header {
-    grid-column: 5 / span 16;
-    grid-row: 1;
-  }
-  /* line 136, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(1) .entry-content {
-    grid-column: 5 / span 16;
-    grid-row: 1;
-    padding-top: 40px;
-  }
-  /* line 148, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(2):not(:nth-child(1)) .thumbnail-frontpage {
-    grid-column: 1 / span 80;
-    grid-row: 1;
-    max-width: 10%;
-  }
-  /* line 157, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(2) .entry-header {
-    grid-column: 1 / 16;
-    grid-row: 2;
-    align-self: center;
-    justify-self: center;
-  }
-  /* line 166, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(2) .entry-content {
-    grid-column: 1 / 16;
-    grid-row: 3;
-  }
-  /* line 176, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(3) .entry-header {
-    grid-column: 1 / 16;
-    grid-row: 2;
-    align-self: center;
-    justify-self: center;
-  }
-  /* line 183, ../sass/content/_front-page.scss */
-  .site-main .container .front-page:nth-of-type(3) .entry-content {
-    grid-column: 1 / span 16;
-    grid-row: 3;
-  }
-}
-
-/*--------------------------------------------------------------
 ## Work Posts Category
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1659,6 +1496,25 @@ a:hover, a:active {
 .card .card-container .description-work a:hover .icon-arrow-right,
 .card .card-container .entry-footer a:hover .icon-arrow-right {
   fill: #757070;
+}
+
+/*--------------------------------------------------------------
+## Work Posts Category
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## page-resume 
+--------------------------------------------------------------*/
+/* line 8, ../sass/content/_page-resume.scss */
+#post-112 ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+/* line 13, ../sass/content/_page-resume.scss */
+#post-112 #social-nav-resume {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
 /*--------------------------------------------------------------

@@ -16,6 +16,12 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
+		<header class="page-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .page-header -->
 
 
 		<?php
@@ -25,9 +31,13 @@ get_header();
 			) );
 		?>
 
+		<?php $personal_statement = new WP_Query("page_id=742"); while($personal_statement->have_posts()) : $personal_statement->the_post();?>
+				<?php the_content(); ?>
+		<?php endwhile; ?>
+
 		<?php
 
-		$post_types = array('courses', 'jobs', 'interests'); //$post_types = array('courses', 'jobs', 'interests');
+		$post_types = array('courses', 'jobs', 'interests'); 
 
 		$args = array(
 			'post_type'		=> $post_types,
@@ -43,13 +53,13 @@ get_header();
 			foreach ($post_types as $post_type) : ?>
 				<div id='<?php echo $post_type?>'>
 
-					<?php //$post_types = get_post_types(); ?>
+
 
 					<?php switch($post_type) {
-						case "courses": //case "courses":
+						case "courses": 
 							echo "<h2>Education</h2>";
 							break;
-						case "jobs": //case "jobs":
+						case "jobs": 
 							echo "<h2>Employment History</h2>";
 							break;
 						case "interests":
@@ -73,13 +83,17 @@ get_header();
 		wp_reset_postdata();
 		
 		else :
-        get_template_part( 'template-parts/content', 'none' );
-                    
-        endif; ?>
-
+		get_template_part( 'template-parts/content', 'none' );
+					
+		endif; ?>
+		<!-- Get side for the resume -->
+		<?php get_sidebar('resume'); ?>
+		</article><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
 <?php
+
 get_footer();
 

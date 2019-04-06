@@ -9,6 +9,6 @@
 
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+<aside id="secondary-sidebar" class="widget-area">
+	<?php dynamic_sidebar( 'Resume Widget Area' ); ?>
 </aside><!-- #secondary -->

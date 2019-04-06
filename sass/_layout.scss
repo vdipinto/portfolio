@@ -59,10 +59,14 @@ html, body {
 /*
  *Content area 
 */
+.site-main {		
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
 
 
-.category-header {
+.category-header, .page-header {
 	grid-column: 1 / 18;
 	align-self: center;
 	justify-self: center;

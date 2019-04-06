@@ -47,7 +47,7 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'portfolio' ),
-			'menu-2' => esc_html__( 'Social nav for resume', 'portfolio'  ),
+			'menu-2' => esc_html__( 'Social-resume', 'portfolio'  ),
 		) );
 
 		/*
@@ -146,7 +146,93 @@ function portfolio_widgets_init() {
 	);
 }
 
+
 add_action( 'widgets_init', 'portfolio_widgets_init' );
+
+/////////////////////////////
+// Core Specialty widget////
+////////////////////////////
+// Description: This is a custm widget to list my core specialities skills///
+
+// use widgets_init Action hook to execute custom function
+add_action( 'widgets_init', 'prowp_register_widgets' );
+
+ //register our widget
+function prowp_register_widgets() {
+
+    register_widget( 'prowp_widget' );
+
+}
+
+//prowpwidget class
+class prowp_widget extends WP_Widget {
+
+    //process our new widget
+    function __construct() {
+
+        $widget_ops = array(
+            'classname'   => 'prowp_widget_class',
+            'description' => 'Example widget that displays a user\'s bio.' );
+        parent::__construct( 'prowp_widget', 'Bio Widget', $widget_ops );  // parent::__construct( 'css-class', 'Title', $widget_ops );
+
+    }
+
+     //build our widget settings form
+    function form( $instance ) {
+        $defaults = array(
+            'skill'  => 'add new skill',);
+        $instance = wp_parse_args( (array) $instance, $defaults );
+        $skill = $instance['skill'];
+
+        ?>	
+
+
+			<p>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'skill' ) ); ?>">My Skills:</label>
+				<input class="widefat" name="<?php echo $this->get_field_name( 'skill' ); ?>" type="text" value="<?php echo esc_attr( $skill ); ?>">
+    		</p>
+
+			
+        <?php
+    }
+
+    //save our widget settings
+    function update( $new_instance, $old_instance ) {
+
+        $instance = $old_instance;
+    
+        $instance['skill']  = sanitize_text_field( $new_instance['skill'] );
+       
+
+        return $instance;
+
+    }
+
+    //display our widget
+    function widget( $args, $instance ) {
+        extract( $args );
+
+        echo $before_widget;
+
+        
+        $skill = ( empty( $instance['skill'] ) ) ? '&nbsp;' : $instance['skill'];
+      
+
+        if ( !empty( $title ) ) {
+            echo $before_title . esc_html( $title ) . $after_title;
+        }
+
+        echo '<p> ' . esc_html( $skill ) . '</p>';
+       
+
+        echo $after_widget;
+
+    }
+}
+
+
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -203,19 +289,19 @@ function all_custom_post_types() {
 	$types = array(
 
 		// Courses
-		array('the_type' => 'courses', //courses
-					'single' => 'Course', //Course
-					'plural' => 'Courses'), //Courses
+		array('the_type' => 'courses', 
+					'single' => 'Course', 
+					'plural' => 'Courses'), 
 
 		// Careers
-		array('the_type' => 'jobs', //jobs
-					'single' => 'Job', //Job
-					'plural' => 'Jobs'), //Jobs
+		array('the_type' => 'jobs', 
+					'single' => 'Job', 
+					'plural' => 'Jobs'), 
 
 		// Interests
-		array('the_type' => 'interests', //interests
-					'single' => 'Interest', //Interest
-					'plural' => 'Interests') //Interests
+		array('the_type' => 'interests', 
+					'single' => 'Interest', 
+					'plural' => 'Interests')
 
 	);
 
@@ -265,6 +351,7 @@ function portfolio_courses_custom_columns ($columns) {
 	$cols = array(
 		$columns['university'] = __( 'University or School', 'portfolio' ),
 		$columns['period'] = __( 'Period of study', 'portfolio' ),
+		$columns['city'] = __( 'City', 'portfolio' ),
 	);
 
 
@@ -279,7 +366,7 @@ function portfolio_courses_custom_columns ($columns) {
     }
 
 		unset($new['title']);
-		unset($columns['date']);
+		// unset($columns['date']);
 		
 		
 	return $new;
@@ -303,6 +390,10 @@ function custom_course_column( $column, $post_id ) {
 			echo get_post_meta( $post_id , 'university_or_school' , true ); 
 			break;
 
+		case 'city' :
+			echo get_post_meta( $post_id, 'City', true );
+			break;
+
 		case 'course-of-study' :
 			$oldtitle = get_the_title();
 			$newtitle = str_replace(array("<span class='sub-title'>", "</span>"), array("", ""),$oldtitle);
@@ -316,33 +407,105 @@ function custom_course_column( $column, $post_id ) {
 add_action( 'manage_courses_posts_custom_column' , 'custom_course_column', 10, 2 );
 
 
-// function portfolio_register_widgets() {
-// 	register-widget('resumeSkills_Widget');
-// }
+// Add the custom columns to the jobs post type:
 
-// add_action( 'widgets_init', 'portfolio_register_widgets' );
+function portfolio_jobs_custom_columns ($columns) {
+	unset($columns['date']);
+	$cols = array(
+		$columns['city'] = __( 'City', 'portfolio' ),
+		$columns['employer'] = __( 'Employer', 'portfolio' ),
+		$columns['period-of-work'] = __( 'Period of work', 'portfolio' ),
+		$columns['key-achievements'] = __( 'Period of work', 'portfolio' ),
+	);
+
+
+
+
+	$new = array();
+
+    foreach($columns as $key => $title) {
+        if ($key=='title') 
+        $new['job-title'] = 'Job Title'; // Our New Colomn Name
+        $new[$key] = $title;
+    }
+
+		unset($new['title']);
+		
+		
+		
+	return $new;
+	return $columns;
+}
+
+
+add_filter( 'manage_jobs_posts_columns', 'portfolio_jobs_custom_columns' );
+
+
+// Add the data to the custom columns for the jobs post type:
+
+function custom_job_column( $column, $post_id ) {
+	switch ( $column ) {
+
+		case 'city' :
+			echo get_post_meta( $post_id, 'City', true );
+			break;
+
+		case 'employer' :
+			echo get_post_meta( $post_id , 'employer' , true ); 
+			break;
+
+		case 'period-of-work' :
+			echo get_post_meta( $post_id, 'period_of_work', true );
+			break;
+
+		case 'key-achievements' :
+			echo get_post_meta( $post_id, 'key_achievements', true );
+			break;
+
+		case 'job-title' :
+			$oldtitle = get_the_title();
+			$newtitle = str_replace(array("<span class='sub-title'>", "</span>"), array("", ""),$oldtitle);
+			$title = esc_attr($newtitle); 
+			echo $title; 
+			break;
+	}
+}
+
+
+add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
+
+
+
 
 
 // add a class work for the category-work.php file
 
-add_filter( 'body_class', 'custom_class' );
-function custom_class( $classes ) {
-    if ( is_page_template( 'category-work.php' ) ) {
-        $classes[] = 'work';
-    }
-    return $classes;
-}
+// add_filter( 'body_class', 'custom_class' );
+// function custom_class( $classes ) {
+//     if ( is_page_template( 'category-work.php' ) ) {
+//         $classes[] = 'work';
+//     }
+//     return $classes;
+// }
 
 
-function get_the_top_ancestor_id() {
-	global $post;
-	if ( $post->post_parent ) {
-		$ancestors = array_reverse( get_post_ancestors( $post->ID ) );
-		return $ancestors[0];
-	} else {
-		return $post->ID;
+
+
+
+
+// Enable menu descriptions 
+
+
+function add_nav_description( $item_output, $item, $depth, $args ) {
+	if ( 'menu-2' == $args->theme_location && $item->description ) {
+		$item_output = str_replace( $args->link_after . '</a>', '<div class="menu-item-description">' . esc_html( $item->description ) . '</div>' . $args->link_after . '</a>', $item_output );
 	}
-}
+	
+	return $item_output;
+	}
+add_filter( 'walker_nav_menu_start_el', 'add_nav_description', 10, 4 );
+
+
 
 
 

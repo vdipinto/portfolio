@@ -44,7 +44,7 @@ get_header();
 
         // define the inner query
         $inner_args = array(
-            'post_type'  	=> 'course',
+            'post_type'  	=> array('post','movie','actor'),
             'post_per_page' => 10,
             'meta_key'		=> 'date',
             'orderby'		=> 'meta_value',
