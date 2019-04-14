@@ -41,11 +41,6 @@ html, body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	
-
-		// .custom-logo-link {
-		// 	width: 120px;
-		// }
 	}
 
 
@@ -66,7 +61,7 @@ html, body {
 
 
 
-.category-header, .page-header {
+.category-header {
 	grid-column: 1 / 18;
 	align-self: center;
 	justify-self: center;

@@ -56,3 +56,10 @@
       background:$darkorange;
 	}
 }
+
+// FontAwesome
+@mixin font-awesome {
+   font-family: FontAwesome;
+	font-weight: 900;
+	padding-right: 4px;
+}

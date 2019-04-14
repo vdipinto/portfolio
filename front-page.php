@@ -35,17 +35,46 @@ get_header();
             $front_page = new WP_Query( $args );
 
             // go main query
-            
-            if($front_page->have_posts()) { 
+           
+            if($front_page->have_posts()) {
+                $count = 0; //set up counter variable
                 while($front_page->have_posts()) { 
-                $front_page->the_post(); 
+                $front_page->the_post();
 
-                get_template_part( 'template-parts/content', 'home' );
+                $count++; //increment the variable by 1 each time the loop executes
 
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
+                if ($count==2) {
+                
+                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                
+                }
+
+                elseif ($count==3) {
+                
+                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                
+                }
+
+                elseif ($count==6) {
+                
+                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                
+                }
+
+                // if ($count==3) {
+                
+                //     get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                
+                // }
+
+                
+                else {
+                    get_template_part( 'template-parts/content', 'home' );
+                }
+
+            
+    
+
 
                 } // endwhile
 

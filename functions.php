@@ -233,12 +233,17 @@ class prowp_widget extends WP_Widget {
 
 
 
-
 /**
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
+
+
+	wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+
+
+
 
 	// Load SlickNav
 	wp_enqueue_script( 'mobilenav-slickjs', get_template_directory_uri() . '/SlickNav-master/jquery.slicknav.js', array('jquery') );
@@ -487,6 +492,10 @@ add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
 //     }
 //     return $classes;
 // }
+
+
+
+
 
 
 
