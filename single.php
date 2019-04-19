@@ -22,7 +22,6 @@ get_header();
 
 			?>
 			
-
 			<div class="navigation">
 				<div class="alignleft"><?php previous_post_link( '%link', '%title', true ); ?></div>
 				<div class="alignright"><?php next_post_link( '%link', '%title', true );  ?></div>

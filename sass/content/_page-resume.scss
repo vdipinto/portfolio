@@ -8,11 +8,35 @@
 	grid-template-columns: 2fr 1fr ;
     grid-auto-rows: min-content;
     grid-column-gap: 20px;
+    line-height: 1.2;
 
     // Typography
-    p {
-        margin: 0 0 8px 0;
+
+
+    section {
+        background: rgb(227, 239, 241);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        grid-gap: 8px;
+        padding:10px;
+
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resume-meta {
+            padding: 10px 0;
+
+        }
+
+
     }
+
     
 
     .category-header {
@@ -52,6 +76,11 @@
         grid-column: 1;
         padding: 20px;
 
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
         .personal-statement {
             
             h2, p {
@@ -59,14 +88,6 @@
             }
         }
         
-
-
-         // list-items reset
-        ul {
-            margin: 0;
-            list-style-type: none;
-            padding: 0;
-        }
         // social navigation 
         #social-nav-resume {
             display: grid;

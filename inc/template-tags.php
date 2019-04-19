@@ -62,7 +62,12 @@ if ( ! function_exists( 'portfolio_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'portfolio' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				
+				if(strpos($categories_list, 'work') !== false) {
+					printf( '<span class="cat-links">' . esc_html__( 'Check out my other %1$s', 'portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				} else {
+					// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				}
 			}
 
 			/* translators: used between list items, there is a space after the comma */
