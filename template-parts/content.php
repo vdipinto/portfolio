@@ -19,9 +19,10 @@
 		endif;
 
 		?>
+		<?php portfolio_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<?php portfolio_post_thumbnail(); ?>
+	
 
 	<div class="entry-content">
 		<?php

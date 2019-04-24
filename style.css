@@ -862,7 +862,7 @@ a:hover, a:active {
 }
 /* line 74, ../sass/navigation/_links.scss */
 .social-button a {
-  font-size: 10px;
+  font-size: 8px;
 }
 
 /* line 80, ../sass/navigation/_links.scss */
@@ -1544,7 +1544,12 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Single
 --------------------------------------------------------------*/
-/* line 4, ../sass/content/_single.scss */
+/* line 5, ../sass/content/_single.scss */
+.single article .entry-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* line 13, ../sass/content/_single.scss */
 .single .entry-footer {
   display: flex;
   flex-direction: column;
@@ -1660,87 +1665,130 @@ a:hover, a:active {
 /* line 6, ../sass/content/_page-resume.scss */
 .resume {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: min-content;
   grid-column-gap: 20px;
-  line-height: 1.2;
 }
-/* line 16, ../sass/content/_page-resume.scss */
-.resume section {
-  background: #e3eff1;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content;
-  grid-gap: 8px;
-  padding: 10px;
+/* line 12, ../sass/content/_page-resume.scss */
+.resume p {
+  font-size: 12px;
 }
-/* line 26, ../sass/content/_page-resume.scss */
-.resume section ul {
+/* line 14, ../sass/content/_page-resume.scss */
+.resume h3 {
+  font-size: 14px;
+}
+/* line 18, ../sass/content/_page-resume.scss */
+.resume h2 {
+  font-size: 16px;
+  text-align: center;
+}
+/* line 23, ../sass/content/_page-resume.scss */
+.resume .title {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+/* line 36, ../sass/content/_page-resume.scss */
+.resume #courses section,
+.resume #jobs section,
+.resume #interests section {
+  background: rgba(238, 119, 75, 0.256);
+  padding: 3px;
+}
+/* line 43, ../sass/content/_page-resume.scss */
+.resume #courses section .resume-content ul:nth-of-type(1) li,
+.resume #jobs section .resume-content ul:nth-of-type(1) li,
+.resume #interests section .resume-content ul:nth-of-type(1) li {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+/* line 55, ../sass/content/_page-resume.scss */
+.resume ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 12px;
 }
-/* line 32, ../sass/content/_page-resume.scss */
-.resume section .resume-meta {
-  padding: 10px 0;
-}
-/* line 42, ../sass/content/_page-resume.scss */
+/* line 62, ../sass/content/_page-resume.scss */
 .resume .category-header {
-  grid-column: 1 / span 3;
+  grid-column: 1;
   grid-row: 1;
 }
-/* line 47, ../sass/content/_page-resume.scss */
-.resume .column-1 {
-  grid-row: 2 / span 6;
-}
-/* line 51, ../sass/content/_page-resume.scss */
-.resume .column-2 {
-  grid-row: 2;
-}
-/* line 55, ../sass/content/_page-resume.scss */
-.resume .column-1,
-.resume .column-2 {
-  z-index: 1;
-  background: #4191c4;
-  position: relative;
-  z-index: 1;
-}
-/* line 63, ../sass/content/_page-resume.scss */
-.resume .column-1::after,
-.resume .column-2::after {
-  content: '';
-  background: #fff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 10px;
-  right: 10px;
-  z-index: -1;
-}
-/* line 75, ../sass/content/_page-resume.scss */
-.resume .column-1 {
-  grid-column: 1;
-  padding: 20px;
+/* line 74, ../sass/content/_page-resume.scss */
+.resume #social-nav-resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 40px;
 }
 /* line 79, ../sass/content/_page-resume.scss */
-.resume .column-1 ul {
-  padding: 0;
-  margin: 0;
+.resume #social-nav-resume .social-button a, .resume #social-nav-resume .menu-item-description {
+  font-size: 6px;
 }
-/* line 86, ../sass/content/_page-resume.scss */
-.resume .column-1 .personal-statement h2, .resume .column-1 .personal-statement p {
-  text-align: center;
+@media only screen and (min-width: 670px) {
+  /* line 74, ../sass/content/_page-resume.scss */
+  .resume #social-nav-resume {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* line 86, ../sass/content/_page-resume.scss */
+  .resume #social-nav-resume .social-button a, .resume #social-nav-resume .menu-item-description {
+    font-size: 10px;
+  }
 }
-/* line 92, ../sass/content/_page-resume.scss */
-.resume .column-1 #social-nav-resume {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+@media only screen and (min-width: 1200px) {
+  /* line 74, ../sass/content/_page-resume.scss */
+  .resume #social-nav-resume {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+  }
+  /* line 95, ../sass/content/_page-resume.scss */
+  .resume #social-nav-resume .social-button a, .resume #social-nav-resume .menu-item-description {
+    font-size: 12px;
+  }
 }
-/* line 99, ../sass/content/_page-resume.scss */
-.resume .column-2 {
-  grid-column: 2;
-  padding: 20px;
+@media only screen and (min-width: 770px) {
+  /* line 6, ../sass/content/_page-resume.scss */
+  .resume {
+    grid-template-columns: 2fr 1fr;
+  }
+  /* line 109, ../sass/content/_page-resume.scss */
+  .resume .category-header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+  /* line 115, ../sass/content/_page-resume.scss */
+  .resume .column-1,
+  .resume .column-2 {
+    z-index: 1;
+    background: #4191c4;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
+  /* line 124, ../sass/content/_page-resume.scss */
+  .resume .column-1::after,
+  .resume .column-2::after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 10px;
+    right: 10px;
+    z-index: -1;
+  }
+  /* line 139, ../sass/content/_page-resume.scss */
+  .resume .column-1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  /* line 144, ../sass/content/_page-resume.scss */
+  .resume .column-2 {
+    grid-column: 2;
+    grid-row: 2;
+  }
 }
 
 /*--------------------------------------------------------------
