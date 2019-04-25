@@ -2,10 +2,30 @@
 
     article {
 
+        .entry-header {
+
+            h1, p {
+                text-align: center;
+            }
+            
+            
+           
+            .featured-image {      
+                border-radius: 8px;
+                max-width: 80%;
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+                margin: 0 auto;
+                display: block;
+            }
+           
+        }
+
         .entry-content {
-            max-width: 900px;
+            max-width: 90%;
             margin: 0 auto;
         }
+
+       
     }
     
    

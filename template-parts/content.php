@@ -17,9 +17,27 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
+		?>
+		<p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
+
+<?php
+
+if( class_exists('Dynamic_Featured_Image') ):
+    global $dynamic_featured_image;
+    global $post;
+     $featured_images = $dynamic_featured_image->get_featured_images( $post->ID );
+
+     if ( $featured_images ):
+        ?>
+            <?php foreach( $featured_images as $images ): ?>
+               <img class="featured-image" src="<?php echo $images['full'] ?>" alt="">
+            <?php endforeach; ?>
+        <?php
+		endif;
+	endif;
 
 		?>
-		<?php portfolio_post_thumbnail(); ?>
+
 	</header><!-- .entry-header -->
 
 	

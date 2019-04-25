@@ -1544,12 +1544,24 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Single
 --------------------------------------------------------------*/
-/* line 5, ../sass/content/_single.scss */
-.single article .entry-content {
-  max-width: 900px;
-  margin: 0 auto;
+/* line 7, ../sass/content/_single.scss */
+.single article .entry-header h1, .single article .entry-header p {
+  text-align: center;
 }
 /* line 13, ../sass/content/_single.scss */
+.single article .entry-header .featured-image {
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+/* line 23, ../sass/content/_single.scss */
+.single article .entry-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+/* line 33, ../sass/content/_single.scss */
 .single .entry-footer {
   display: flex;
   flex-direction: column;
