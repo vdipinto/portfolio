@@ -450,32 +450,32 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 35, ../sass/_typography.scss */
+/* line 34, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 39, ../sass/_typography.scss */
+/* line 38, ../sass/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 43, ../sass/_typography.scss */
+/* line 42, ../sass/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 47, ../sass/_typography.scss */
+/* line 46, ../sass/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 51, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 55, ../sass/_typography.scss */
+/* line 54, ../sass/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -488,26 +488,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 67, ../sass/_typography.scss */
+/* line 66, ../sass/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 73, ../sass/_typography.scss */
+/* line 72, ../sass/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 78, ../sass/_typography.scss */
+/* line 77, ../sass/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 83, ../sass/_typography.scss */
+/* line 82, ../sass/_typography.scss */
 big {
   font-size: 125%;
 }
@@ -763,7 +763,7 @@ html, body {
 .site-content {
   padding: 20px 0 20px 0;
   display: grid;
-  grid-template-columns: 20px auto 20px;
+  grid-template-columns: 10px auto 10px;
   grid-auto-rows: minmax(20px, auto);
   align-items: center;
 }
@@ -1544,24 +1544,26 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Single
 --------------------------------------------------------------*/
-/* line 7, ../sass/content/_single.scss */
+/* line 3, ../sass/content/_single.scss */
+.single article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 9, ../sass/content/_single.scss */
 .single article .entry-header h1, .single article .entry-header p {
   text-align: center;
 }
-/* line 13, ../sass/content/_single.scss */
+/* line 15, ../sass/content/_single.scss */
 .single article .entry-header .featured-image {
-  border-radius: 8px;
   max-width: 80%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   display: block;
 }
-/* line 23, ../sass/content/_single.scss */
+/* line 25, ../sass/content/_single.scss */
 .single article .entry-content {
-  max-width: 90%;
   margin: 0 auto;
 }
-/* line 33, ../sass/content/_single.scss */
+/* line 34, ../sass/content/_single.scss */
 .single .entry-footer {
   display: flex;
   flex-direction: column;
