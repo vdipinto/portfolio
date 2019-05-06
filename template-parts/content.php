@@ -30,7 +30,7 @@ if( class_exists('Dynamic_Featured_Image') ):
      if ( $featured_images ):
         ?>
             <?php foreach( $featured_images as $images ): ?>
-               <img class="featured-image" src="<?php echo $images['full'] ?>" alt="">
+               <img class="featured-image" src="<?php echo $images['full'] ?>" alt="<?php echo $dynamic_featured_image->get_image_alt($images['full']) ?>">
             <?php endforeach; ?>
         <?php
 		endif;

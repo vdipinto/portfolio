@@ -45,27 +45,23 @@ get_header();
 
                 if ($count==2) {
                 
-                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                    get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
                 
                 }
 
                 elseif ($count==3) {
                 
-                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                    get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
                 
                 }
 
                 elseif ($count==6) {
                 
-                    get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
+                    get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
                 
                 }
 
-                // if ($count==3) {
-                
-                //     get_template_part( 'template-parts/content', 'thumb_image_frontpage' );
-                
-                // }
+              
 
                 
                 else {

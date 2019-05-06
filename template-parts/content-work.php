@@ -11,7 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 	<div class="card-container">
-		<?php the_post_thumbnail(); ?>
+		<a href="<?php esc_url( the_permalink() ) ?>">
+			<?php the_post_thumbnail(); ?>
+		</a>
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :
