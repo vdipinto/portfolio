@@ -362,6 +362,13 @@
 		article:nth-of-type(1) {
 			order: 1;
 
+			p {
+				font-size: 22px;
+				font-family: futura-pt, sans-serif;
+				font-weight: 600;
+				font-style: normal;
+			}
+
 			// hide button because I don't need it
 			.button {
 				display: none;
@@ -419,9 +426,6 @@
 				font-size: 50px;
 			}
 
-			p {
-				font-size: 18px;
-			}
 		
 			
 		
@@ -498,7 +502,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	padding: 10px;
-	font-family: sofia-pro-soft, sans-serif;
+	font-family:  futura-pt-bold, sans-serif; 
 	font-weight: 700;
 	font-style: normal;
 	background-color: $orange;
@@ -534,52 +538,49 @@
 
 
   article:nth-of-type(1) h1, article:nth-of-type(1) p {
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	overflow: hidden;
-  }
-  article:nth-of-type(1) h1 {
-	width: 290px; /* manually set width */
-	-webkit-animation: type 2s steps(20, end);
-	animation: type 2s steps(20, end);
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
-
-	@media screen and (max-width: $width-medium - 100px) {
-		width: 235px; /* manually set width */
+		border-right: .15em solid orange;
+		white-space: nowrap;
+		overflow: hidden;
 	}
+	
+  article:nth-of-type(1) h1 {
+		width: 205px; /* manually set width */
+		-webkit-animation: type 2s steps(20, end);
+		animation: type 2s steps(20, end);
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+
+		@media screen and (min-width: $width-medium) {
+			width: 305px; /* manually set width */
+		}
   }
   
   article:nth-of-type(1) p:nth-of-type(1) {
-	width: 360px; /* manually set width */
-	opacity: 0;
-	-webkit-animation: type2 2s steps(20, end);
-	animation: type2 2s steps(20, end);
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
-
-	@media screen and (max-width: $width-medium - 100px) {
-		width: 300px; /* manually set width */
-	}
+		width: 280px; /* manually set width */
+		opacity: 0;
+		-webkit-animation: type2 2s steps(20, end);
+		animation: type2 2s steps(20, end);
+		-webkit-animation-delay: 2s;
+		animation-delay: 2s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
   }
 
 
 
   article:nth-of-type(1) p:nth-of-type(2) {
-	width: 260px; /* manually set width */
-	opacity: 0;
-	-webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
-	animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
-	-webkit-animation-delay: 4s;
-	animation-delay: 4s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+		width: 200px; /* manually set width */
+		opacity: 0;
+		-webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+		animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+		-webkit-animation-delay: 4s;
+		animation-delay: 4s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
 
-	@media screen and (max-width: $width-medium - 100px) {
-		width: 195px; /* manually set width */
-	}
+		@media screen and (max-width: $width-medium - 100px) {
+			width: 195px; /* manually set width */
+		}
   }
 
   @keyframes type {

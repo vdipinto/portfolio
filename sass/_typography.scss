@@ -35,8 +35,18 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+// TO FIX 
+
+.description {
+	// Futura PT Demi
+	font-family: futura-pt, sans-serif;
+	font-weight: 600;
+	font-style: normal;	
+}
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: sofia-pro-soft, sans-serif;
+	// Futura PT Bold
+	font-family: futura-pt-bold, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -96,7 +106,7 @@ big {
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Space+Mono');
 
 /*--------------------------------------------------------------
-## Import Adobe Sofia
+## Import Adobe Futura PT Demi and Futura PT Bold
 --------------------------------------------------------------*/
 
 @import url("https://use.typekit.net/zko4pwx.css");
