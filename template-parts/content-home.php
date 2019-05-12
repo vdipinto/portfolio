@@ -12,7 +12,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="column-1">
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
@@ -30,7 +29,9 @@
 		</div><!-- .entry-content -->
 
 		<div class="link-to-page">			
-				<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?></a>
+				<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?>
+				<?php get_template_part( 'assets/inline', 'right_icon.svg' );?>
+			</a>
 		</div><!-- .link-to-page -->
 
 		<?php if ( get_edit_post_link() ) : ?>
@@ -57,11 +58,9 @@
 				
 			</footer><!-- .entry-footer -->
 		<?php endif; ?>
-	</div><!-- .column-1 -->
 
-	<div class="column-2">
-		<?php portfolio_post_thumbnail('profile-thumb' , array( 'class' => 'thumbnail-frontpage')) ; ?>
-	</div><!-- .column-2 -->
+
+		<?php //portfolio_post_thumbnail('profile-thumb' , array( 'class' => 'thumbnail-frontpage')) ; ?>
 	
 </article><!-- #post-<?php the_ID(); ?> -->
 

@@ -22,39 +22,40 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<div class="works">
+			<?php
+			// Check if there are any posts to display
+			if ( have_posts() ) : ?>
+	
+			<header class="category-header">
+				<h1 class="category-title"><?php single_cat_title( '', true ); ?></h1>
+			
+			
+			<?php
+			// Display optional category description
+			if ( category_description() ) : ?>
+				<div class="archive-meta"><?php echo category_description(); ?></div>
+			<?php endif; ?>
+			</header>
+			
+			<div class="work-posts">
+				<?php
+				
+				// The Loop
+				
+				while ( have_posts() ) : the_post();
 
-		<?php
-		// Check if there are any posts to display
-		if ( have_posts() ) : ?>
- 
-		<header class="category-header">
-			<h1 class="category-title"><?php single_cat_title( '', true ); ?></h1>
-		
-		
-		<?php
-		// Display optional category description
-		if ( category_description() ) : ?>
-		    <div class="archive-meta"><?php echo category_description(); ?></div>
-		<?php endif; ?>
-		</header>
-		
-		<div class="work-posts">
-            <?php
-            
-            // The Loop
-            
-            while ( have_posts() ) : the_post();
-
-                get_template_part( 'template-parts/content-work', get_post_type() );
-            
-            endwhile; 
-            
-        else: ?>
-            <p>Sorry, no posts matched your criteria.</p>
-            
-            
-        <?php endif; ?>
-	    </div><!-- .work-posts -->
+					get_template_part( 'template-parts/content-work', get_post_type() );
+				
+				endwhile; 
+				
+			else: ?>
+				<p>Sorry, no posts matched your criteria.</p>
+				
+				
+			<?php endif; ?>
+			</div><!-- .work-posts -->
+		</div><!-- .works -->
     </div>
     
 <?php get_footer(); ?>

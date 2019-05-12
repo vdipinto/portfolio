@@ -63,3 +63,30 @@
 	font-weight: 900;
 	padding-right: 4px;
 }
+
+
+@mixin button {
+	background-color: $orange;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	width: 130px;
+	border: none;
+	color: $white;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 10px;
+	font-family: sofia-pro-soft, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	background-color: $orange;
+	transition-property: background;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+
+	&:hover {
+		background: $darkorange;
+		color: $white;
+      }
+}

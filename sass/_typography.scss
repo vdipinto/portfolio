@@ -35,6 +35,12 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: sofia-pro-soft, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -89,3 +95,8 @@ big {
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Space+Mono');
 
+/*--------------------------------------------------------------
+## Import Adobe Sofia
+--------------------------------------------------------------*/
+
+@import url("https://use.typekit.net/zko4pwx.css");

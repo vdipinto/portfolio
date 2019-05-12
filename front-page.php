@@ -43,21 +43,21 @@ get_header();
 
                 $count++; //increment the variable by 1 each time the loop executes
 
-                if ($count==2) {
+                if ($count==1) {
                 
                     get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
+                
+                }
+
+                elseif ($count==2) {
+                
+                    get_template_part( 'template-parts/inline', 'featured_work.svg' );
                 
                 }
 
                 elseif ($count==3) {
                 
-                    get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
-                
-                }
-
-                elseif ($count==6) {
-                
-                    get_template_part( 'template-parts/inline', 'web_designer_desk.svg' );
+                    get_template_part( 'template-parts/inline', 'what_I_do.svg' );
                 
                 }
 
