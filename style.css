@@ -456,34 +456,41 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 38, ../sass/_typography.scss */
+/* line 40, ../sass/_typography.scss */
+.description {
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* line 47, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: futura-pt-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-/* line 45, ../sass/_typography.scss */
+/* line 54, ../sass/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 49, ../sass/_typography.scss */
+/* line 58, ../sass/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 53, ../sass/_typography.scss */
+/* line 62, ../sass/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 57, ../sass/_typography.scss */
+/* line 66, ../sass/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 61, ../sass/_typography.scss */
+/* line 70, ../sass/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -496,26 +503,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 73, ../sass/_typography.scss */
+/* line 82, ../sass/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 79, ../sass/_typography.scss */
+/* line 88, ../sass/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 84, ../sass/_typography.scss */
+/* line 93, ../sass/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 89, ../sass/_typography.scss */
+/* line 98, ../sass/_typography.scss */
 big {
   font-size: 125%;
 }

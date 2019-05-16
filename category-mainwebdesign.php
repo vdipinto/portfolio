@@ -27,8 +27,9 @@ get_header();
 		// Check if there are any posts to display
 		if ( have_posts() ) : ?>
  
-		<header class="category-header">
+		<header class="page-header">
 			<h1 class="category-title"><?php single_cat_title( '', true ); ?></h1>
+ 		
 		
 		
 		<?php
@@ -36,7 +37,7 @@ get_header();
 		if ( category_description() ) : ?>
 		<div class="archive-meta"><?php echo category_description(); ?></div>
 		<?php endif; ?>
-		</header>
+		</header><!-- .page-header-->
 		
 		<div class="core_courses_MA">
 		<?php

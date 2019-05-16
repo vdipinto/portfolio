@@ -19,9 +19,9 @@ get_header();
 		<article id="post-<?php the_ID(); ?>" <?php post_class('resume'); ?>>
 
 
-		<header class="category-header">
+		<header class="page-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .category-header -->
+		</header><!-- .page-header -->
 
 		<div class="column-1">
 			<?php

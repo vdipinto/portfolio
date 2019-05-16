@@ -17,9 +17,38 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		
+		
+		<?php
+// See if "posts page" is set in Settings > Reading
+$page_for_posts = get_option( 'page_for_posts' ); 
+if ($page_for_posts) { ?>
+    <header class="page-header">
+        <h1 class="page-title" itemprop="headline">
+            <?php echo get_queried_object()->post_title; ?>
+        </h1>
+    </header>
+<?php } ?>
+
+
+		
+
 
 		<?php
-		if ( have_posts() ) :
+
+		$args = array(
+			'post_type'		=> 'articles',
+			'post_per_page' => '10',
+			'orderby'       => 'date',
+			'order'         => 'ASC'
+		);
+
+		$the_query = new WP_Query($args);
+
+		
+
+		
+		if ( $the_query->have_posts() ) : 
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
@@ -29,18 +58,19 @@ get_header();
 				<?php
 			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			?>
 
+
+		<!-- the loop -->
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post();
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
+		endwhile;
+	
 
 			the_posts_navigation();
 

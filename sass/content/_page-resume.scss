@@ -59,7 +59,7 @@
         font-size: 12px;
     }
 
-    .category-header {
+    .page-header {
         grid-column: 1;
         grid-row: 1;
     }
@@ -106,7 +106,7 @@
         grid-template-columns: 2fr 1fr;
 
 
-        .category-header {
+        .page-header {
             grid-column: 1 / span 3;
             grid-row: 1;
         }

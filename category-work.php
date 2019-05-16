@@ -22,12 +22,13 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<div class="works">
+
+		<article id="post-<?php the_ID(); ?>" <?php post_class('works'); ?>>
 			<?php
 			// Check if there are any posts to display
 			if ( have_posts() ) : ?>
 	
-			<header class="category-header">
+			<header class="page-header">
 				<h1 class="category-title"><?php single_cat_title( '', true ); ?></h1>
 			
 			
@@ -36,8 +37,9 @@ get_header();
 			if ( category_description() ) : ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 			<?php endif; ?>
-			</header>
 			
+			
+			<header class="page-header">
 			<div class="work-posts">
 				<?php
 				
@@ -55,7 +57,8 @@ get_header();
 				
 			<?php endif; ?>
 			</div><!-- .work-posts -->
-		</div><!-- .works -->
-    </div>
+			</article><!-- #post-<?php the_ID(); ?> -->
+    	</main><!-- #main -->
+	</div><!-- #primary -->
     
 <?php get_footer(); ?>

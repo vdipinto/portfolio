@@ -306,7 +306,13 @@ function all_custom_post_types() {
 		// Interests
 		array('the_type' => 'interests', 
 					'single' => 'Interest', 
-					'plural' => 'Interests')
+					'plural' => 'Interests'),
+
+		// Articles
+		array('the_type' => 'articles', 
+					'single' => 'Article', 
+					'plural' => 'Articles'),
+		
 
 	);
 
@@ -478,6 +484,26 @@ function custom_job_column( $column, $post_id ) {
 
 
 add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
+
+
+
+function page_content_on_posts_page() {
+	if( get_option( 'page_for_posts' ) && is_home() ) {
+	global $wp_query;
+	if( !is_paged() && $wp_query->current_post == 0 ) { ?>
+	<article id="post-<?php echo get_option( 'page_for_posts' ); ?>" class="<?php echo implode(  ', ', get_post_class( 'posts-page-content', get_option( 'page_for_posts' ) ) ); ?>">
+	 
+	<div class="entry-content">
+	<?php
+	echo apply_filters( 'the_content', get_post( get_option( 'page_for_posts' ) )->post_content );
+	?>
+	</div><!-- .entry-content -->
+	</article><!-- #post-## -->
+	<?php }
+	}
+	}
+	 
+	add_action( 'the_post', 'page_content_on_posts_page' );
 
 
 
