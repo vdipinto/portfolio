@@ -17,22 +17,17 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<article id="post-<?php the_ID(); ?>" <?php post_class('projects'); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('work'); ?>>
 		
 		
-		<?php
+		
 
-		// See if "posts page" is set in Settings > Reading
-		$page_for_posts = get_option( 'page_for_posts' ); 
-		if ($page_for_posts) { ?>
+        
+        <header class="page-header">
+		    <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+	    </header><!-- .entry-header -->
 
-		<header class="page-header">
-			<h1 class="page-title" itemprop="headline">
-				<?php echo get_queried_object()->post_title; ?>
-			</h1>
-		</header>
-
-		<?php } ?>
+		
 
 
 		
@@ -41,7 +36,7 @@ get_header();
 		<?php
 
 		$args = array(
-			'post_type'		=> 'articles',
+            'post_type'		=> 'mywork',
 			'post_per_page' => '10',
 			'orderby'       => 'date',
 			'order'         => 'ASC'

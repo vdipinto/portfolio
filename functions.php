@@ -312,6 +312,13 @@ function all_custom_post_types() {
 		array('the_type' => 'articles', 
 					'single' => 'Article', 
 					'plural' => 'Articles'),
+
+		
+
+		// My Work
+		array('the_type' => 'mywork', 
+					'single' => 'Work', 
+					'plural' => 'Work'),
 		
 
 	);
@@ -333,7 +340,9 @@ foreach ($types as $type) {
 		'search_items' => __('Search '.$plural),
 		'not_found' =>  __('No '.$plural.' found'),
 		'not_found_in_trash' => __('No '.$plural.' found in Trash'),
-		'parent_item_colon' => ''
+		'parent_item_colon' => '',
+	
+		
 	  );
 
 	  $args = array(
@@ -346,6 +355,8 @@ foreach ($types as $type) {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => 5,
+		'show_in_rest' => true,
+		'taxonomies'  => array( 'category' ),
 		'supports' => array('title','editor','thumbnail','custom-fields', 'page-attributes')
 	  );
 
@@ -354,6 +365,11 @@ foreach ($types as $type) {
 }
 
 }
+
+function theme_prefix_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'theme_prefix_rewrite_flush' );
 
 // Add the custom columns to the Courses post type:
 
@@ -487,23 +503,6 @@ add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
 
 
 
-function page_content_on_posts_page() {
-	if( get_option( 'page_for_posts' ) && is_home() ) {
-	global $wp_query;
-	if( !is_paged() && $wp_query->current_post == 0 ) { ?>
-	<article id="post-<?php echo get_option( 'page_for_posts' ); ?>" class="<?php echo implode(  ', ', get_post_class( 'posts-page-content', get_option( 'page_for_posts' ) ) ); ?>">
-	 
-	<div class="entry-content">
-	<?php
-	echo apply_filters( 'the_content', get_post( get_option( 'page_for_posts' ) )->post_content );
-	?>
-	</div><!-- .entry-content -->
-	</article><!-- #post-## -->
-	<?php }
-	}
-	}
-	 
-	add_action( 'the_post', 'page_content_on_posts_page' );
 
 
 
@@ -522,10 +521,38 @@ function page_content_on_posts_page() {
 
 
 
+// **
+//  * Display category list
+//  */
+function portfolio_the_category_list() {
+	/* Space inserted between categories */
+	$categories_list = get_the_category_list( esc_html__( ' ', 'portfolio' ) );
+	printf( '<span class="cat-links">' . esc_html__( '%1$s', 'portfolio' ) . '</span>', $categories_list );
+}
+
+// Control Excerpt Length
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
-
-
+// **
+//  * Filter the excerpt "read more" string.
+//  *
+//  * @param string $more "Read more" excerpt string.
+//  * @return string (Maybe) modified "read more" excerpt string.
+//  */
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
 // Enable menu descriptions 

@@ -39,7 +39,7 @@ get_header();
 			<?php endif; ?>
 			
 			
-			<header class="page-header">
+ 			</header><!-- .page-header -->
 			<div class="work-posts">
 				<?php
 				
