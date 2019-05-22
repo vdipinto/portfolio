@@ -11,9 +11,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
 	<div class="card-container">
-		<a href="<?php esc_url( the_permalink() ) ?>">
-			<?php the_post_thumbnail(); ?>
-		</a>
+
+	
+		<?php if ( has_post_thumbnail() ) { ?>
+			<figure class="featured-image">
+				<a href="<?php esc_url( the_permalink() ) ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			</figure>
+		<?php } ?>
+  		
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :
@@ -24,9 +31,20 @@
 		</header><!-- .entry-header -->
 		<?php portfolio_the_category_list(); ?>
 		
-		<?php if ( is_page('Blog') ): ?>
-			<?php the_excerpt(); ?>
-		<?php endif; ?>
+		
+		<?php
+		if ( is_home() ) {
+			the_excerpt();
+		}
+		?>
+
+		
+
+
+
+
+
+
 		
 		
 		<!-- Description custom field  -->
@@ -37,7 +55,7 @@
 		<?php endif; ?>
 		
 
-			<footer class="entry-footer">
+		<footer class="entry-footer">
 			<a class="button" href="<?php esc_url( the_permalink() ) ?>">
 			<?php get_template_part( 'assets/inline', 'right_icon.svg' );?>
 			see more</a>
