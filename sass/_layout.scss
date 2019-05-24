@@ -8,11 +8,27 @@
 
 
 
-html, body {
+
+
+
+html {
+	height: 100%;
+  }
+  body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+	min-height: 100%;
+  }
+
+  #page {
 	background: $vanilla;
-}
+	flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  }
 
-
+  footer {
+	flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  }
 
 
 /*
@@ -21,7 +37,7 @@ html, body {
 
 .site-header {
 	display: none;
-
+	flex-grow: 1;
 
 		@media screen and (min-width: $width-small + 1) {
 		display: grid;
@@ -87,24 +103,8 @@ html, body {
 	text-align: center;
 }
 
-// .site-content {
-// 	padding: 20px 0 20px 0;
-// 	display: grid;
-// 	grid-template-columns: 10px auto 10px;
-// 	grid-auto-rows: minmax(20px, auto);
-// 	align-items: center;
-// }
 
 
-/*
- *Site footer 
-*/
-
-.site-footer {
-	background: #333333;
-	height: 50px;
-	color: $white;
-}
 
 
 

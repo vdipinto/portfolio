@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<article id="post-<?php the_ID(); ?>" <?php post_class('work'); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class('home-work'); ?>>
 		
 		
 		
@@ -73,7 +73,8 @@ get_header();
 		endif;
 		?>
 		</div><!-- .work-posts -->
-		</article><!-- #post-<?php the_ID(); ?> -->
+		</div><!-- #post-<?php the_ID(); ?> -->
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -16,7 +16,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<article id="post-<?php the_ID(); ?>" <?php post_class('resume'); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class('resume'); ?>>
 
 
 		<header class="page-header">
@@ -95,12 +95,14 @@ get_header();
 		<div class="column-2">
 			<?php get_sidebar('resume'); ?>
 		</div><!-- column-2 -->
-		</article><!-- #post-<?php the_ID(); ?> -->
+		
+		</div><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-
-<?php
-
+	<?php
+get_sidebar();
 get_footer();
+
+
+
 

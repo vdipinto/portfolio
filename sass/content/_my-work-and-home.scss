@@ -3,7 +3,8 @@
 ## Pages> My work and Blog 
 --------------------------------------------------------------*/
 
-.home-work {
+.home-work,
+.resume {
 	margin: 20px;
 }
 
@@ -14,7 +15,6 @@
 .work-posts,
 .blog-posts {
 	grid-column: 1;
-	grid-row: 2;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 20px;

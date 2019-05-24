@@ -147,6 +147,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "content/posts-and-pages";
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "content/footer";
+
+/*--------------------------------------------------------------
 ## Front page
 --------------------------------------------------------------*/
 @import "content/front-page";
@@ -156,15 +161,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "content/single";
 /*--------------------------------------------------------------
-## Work Posts Category
+## My Work and Home Page
 --------------------------------------------------------------*/
-@import "content/work-post-Category";
+@import "content/my-work-and-home";
+
 
 /*--------------------------------------------------------------
-## Work Posts Category
+## Resume Page
 --------------------------------------------------------------*/
 @import "content/page-resume";
 
+/*--------------------------------------------------------------
+## Contact Page
+--------------------------------------------------------------*/
+@import "content/contact";
 
 /*--------------------------------------------------------------
 ## Comments

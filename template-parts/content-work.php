@@ -39,13 +39,6 @@
 		?>
 
 		
-
-
-
-
-
-
-		
 		
 		<!-- Description custom field  -->
 		<?php if (get_post_meta($post->ID, 'description', true)) : ?>

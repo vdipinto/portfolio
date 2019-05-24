@@ -33,7 +33,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		</article><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

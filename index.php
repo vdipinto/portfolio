@@ -17,6 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+        <div id="post-<?php the_ID(); ?>" <?php post_class('home-work'); ?>>
 		
 		
 		
@@ -54,31 +55,32 @@ get_header();
 		
 		if ( $the_query->have_posts() ) : ?>
 
-		<div class="blog-posts">	
-		<!-- the loop -->
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post();
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content-work', get_post_type() );
-		endwhile; 
+			<div class="blog-posts">	
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content-work', get_post_type() );
+			endwhile; 
+			
 		
-	
 
-			the_posts_navigation();
+				the_posts_navigation();
 
-			wp_reset_postdata();
+				wp_reset_postdata();
 
-		else :
+			else :
 
-			get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
-		</div><!-- .blog-posts -->
-		
+			endif;
+			?>
+			</div><!-- .blog-posts -->
+
+		</div><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

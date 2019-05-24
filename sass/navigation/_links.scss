@@ -87,7 +87,7 @@ a:hover, a:active {
 	flex-direction: row;
 
 	a {
-		font-size: 8px;
+		font-size: 12px;
 	}
 
 }
@@ -95,24 +95,28 @@ a:hover, a:active {
 .linkedIn-icon::before {
 	content: "\f0e1";
 	@include font-awesome;
+	font-size: 20px;
 }
 
 .twitter-icon::before {
 	content: "\f099";
 	@include font-awesome;
+	font-size: 20px;
 }
 
 .github-icon::before {
 	content: "\f09b";
 	@include font-awesome;
+	font-size: 20px;
 }
 
 .myportfolio-icon::before {
 	content: "\f19d";
 	@include font-awesome;
+	font-size: 20px;
 }
 
 .menu-item-description {
-	font-size: 8px;
+	font-size: 12px;
 }
 	

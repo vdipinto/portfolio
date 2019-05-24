@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-            <div id="front-page">
+        <div id="post-<?php the_ID(); ?>" <?php post_class('front-page'); ?>>
 
             <?php
 

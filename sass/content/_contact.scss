@@ -1,0 +1,37 @@
+
+/*--------------------------------------------------------------
+## page-contact
+--------------------------------------------------------------*/
+
+.contact {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    article {
+        .entry-header {
+            text-align: center;
+        }
+    }
+
+    
+
+
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea
+        {
+        background-color: #fff;
+        color: #000;
+        }
+
+    .wpcf7 input[type="submit"] {
+        @include button;
+        font-size: 20px;
+    }
+
+
+}
