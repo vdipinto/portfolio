@@ -7,4 +7,33 @@
 
 .site-footer {
     background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    
+
+    .site-info {
+       
+
+        small {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            padding: 20px 0;
+
+            
+            @media only screen and (min-width: $width-medium)  {
+                 font-size: 18px;
+            }
+        }
+    }
 }
+
+
+.logo-footer {
+    width: 100px;
+    margin: 20px;
+}
+

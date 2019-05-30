@@ -48,6 +48,7 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'portfolio' ),
 			'menu-2' => esc_html__( 'Social-resume', 'portfolio'  ),
+			'menu-3' => esc_html__( 'Social-bar', 'portfolio'  ),
 		) );
 
 		/*
@@ -77,8 +78,8 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 466.4,
+			'width'       => 426,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -555,7 +556,7 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
-// Enable menu descriptions 
+// Enable menu descriptions for social nav resume
 
 
 function add_nav_description( $item_output, $item, $depth, $args ) {

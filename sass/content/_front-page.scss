@@ -494,28 +494,7 @@
 }
 
 .button {
-	background-color: $orange;
-	display: inline-block;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 4px;
-	width: 130px;
-	border: none;
-	text-transform: uppercase;
-	cursor: pointer;
-	padding: 10px;
-	font-family:  futura-pt-bold, sans-serif; 
-	font-weight: 700;
-	font-style: normal;
-	background-color: $orange;
-	transition-property: background;
-	transition-duration: 1s;
-	transition-timing-function: linear;
-
-	&:hover {
-		background: $darkorange;
-		color: $white;
-		}
+	@include button;
 		
 	.right_icon {
 		display: inline-block;
@@ -524,7 +503,6 @@
 		margin-top: 4px;
 		width: 1em;
 		height: 1em;
-		color: red;
 	}
 }
 

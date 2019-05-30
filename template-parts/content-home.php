@@ -2,7 +2,7 @@
 
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying page content in content-home.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

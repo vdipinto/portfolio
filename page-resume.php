@@ -24,12 +24,14 @@ get_header();
 		</header><!-- .page-header -->
 
 		<div class="column-1">
+			<!-- add social navigation -->
 			<?php
 				wp_nav_menu( array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'social-nav-resume',
+					'theme_location' => 'menu-3',
+					'menu_id'        => '',
 				) );
 			?>
+			<!-- end social navigation  -->
 			<div class="personal-statement">
 				<?php $personal_statement = new WP_Query("page_id=742"); while($personal_statement->have_posts()) : $personal_statement->the_post();?>
 						<?php the_title( '<h2>', '</h2>' ); ?>
