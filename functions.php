@@ -150,86 +150,7 @@ function portfolio_widgets_init() {
 
 add_action( 'widgets_init', 'portfolio_widgets_init' );
 
-/////////////////////////////
-// Core Specialty widget////
-////////////////////////////
-// Description: This is a custm widget to list my core specialities skills///
 
-// use widgets_init Action hook to execute custom function
-add_action( 'widgets_init', 'prowp_register_widgets' );
-
- //register our widget
-function prowp_register_widgets() {
-
-    register_widget( 'prowp_widget' );
-
-}
-
-//prowpwidget class
-class prowp_widget extends WP_Widget {
-
-    //process our new widget
-    function __construct() {
-
-        $widget_ops = array(
-            'classname'   => 'prowp_widget_class',
-            'description' => 'Example widget that displays a user\'s bio.' );
-        parent::__construct( 'prowp_widget', 'Bio Widget', $widget_ops );  // parent::__construct( 'css-class', 'Title', $widget_ops );
-
-    }
-
-     //build our widget settings form
-    function form( $instance ) {
-        $defaults = array(
-            'skill'  => 'add new skill',);
-        $instance = wp_parse_args( (array) $instance, $defaults );
-        $skill = $instance['skill'];
-
-        ?>	
-
-
-			<p>
-				<label for="<?php echo esc_attr( $this->get_field_id( 'skill' ) ); ?>">My Skills:</label>
-				<input class="widefat" name="<?php echo $this->get_field_name( 'skill' ); ?>" type="text" value="<?php echo esc_attr( $skill ); ?>">
-    		</p>
-
-			
-        <?php
-    }
-
-    //save our widget settings
-    function update( $new_instance, $old_instance ) {
-
-        $instance = $old_instance;
-    
-        $instance['skill']  = sanitize_text_field( $new_instance['skill'] );
-       
-
-        return $instance;
-
-    }
-
-    //display our widget
-    function widget( $args, $instance ) {
-        extract( $args );
-
-        echo $before_widget;
-
-        
-        $skill = ( empty( $instance['skill'] ) ) ? '&nbsp;' : $instance['skill'];
-      
-
-        if ( !empty( $title ) ) {
-            echo $before_title . esc_html( $title ) . $after_title;
-        }
-
-        echo '<p> ' . esc_html( $skill ) . '</p>';
-       
-
-        echo $after_widget;
-
-    }
-}
 
 
 
@@ -297,30 +218,35 @@ function all_custom_post_types() {
 		// Courses
 		array('the_type' => 'courses', 
 					'single' => 'Course', 
-					'plural' => 'Courses'), 
+					'plural' => 'Courses',
+					'exclude_from_search' => true), 
 
 		// Careers
 		array('the_type' => 'jobs', 
 					'single' => 'Job', 
-					'plural' => 'Jobs'), 
+					'plural' => 'Jobs',
+					'exclude_from_search' => true), 
 
 		// Interests
 		array('the_type' => 'interests', 
 					'single' => 'Interest', 
-					'plural' => 'Interests'),
+					'plural' => 'Interests',
+					'exclude_from_search' => true), 
 
 		// Articles
 		array('the_type' => 'articles', 
 					'single' => 'Article', 
-					'plural' => 'Articles'),
+					'plural' => 'Articles',
+					'exclude_from_search' => false), 
 
 		
 
 		// My Work
 		array('the_type' => 'mywork', 
 					'single' => 'Work', 
-					'plural' => 'Work'),
-		
+					'plural' => 'Work',
+					'exclude_from_search' => false), 
+					
 
 	);
 
@@ -329,6 +255,7 @@ foreach ($types as $type) {
 	$the_type = $type['the_type'];
 	  $single = $type['single'];
 	  $plural = $type['plural'];
+	  $exclude_from_search = $type['exclude_from_search'];
 
 	$labels = array(
 		'name' => _x($plural, 'post type general name'),
@@ -346,10 +273,15 @@ foreach ($types as $type) {
 		
 	  );
 
+
+
+
+
 	  $args = array(
 		'labels' => $labels,
 		'public' => true,
 		'publicly_queryable' => true,
+		'exclude_from_search'  => $exclude_from_search,
 		'show_ui' => true,
 		'query_var' => true,
 		'rewrite' => true,
@@ -506,8 +438,33 @@ add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
 
 
 
+// Modifying search query to exclude posts not intented for front-end and limit results to 10 per page on front end only
+
+function SearchFilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type', 'page');
+    }
 
 
+    return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
+
+function change_wp_search_size($query) {
+    if ( $query->is_search && !is_admin() ) {
+        	//Exclude posts by ID
+		$post_ids = array(900,903,685,8,755,757,770,746,748,750,872,742,3,112);
+		$query->set('post__not_in', $post_ids);
+		$query->set( 'posts_per_page', 5 );
+    }
+
+    return $query;
+}
+
+add_filter('pre_get_posts', 'change_wp_search_size');
+
+//////////////////////
 
 // add a class work for the category-work.php file
 
