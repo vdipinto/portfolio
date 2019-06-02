@@ -37,38 +37,69 @@ html {
 
 .site-header {
 	display: none;
-	flex-grow: 1;
+	// flex-grow: 1;
 
-		@media screen and (min-width: $width-small + 1) {
-		display: grid;
-		grid-template-columns: 20px 100px 10px 1fr 20px;
-		grid-template-rows: 10px 100px;
-		align-items: center;
-		justify-items: end;
-		background: $orange;
+	// 	@media screen and (min-width: $width-small + 1) {
+	// 	display: grid;
+	// 	grid-template-columns: 20px 100px 10px 1fr 20px;
+	// 	grid-template-rows: 10px 100px;
+	// 	align-items: center;
+	// 	justify-items: end;
+	// 	background: $orange;
+
+	// 	#primary-menu {
+	// 		border: 1px solid black;
+	// 	}
 		
-	}
+	// }
 
 
-	.site-branding {
+	// .site-branding {
 
-		grid-column: 2;
-		grid-row: 2;
-		align-self: center;
-		justify-self: center;
+	// 	grid-column: 2;
+	// 	grid-row: 2;
+	// 	align-self: center;
+	// 	justify-self: center;
+
+	// 	.custom-logo {
+	// 		vertical-align: center;
+	// 		max-width: 100%;
+	// 		padding: 10px;
+	// 	}
+
+		
+
+	// 	.site-title, .site-description {
+	// 		display: none;
+	// 	}
+		
+	// }
+
+	@media screen and (min-width: $width-small + 1) {
+		background: $orange;
+		display: flex;
+		flex-direction: column;
+
+		.site-branding-and-search {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 20px 20px 10px 20px;
+
+			.search-form {
+				align-self: center;
+			}
+		}
 
 		.custom-logo {
-			vertical-align: center;
-			max-width: 100%;
-			padding: 10px;
+			width: 100px;
 		}
 
-		
-
-		.site-title, .site-description {
-			display: none;
+		.main-navigation {
+			background: #ff9b66;;
+			width: 100%;
+			padding: 5px 0 5px 20px;
 		}
-		
 	}
 
 
