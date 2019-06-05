@@ -69,6 +69,27 @@ a:hover, a:active {
 	}
 }
 
+/*--------------------------------------------------------------
+## Post Navigation back and forwards various posts 
+--------------------------------------------------------------*/
+
+.navleft,
+.navright{
+
+	a {
+		display: inline-block;
+		position: relative;
+		bottom: 8px;
+		text-decoration: none;
+		padding: 0 5px;
+		
+
+		&:hover {
+			border-bottom: 1px solid 
+		}
+
+	}
+}
 
 /*--------------------------------------------------------------
 ## Social Buttons

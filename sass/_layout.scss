@@ -92,13 +92,17 @@ html {
 		}
 
 		.custom-logo {
-			width: 100px;
+			width: 120px;
 		}
 
 		.main-navigation {
 			background: #ff9b66;;
 			width: 100%;
 			padding: 5px 0 5px 20px;
+
+			.menu {
+				float: right;
+			}
 		}
 	}
 
@@ -123,6 +127,34 @@ html {
 .site-main {		
 	max-width: 1300px;
 	margin: 0 auto;
+
+
+	.navigation {
+		border: 1px solid rgba(0,0,0,0.5);
+		max-width: 1200px;
+		margin: 70px 0;
+		padding: 20px 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
+		-moz-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
+
+		svg {
+			width: 10px;
+			fill: rgb(65, 57, 57);
+
+			@media screen and (min-width: $width-small + 1) {
+				width: 20px;
+			}
+		}
+
+		.navleft a,
+		.navright a {
+			font-size: 14px;
+		}
+	}
 }
 
 

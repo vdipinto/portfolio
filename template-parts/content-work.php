@@ -50,8 +50,7 @@
 
 		<footer class="entry-footer">
 			<a class="button" href="<?php esc_url( the_permalink() ) ?>">
-			<?php get_template_part( 'assets/inline', 'right_icon.svg' );?>
-			see more</a>
+			see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
 		</footer><!-- .entry-footer -->
 		</div><!-- .card-container -->
 </article><!-- #post-<?php the_ID(); ?> -->

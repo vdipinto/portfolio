@@ -73,6 +73,7 @@
 
 
 @mixin button {
+	color: $white;
 	background-color: $orange;
 	display: inline-block;
 	text-align: center;
@@ -84,7 +85,7 @@
 	cursor: pointer;
 	padding: 10px;
 	font-family:  futura-pt-bold, sans-serif; 
-	font-weight: 700;
+	font-size: 16px;
 	font-style: normal;
 	background-color: $orange;
 	transition-property: background;

@@ -21,11 +21,29 @@ get_header();
 			get_template_part( 'template-parts/content', get_post_type() );
 
 			?>
+
+
+
 			
+			<!-- <div class="navigation">
+				<div class="navleft"><?php //get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php //previous_post_link( '%link', '%title', true ); ?></div>
+				<div class="navright"><?php //next_post_link( '%link', '%title', true );  ?><?php //get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
+			</div> -->
+
+
+	
 			<div class="navigation">
-				<div class="alignleft"><?php previous_post_link( '%link', '%title', true ); ?></div>
-				<div class="alignright"><?php next_post_link( '%link', '%title', true );  ?></div>
+				<?php if (strlen(get_previous_post()->post_title) > 0) { ?>
+					<div class="navleft"><?php get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php previous_post_link( '%link', '%title', true ) ?>
+				<?php } ?>
 			</div>
+
+				<?php if (strlen(get_next_post()->post_title) > 0) { ?>
+					<div class="navright"><?php next_post_link( '%link', '%title', true ) ?><?php get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
+				<?php } ?>
+			</div>
+
+			
 
 			<?php
 			
