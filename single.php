@@ -34,14 +34,17 @@ get_header();
 	
 			<div class="navigation">
 				<?php if (strlen(get_previous_post()->post_title) > 0) { ?>
-					<div class="navleft"><?php get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php previous_post_link( '%link', '%title', true ) ?>
+					<div class="navleft"><?php get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php previous_post_link( '%link', '%title', true ) ?></div>
 				<?php } ?>
-			</div>
+			
 
 				<?php if (strlen(get_next_post()->post_title) > 0) { ?>
 					<div class="navright"><?php next_post_link( '%link', '%title', true ) ?><?php get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
 				<?php } ?>
-			</div>
+
+
+			
+			</div><!-- .navigation -->
 
 			
 

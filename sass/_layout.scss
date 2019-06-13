@@ -132,11 +132,8 @@ html {
 	.navigation {
 		border: 1px solid rgba(0,0,0,0.5);
 		max-width: 1200px;
-		margin: 70px 0;
+		margin: 70px auto;
 		padding: 20px 0;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 		box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
 		-webkit-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
 		-moz-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
@@ -149,6 +146,8 @@ html {
 				width: 20px;
 			}
 		}
+
+		
 
 		.navleft a,
 		.navright a {

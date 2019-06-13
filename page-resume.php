@@ -22,81 +22,82 @@ get_header();
 		<header class="page-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .page-header -->
+		<div class="resume-container">
+			<div class="column-1">
+				<!-- add social navigation -->
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-3',
+						'menu_id'        => '',
+					) );
+				?>
+				<!-- end social navigation  -->
+				<div class="personal-statement">
+					<?php $personal_statement = new WP_Query("page_id=742"); while($personal_statement->have_posts()) : $personal_statement->the_post();?>
+							<?php the_title( '<h2>', '</h2>' ); ?>
+							<?php the_content(); ?>
+					<?php endwhile; ?>
+				</div><!-- .personal-statement -->
 
-		<div class="column-1">
-			<!-- add social navigation -->
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-3',
-					'menu_id'        => '',
-				) );
-			?>
-			<!-- end social navigation  -->
-			<div class="personal-statement">
-				<?php $personal_statement = new WP_Query("page_id=742"); while($personal_statement->have_posts()) : $personal_statement->the_post();?>
-						<?php the_title( '<h2>', '</h2>' ); ?>
-						<?php the_content(); ?>
-				<?php endwhile; ?>
-			</div><!-- .personal-statement -->
+				<hr>
 
-			<hr>
+				<?php
 
-			<?php
+				$post_types = array('courses', 'jobs', 'interests'); 
 
-			$post_types = array('courses', 'jobs', 'interests'); 
+				$args = array(
+					'post_type'		=> $post_types,
+					'post_per_page' => '-1',
+					'orderby'       => 'post_type',
+					'order'         => 'ASC'
+				);
+				
+				$resume_items = new WP_Query( $args );
+				
+				if ( $resume_items->have_posts() ) :
 
-			$args = array(
-				'post_type'		=> $post_types,
-				'post_per_page' => '-1',
-				'orderby'       => 'post_type',
-				'order'         => 'ASC'
-			);
-			
-			$resume_items = new WP_Query( $args );
-			
-			if ( $resume_items->have_posts() ) :
-
-				foreach ($post_types as $post_type) : ?>
-					<div id='<?php echo $post_type?>'>
+					foreach ($post_types as $post_type) : ?>
+						<div id='<?php echo $post_type?>'>
 
 
 
-						<?php switch($post_type) {
-							case "courses": 
-								echo "<h2>Education</h2>";
-								break;
-							case "jobs": 
-								echo "<h2>Employment History</h2>";
-								break;
-							case "interests":
-								echo "<h2>Interests</h2>";
-								break;
-						} ?>
+							<?php switch($post_type) {
+								case "courses": 
+									echo "<h2>Education</h2>";
+									break;
+								case "jobs": 
+									echo "<h2>Employment History</h2>";
+									break;
+								case "interests":
+									echo "<h2>Interests</h2>";
+									break;
+							} ?>
 
-						<?php while ( $resume_items->have_posts() ) : $resume_items->the_post(); ?>
-							
-								<?php if(get_post_type() == "{$post_type}") {
-									get_template_part( 'template-parts/content', 'resume' );
-								} ?>
+							<?php while ( $resume_items->have_posts() ) : $resume_items->the_post(); ?>
 								
-						<?php endwhile; ?>
-						<!-- end of the loop -->
+									<?php if(get_post_type() == "{$post_type}") {
+										get_template_part( 'template-parts/content', 'resume' );
+									} ?>
+									
+							<?php endwhile; ?>
+							<!-- end of the loop -->
 
-					</div>
+						</div>
 
-				<?php endforeach;
+					<?php endforeach;
 
-			wp_reset_postdata();
-			
-			else :
-			get_template_part( 'template-parts/content', 'none' );
-						
-			endif; ?>
-			<!-- Get side for the resume -->
-		</div><!-- column-1 -->
-		<div class="column-2">
-			<?php get_sidebar('resume'); ?>
-		</div><!-- column-2 -->
+				wp_reset_postdata();
+				
+				else :
+				get_template_part( 'template-parts/content', 'none' );
+							
+				endif; ?>
+				<!-- Get side for the resume -->
+			</div><!-- column-1 -->
+			<div class="column-2">
+				<?php get_sidebar('resume'); ?>
+			</div><!--.column-2 -->
+			</div><!-- resume-container -->
 		
 		</div><!-- #post-<?php the_ID(); ?> -->
 		</main><!-- #main -->
