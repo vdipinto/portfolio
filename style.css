@@ -2277,10 +2277,6 @@ a:hover, a:active {
   width: 1em;
   height: 1em;
 }
-/* line 120, ../sass/content/_my-work-and-home.scss */
-.card .navigation {
-  border: 1px solid red;
-}
 
 /*--------------------------------------------------------------
 ## Resume Page
