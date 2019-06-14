@@ -2148,6 +2148,9 @@ a:hover, a:active {
 /* line 6, ../sass/content/_my-work-and-home.scss */
 .home-work {
   margin: 20px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* line 19, ../sass/content/_my-work-and-home.scss */
@@ -2285,14 +2288,15 @@ a:hover, a:active {
 .resume {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
-/* line 12, ../sass/content/_page-resume.scss */
+/* line 14, ../sass/content/_page-resume.scss */
 .resume .resume-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-/* line 17, ../sass/content/_page-resume.scss */
+/* line 19, ../sass/content/_page-resume.scss */
 .resume .resume-container .column-1 {
   background: #fff;
   box-shadow: 14px 12px 0px -8px #4191c4;
@@ -2300,11 +2304,11 @@ a:hover, a:active {
   -moz-box-shadow: 14px 12px 0px -8px #4191c4;
   padding: 10px;
 }
-/* line 25, ../sass/content/_page-resume.scss */
+/* line 27, ../sass/content/_page-resume.scss */
 .resume .resume-container .column-2 {
   margin-top: 20px;
 }
-/* line 28, ../sass/content/_page-resume.scss */
+/* line 30, ../sass/content/_page-resume.scss */
 .resume .resume-container .column-2 #secondary-sidebar {
   background: #fff;
   box-shadow: 14px 12px 0px -8px #4191c4;
@@ -2313,11 +2317,11 @@ a:hover, a:active {
   padding: 10px;
 }
 @media only screen and (min-width: 770px) {
-  /* line 12, ../sass/content/_page-resume.scss */
+  /* line 14, ../sass/content/_page-resume.scss */
   .resume .resume-container {
     flex-direction: row;
   }
-  /* line 44, ../sass/content/_page-resume.scss */
+  /* line 46, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-1 {
     /* This will be twice as */
     /* big as the small item. */
@@ -2325,43 +2329,43 @@ a:hover, a:active {
     padding: 20px;
     margin: 0 20px;
   }
-  /* line 51, ../sass/content/_page-resume.scss */
+  /* line 53, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-2 {
     flex: 1 0 0;
     margin-top: 0;
   }
-  /* line 56, ../sass/content/_page-resume.scss */
+  /* line 58, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-2 #secondary-sidebar {
     padding: 20px;
   }
 }
-/* line 87, ../sass/content/_page-resume.scss */
+/* line 89, ../sass/content/_page-resume.scss */
 .resume .resume-container p {
   font-size: 12px;
 }
-/* line 89, ../sass/content/_page-resume.scss */
+/* line 91, ../sass/content/_page-resume.scss */
 .resume .resume-container h3 {
   font-size: 14px;
 }
-/* line 93, ../sass/content/_page-resume.scss */
+/* line 95, ../sass/content/_page-resume.scss */
 .resume .resume-container h2 {
   font-size: 16px;
   text-align: center;
 }
-/* line 98, ../sass/content/_page-resume.scss */
+/* line 100, ../sass/content/_page-resume.scss */
 .resume .resume-container .title {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
-/* line 112, ../sass/content/_page-resume.scss */
+/* line 114, ../sass/content/_page-resume.scss */
 .resume .resume-container #courses section,
 .resume .resume-container #jobs section,
 .resume .resume-container #interests section {
   background: rgba(238, 119, 75, 0.256);
   padding: 3px;
 }
-/* line 119, ../sass/content/_page-resume.scss */
+/* line 121, ../sass/content/_page-resume.scss */
 .resume .resume-container #courses section .resume-content ul:nth-of-type(1) li,
 .resume .resume-container #jobs section .resume-content ul:nth-of-type(1) li,
 .resume .resume-container #interests section .resume-content ul:nth-of-type(1) li {
@@ -2371,23 +2375,23 @@ a:hover, a:active {
   margin-bottom: 12px;
   line-height: 1.1;
 }
-/* line 131, ../sass/content/_page-resume.scss */
+/* line 133, ../sass/content/_page-resume.scss */
 .resume .resume-container ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 12px;
 }
-/* line 161, ../sass/content/_page-resume.scss */
+/* line 163, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar {
   max-width: 230px;
 }
-/* line 166, ../sass/content/_page-resume.scss */
+/* line 168, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar .social-button::before {
   margin-left: 8px;
   margin-top: -1.3px;
 }
-/* line 172, ../sass/content/_page-resume.scss */
+/* line 174, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar .social-button a {
   border: 2px solid #000;
   height: 44px;
@@ -2400,22 +2404,23 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## page-contact - Contact Form 7 Style
 --------------------------------------------------------------*/
-/* line 56, ../sass/content/_contact.scss */
+/* line 8, ../sass/content/_contact.scss */
 .contact {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
-/* line 61, ../sass/content/_contact.scss */
+/* line 15, ../sass/content/_contact.scss */
 .contact .entry-title {
   text-align: center;
 }
-/* line 66, ../sass/content/_contact.scss */
+/* line 20, ../sass/content/_contact.scss */
 .contact .wpcf7-form {
   padding: 20px;
   max-width: 600px;
 }
-/* line 70, ../sass/content/_contact.scss */
+/* line 24, ../sass/content/_contact.scss */
 .contact .wpcf7-form p label,
 .contact .wpcf7-form .wpcf7 input {
   padding: 8px;
@@ -2423,7 +2428,7 @@ a:hover, a:active {
   letter-spacing: .09em;
   text-transform: uppercase;
 }
-/* line 78, ../sass/content/_contact.scss */
+/* line 32, ../sass/content/_contact.scss */
 .contact .wpcf7-form .wpcf7-validation-errors,
 .contact .wpcf7-form div.wpcf7-acceptance-missing {
   padding: 8px;
@@ -2432,11 +2437,11 @@ a:hover, a:active {
   text-transform: uppercase;
   border: 2px solid #f00;
 }
-/* line 87, ../sass/content/_contact.scss */
+/* line 41, ../sass/content/_contact.scss */
 .contact .wpcf7-form .wpcf7-not-valid {
   border-color: #f00;
 }
-/* line 95, ../sass/content/_contact.scss */
+/* line 49, ../sass/content/_contact.scss */
 .contact .wpcf7-form .wpcf7-form-control:not(.wpcf7-submit) {
   width: 100%;
   display: inline-block;
@@ -2446,7 +2451,7 @@ a:hover, a:active {
   text-transform: uppercase;
   color: #817f7f;
 }
-/* line 105, ../sass/content/_contact.scss */
+/* line 59, ../sass/content/_contact.scss */
 .contact .wpcf7-form .wpcf7-submit {
   color: #fff;
   background-color: #e95d2a;
