@@ -12,10 +12,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<section class="front-page-section-image">
+	<?php
+		global $post;
+
+		if( $post->ID == 746) {
+			get_template_part( 'assets/inline', 'web_designer_desk.svg' );
+		} 
+		else if ($post->ID == 748) {
+			get_template_part( 'assets/inline', 'featured_work.svg' );
+		}
+		else {
+			get_template_part( 'assets/inline', 'what_I_do.svg' );
+		}
+		?>
+
+		
+	</section><!-- .front-page-section-image -->
+
+	<section class="front-page-section-description">
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
-		
+			
 		<div class="entry-content">
 			<?php
 			the_content();
@@ -58,9 +78,8 @@
 				
 			</footer><!-- .entry-footer -->
 		<?php endif; ?>
-
-
-		<?php //portfolio_post_thumbnail('profile-thumb' , array( 'class' => 'thumbnail-frontpage')) ; ?>
+	</section><!-- .front-page-section-description-->
+	
 	
 </article><!-- #post-<?php the_ID(); ?> -->
 

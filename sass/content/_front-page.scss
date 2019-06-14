@@ -3,157 +3,85 @@
 // --------------------------------------------------------------*/
 
 
-.site-main {
-	
 
-	@media screen and (min-width: $width-medium) {
-		margin: 50px;
-		margin: 0 auto; 
-		
-		
-	}
+.front-page {
+	// margin: 20px;
+	display: flex;
+    min-height: 100vh;
+	flex-direction: column;
+	height: 100%;
 
-	
 
-	.front-page {
+
+	article {
 		display: flex;
 		flex-direction: column;
-		margin: 20px auto;
+		// margin-bottom: 50px;
+		// align-content: space-between;
+		// border: 3px solid red;
+		// margin: 100px 0;
+		margin: 0px;
+		height: 100vh;
+		// padding: 30px;
+		justify-content: space-evenly;
+		
 
-		// Order elements
-
-		// I'm Vito
-		article:nth-of-type(1) {
-			order: 1;
-
-			p {
-				font-size: 22px;
-				font-family: futura-pt, sans-serif;
-				font-weight: 600;
-				font-style: normal;
-			}
-
-			// hide button because I don't need it
-			.button {
-				display: none;
-			}
-		}
-
-		// web_designer
-		svg:nth-of-type(1) {
+		// Move the featured image as second element 
+		section:nth-of-type(1) {
 			order: 2;
-		}
-
-		article:nth-of-type(2) {
-			order: 3;
-		}
-
-		// featured_work
-		svg:nth-of-type(2) {
-			order: 4;
-		}
-
-		article:nth-of-type(3) {
-			order: 5;
-		}
-
-		// what_I_do
-		svg:nth-of-type(3) {
-			order: 6;
-		}
-
-
-		article {
-			// border: 1px solid #000;
-			padding: 10px;
-			
+			// padding: 20px;
+			// border: 3px solid red;
 			
 
-			@media screen and (max-width: $width-medium) {
+			.illustration {
 
-				&:nth-of-type(1) {
-					height: 300px;
+				@media screen and (min-width: $width-medium - 100px) and (max-width: $width-medium - 1px){
+					max-width: 60%;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
 		}
 
+		// This is the description 
+		section:nth-of-type(2) {
+			// padding: 20px;
+			// border: 3px solid red;
+			height: 90vh;
+			
+		}
+
+		
 
 		@media screen and (min-width: $width-medium) {
 			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			max-width: 990px;
-
-			// typography
-
-			h1 {
-				font-size: 50px;
-			}
-
-		
+			// justify-content: center;
+			align-items: center;
 			
-		
 
-			article, .illustration {
-				height: 520px;
-				width: 365px;
-				padding: 40px;
-				margin: 0 0 1.5em;
+			section:nth-of-type(1) {
+				flex-basis: 50%;
+				margin-top: 0;
+				align-self: flex-start;
+				position: relative;
+				top: 60px;
 			}
 
-			// Hi, I'm Vito...
-			article:nth-of-type(1) {
-				order: 1;
-			}
-	
-			// web_designer illustration 
-			svg:nth-of-type(1) {
-				order: 2;
-			}
-
-			// featured_work illustration 
-			svg:nth-of-type(2) {
-				order: 3;
-			}
-	
-			article:nth-of-type(2) {
-				order: 4;
-			}
-	
-			// What I Do
-			article:nth-of-type(3) {
-				order: 5;
-				height: 700px;
-			}
-	
-			// what_I_do illustration 
-			svg:nth-of-type(3) {
-				order: 6;
-				height: 700px;
-			}
-
-
-
-		}
-
-		@media screen and (min-width: $width-large - 209px) {
-
-			article, .illustration {
-				width: 475.5px;
-				// background: red;
-				// border: 1px solid red;
+			// This is the description 
+			section:nth-of-type(2) {
+				flex-basis: 50%;
 			}
 		}
 	}
+
 }
+	
 
 
 
-.illustration {
-	// border: 1px solid #000;
-	margin: 0 0 1.5em;
-	height: 400px;
-}
+
+
 
 .button {
 	@include button;
@@ -319,31 +247,31 @@
 
 
 	// web_designer 
-	.illustration:nth-of-type(1) {
-	
-			.cls-5{fill:#5e5855}
-			.cls-6{fill:#333}
-			.cls-7{fill:#ccc}
-			.cls-8{fill:#906}
-			.cls-10{fill:#09c}
-			.cls-11{fill:#fc3}
-			.cls-12{fill:#dee2de}
-			.cls-20{fill:#999}
-			.cls-21{fill:#39c}
-			.cls-22{fill:#c00}
-			.cls-23{fill:#3cf}
-			.cls-24{fill:#f7a892}
-			.cls-25{fill:#f2c5bb}
-			.cls-26{fill:#fff}
-			.cls-27{
-				fill:#000;
-				stroke-miterlimit:10
-			}
-			.cls-28{fill:#3f3}
-			.cls-29{fill:#406840}
+	#post-746 .illustration {
+		.cls-5{fill:#5e5855}
+		.cls-6{fill:#333}
+		.cls-7{fill:#ccc}
+		.cls-8{fill:#906}
+		.cls-10{fill:#09c}
+		.cls-11{fill:#fc3}
+		.cls-12{fill:#dee2de}
+		.cls-20{fill:#999}
+		.cls-21{fill:#39c}
+		.cls-22{fill:#c00}
+		.cls-23{fill:#3cf}
+		.cls-24{fill:#f7a892}
+		.cls-25{fill:#f2c5bb}
+		.cls-26{fill:#fff}
+		.cls-27{
+			fill:#000;
+			stroke-miterlimit:10
+		}
+		.cls-28{fill:#3f3}
+		.cls-29{fill:#406840}
 	}
+
 	// Featured_work
-	.illustration:nth-of-type(2) {
+	#post-748 .illustration {
 		.cls-5{fill:#f15d62}
 		.cls-18,.cls-7{fill:#fff}
 		.cls-10,.cls-16{fill:#f1f2f2}
@@ -365,21 +293,22 @@
 		.cls-35{opacity:.3;fill:#a7a9ac}
 		.cls-37{fill:#c85b55}
 	}
+
 	// What_I_do
-	.illustration:nth-of-type(3) {
-			.cls-2{fill:#f9a880}
-			.cls-4{fill:#999}
-			.cls-5{fill:#fc6f29}
-			.cls-9{fill:#b78c79}
-			.cls-10{fill:#fff}
-			.cls-11{fill:#c2c4c5}
-			.cls-12{fill:#d1d3d4}
-			.cls-14,.cls-17{fill:#ff876c}
-			.cls-14,.cls-15{opacity:.3}
-			.cls-15{fill:#a7a9ac}
-			.cls-16{fill:#f1f2f2}
-			.cls-17,.cls-18{opacity:.2}
-			.cls-18{fill:#c85b55}
-			.cls-19{fill:#262a33}
-			.cls-24{fill:#39c}
-	}
+	#post-750 .illustration {
+		.cls-2{fill:#f9a880}
+		.cls-4{fill:#999}
+		.cls-5{fill:#fc6f29}
+		.cls-9{fill:#b78c79}
+		.cls-10{fill:#fff}
+		.cls-11{fill:#c2c4c5}
+		.cls-12{fill:#d1d3d4}
+		.cls-14,.cls-17{fill:#ff876c}
+		.cls-14,.cls-15{opacity:.3}
+		.cls-15{fill:#a7a9ac}
+		.cls-16{fill:#f1f2f2}
+		.cls-17,.cls-18{opacity:.2}
+		.cls-18{fill:#c85b55}
+		.cls-19{fill:#262a33}
+		.cls-24{fill:#39c}
+	}	
