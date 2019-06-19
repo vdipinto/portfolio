@@ -5,7 +5,6 @@
 
 
 .front-page {
-	// margin: 20px;
 	display: flex;
     min-height: 100vh;
 	flex-direction: column;
@@ -16,56 +15,64 @@
 	article {
 		display: flex;
 		flex-direction: column;
-		// margin-bottom: 50px;
-		// align-content: space-between;
-		// border: 3px solid red;
-		// margin: 100px 0;
-		margin: 0px;
-		height: 100vh;
-		// padding: 30px;
 		justify-content: space-evenly;
+		margin-bottom: 6em;
+
+		section {
+			padding: 20px;
+
+			@media screen and (min-width: $width-medium) {
+				// background: red;
+				padding: 40px;
+			}
+		}
+
+
+
+		@media screen and (min-width: $width-medium) {
+			margin-bottom: 8em;
+			padding: 20px;
+		}
+
+		&:nth-of-type(1) {
+			margin-top: 1.5em;
+		}
+
+		&:nth-of-type(2) {
+			@media screen and (min-width: $width-medium) {
+				section:nth-of-type(2) {
+					order: 2;
+				}
+			}
+		}
+
+		.front-page-section-image {
+			padding: 5px;
+
+			@media screen and (min-width: $width-small) and (max-width: $width-medium - 1px){
+				max-width: 80%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
 		
 
 		// Move the featured image as second element 
 		section:nth-of-type(1) {
 			order: 2;
-			// padding: 20px;
-			// border: 3px solid red;
-			
-
-			.illustration {
-
-				@media screen and (min-width: $width-medium - 100px) and (max-width: $width-medium - 1px){
-					max-width: 60%;
-					display: block;
-					margin-left: auto;
-					margin-right: auto;
-				}
-			}
-		}
-
-		// This is the description 
-		section:nth-of-type(2) {
-			// padding: 20px;
-			// border: 3px solid red;
-			height: 90vh;
-			
 		}
 
 		
 
 		@media screen and (min-width: $width-medium) {
 			flex-direction: row;
-			// justify-content: center;
 			align-items: center;
 			
 
 			section:nth-of-type(1) {
 				flex-basis: 50%;
-				margin-top: 0;
-				align-self: flex-start;
-				position: relative;
-				top: 60px;
 			}
 
 			// This is the description 
@@ -114,19 +121,15 @@
 	}
 	
   article:nth-of-type(1) h1 {
-		width: 205px; /* manually set width */
+		width: 200px; /* manually set width */
 		-webkit-animation: type 2s steps(20, end);
 		animation: type 2s steps(20, end);
 		-webkit-animation-fill-mode: forwards;
 		animation-fill-mode: forwards;
-
-		@media screen and (min-width: $width-medium) {
-			width: 305px; /* manually set width */
-		}
   }
   
   article:nth-of-type(1) p:nth-of-type(1) {
-		width: 280px; /* manually set width */
+		width: 320px; /* manually set width */
 		opacity: 0;
 		-webkit-animation: type2 2s steps(20, end);
 		animation: type2 2s steps(20, end);
@@ -134,12 +137,16 @@
 		animation-delay: 2s;
 		-webkit-animation-fill-mode: forwards;
 		animation-fill-mode: forwards;
+		font-family: futura-pt, sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 25px;
   }
 
 
 
   article:nth-of-type(1) p:nth-of-type(2) {
-		width: 200px; /* manually set width */
+		width: 220px; /* manually set width */
 		opacity: 0;
 		-webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
 		animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
@@ -147,10 +154,10 @@
 		animation-delay: 4s;
 		-webkit-animation-fill-mode: forwards;
 		animation-fill-mode: forwards;
-
-		@media screen and (max-width: $width-medium - 100px) {
-			width: 195px; /* manually set width */
-		}
+		font-family: futura-pt, sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 25px;
   }
 
   @keyframes type {

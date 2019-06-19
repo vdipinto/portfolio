@@ -43,21 +43,21 @@ a:hover, a:active {
 ## Cards Links
 --------------------------------------------------------------*/
 
-.entry-title {
-	a {
-		text-decoration: none;
-		color: $black;
-	}
-}
+// .entry-title {
+// 	a {
+// 		text-decoration: none;
+// 		color: $black;
+// 	}
+// }
 
-.entry-footer {
-	a {
-		color: $black;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 14px;
-	}
-}
+// .entry-footer {
+// 	a {
+// 		color: $black;
+// 		text-decoration: none;
+// 		text-transform: uppercase;
+// 		font-size: 14px;
+// 	}
+// }
 
 /*--------------------------------------------------------------
 ## Footer Links
@@ -160,4 +160,18 @@ a:hover, a:active {
 .menu-item-description {
 	font-size: 12px;
 }
-	
+
+
+.button {
+	@include button;
+
+
+	.right_icon {
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		margin-top: 4px;
+		width: 1em;
+		height: 1em;
+	}
+}

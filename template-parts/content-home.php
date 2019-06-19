@@ -48,11 +48,12 @@
 
 		</div><!-- .entry-content -->
 
-		<div class="link-to-page">			
+		<?php if ( get_post_meta($post->ID, 'linkedpageurl', true) )  : ?>
+			<div class="link-to-page">			
 				<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?>
-				<?php get_template_part( 'assets/inline', 'right_icon.svg' );?>
-			</a>
-		</div><!-- .link-to-page -->
+				<?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
+			</div><!-- .link-to-page -->
+		<?php endif; ?>
 
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer class="entry-footer">

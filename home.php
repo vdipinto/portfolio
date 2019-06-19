@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-        <div id="post-<?php the_ID(); ?>" <?php post_class('home-work'); ?>>
+        <div id="post-<?php the_ID(); ?>" <?php post_class('my-work blog-content'); ?>>
 		
 		
 		
@@ -55,7 +55,7 @@ get_header();
 		
 		if ( $the_query->have_posts() ) : ?>
 
-			<div class="blog-posts">	
+			<div class="cards">	
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post();
 					/*
