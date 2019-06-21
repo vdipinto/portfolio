@@ -5,6 +5,8 @@
 	clear: both;
 	display: block;
 	text-transform: uppercase;
+
+	
 	
 
 	@media screen and (min-width: $width-medium + 100) {
@@ -18,7 +20,6 @@
 	margin: 0;
 	padding-left: 0;
 
-
 	
 
 	li a {
@@ -29,9 +30,18 @@
 		}
 	}
 
+	li:nth-child(6) {
+		@media screen and (min-width: $width-small) {
+			display: none;
+		}
+
+	}
+
 	li:nth-child(1) {
+
 		a {
 			padding-left: 0px;
+			
 		}
 	}
 
@@ -149,6 +159,7 @@
 
 	.slicknav_menu {
 	display:block;
+	
 	}
 }
 

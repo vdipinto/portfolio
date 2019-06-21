@@ -51,6 +51,43 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 			'menu-3' => esc_html__( 'Social-bar', 'portfolio'  ),
 		) );
 
+
+		
+		/**
+		 * Generate custom search form
+		 *
+		 * @param string $form Form HTML.
+		 * @return string Modified form HTML.
+		 */
+		// function wpdocs_my_search_form( $form ) {
+		// 	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+		// 	<div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+		// 	<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+		// 	<input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+		// 	</div>
+		// 	</form>';
+		
+		// 	return $form;
+		// }
+		// add_filter( 'get_search_form', 'wpdocs_my_search_form' );
+
+	
+
+		
+		add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+		function add_search_form($items, $args) {
+		if( $args->theme_location == 'menu-1' )
+				$searchform = '<li class="search-mobile"><form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+				<div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+				<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+				<input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+				</div>
+				</form></li>';
+				$items = $items .$searchform;
+				return $items;
+		}
+
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -440,23 +477,22 @@ add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
 
 // Modifying search query to exclude posts not intented for front-end and limit results to 10 per page on front end only
 
-function SearchFilter($query) {
+function searchfilter($query) {
+ 
     if ($query->is_search && !is_admin() ) {
-        $query->set('post_type', 'page');
+        $query->set('post_type',array('post'));
     }
-
-
-    return $query;
+ 
+return $query;
 }
-
-add_filter('pre_get_posts','SearchFilter');
+ 
 
 function change_wp_search_size($query) {
     if ( $query->is_search && !is_admin() ) {
         	//Exclude posts by ID
-		$post_ids = array(900,903,685,8,755,757,770,746,748,750,872,742,3,112);
+		$post_ids = array(900,903,685,8,746,748,750,3);
 		$query->set('post__not_in', $post_ids);
-		$query->set( 'posts_per_page', 5 );
+		$query->set( 'posts_per_page', 10 );
     }
 
     return $query;

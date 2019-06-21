@@ -40,45 +40,10 @@ html {
 
 .site-header {
 	display: none;
+
 	
+
 	
-	// flex-grow: 1;
-
-	// 	@media screen and (min-width: $width-small + 1) {
-	// 	display: grid;
-	// 	grid-template-columns: 20px 100px 10px 1fr 20px;
-	// 	grid-template-rows: 10px 100px;
-	// 	align-items: center;
-	// 	justify-items: end;
-	// 	background: $orange;
-
-	// 	#primary-menu {
-	// 		border: 1px solid black;
-	// 	}
-		
-	// }
-
-
-	// .site-branding {
-
-	// 	grid-column: 2;
-	// 	grid-row: 2;
-	// 	align-self: center;
-	// 	justify-self: center;
-
-	// 	.custom-logo {
-	// 		vertical-align: center;
-	// 		max-width: 100%;
-	// 		padding: 10px;
-	// 	}
-
-		
-
-	// 	.site-title, .site-description {
-	// 		display: none;
-	// 	}
-		
-	// }
 
 	@media screen and (min-width: $width-small + 1) {
 		background: $orange;
@@ -108,6 +73,7 @@ html {
 			.menu {
 				float: right;
 			}
+
 		}
 	}
 

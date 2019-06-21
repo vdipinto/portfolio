@@ -12,6 +12,7 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<div id="post-<?php the_ID(); ?>" <?php post_class('search-page'); ?>>
 
 		<?php if ( have_posts() ) : ?>
 

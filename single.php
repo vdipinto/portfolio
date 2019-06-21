@@ -22,30 +22,33 @@ get_header();
 
 			?>
 
-
-
 			
-			<!-- <div class="navigation">
-				<div class="navleft"><?php //get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php //previous_post_link( '%link', '%title', true ); ?></div>
-				<div class="navright"><?php //next_post_link( '%link', '%title', true );  ?><?php //get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
-			</div> -->
+
+				
+
+				<div class="navigation">
+
+				<?php
+				$prev_post = get_previous_post();
+				if ( ! empty( $prev_post ) ): ?>
+					<div class="navleft"><?php get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></a></div>
+				<?php endif; ?>
+				
 
 
+				<?php
+				$next_post = get_next_post();
+				if (!empty( $next_post )): ?>
+				<div class="navright"><a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_attr( $next_post->post_title ); ?></a><?php get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
+				<?php endif; ?>
+
+
+
+				
+				</div><!-- .navigation -->
+
+				
 	
-			<div class="navigation">
-				<?php if (strlen(get_previous_post()->post_title) > 0) { ?>
-					<div class="navleft"><?php get_template_part( 'assets/inline', 'left_icon_nanbar.svg' );?><?php previous_post_link( '%link', '%title', true ) ?></div>
-				<?php } ?>
-			
-
-				<?php if (strlen(get_next_post()->post_title) > 0) { ?>
-					<div class="navright"><?php next_post_link( '%link', '%title', true ) ?><?php get_template_part( 'assets/inline', 'right_icon_nanbar.svg' );?></div>
-				<?php } ?>
-
-
-			
-			</div><!-- .navigation -->
-
 			
 
 			<?php

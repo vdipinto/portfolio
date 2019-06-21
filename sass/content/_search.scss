@@ -1,0 +1,51 @@
+
+/*--------------------------------------------------------------
+## Pages> search
+--------------------------------------------------------------*/
+
+
+.search-page {
+
+   
+    .search-card {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 20px;
+
+        .search-content {
+            flex: 2 1 100px;
+            margin: 0;
+            padding: 5px;
+
+            @media only screen and (max-width: $width-small)  {
+
+                h2 {
+                    font-size: 14px;
+                }
+    
+                p {
+                    font-size: 12px;
+                }
+    
+                .entry-meta {
+                    font-size: 12px;
+                }
+    
+                .entry-summary {
+                    margin: 0;
+                }
+            
+            
+            }
+        }
+
+        .featured-image {
+            flex: 1 1 200px;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+}

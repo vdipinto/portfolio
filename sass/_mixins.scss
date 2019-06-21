@@ -73,7 +73,7 @@
 
 
 @mixin button {
-	color: $white;
+	color: #fff;
 	background-color: $orange;
 	display: inline-block;
 	text-align: center;
@@ -92,8 +92,10 @@
 	transition-duration: 1s;
 	transition-timing-function: linear;
 
-	&:hover {
+
+	
+	&:hover, &:focus, &:active,&:visited {
 		background: $darkorange;
-		color: $white;
-      }
+		color: #fff;
+	}
 }

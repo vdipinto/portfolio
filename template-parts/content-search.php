@@ -9,27 +9,34 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('search-card'); ?>>
+	<div class="search-content">
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			portfolio_posted_on();
-			portfolio_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+			
+			<div class="entry-meta">
+				<?php the_time('jS F Y') ?><br />
+			</div><!-- .entry-meta -->
+			
+		</header><!-- .entry-header -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 
-	<?php portfolio_post_thumbnail(); ?>
+		<a class="button" href="<?php esc_url( the_permalink() ) ?>">
+				see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
+	</div><!-- .search-content -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php portfolio_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
+	<?php if ( has_post_thumbnail() ) { ?>
+		<figure class="featured-image">
+			<a href="<?php esc_url( the_permalink() ) ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+		</figure>
+	<?php } ?>
+
+	
 </article><!-- #post-<?php the_ID(); ?> -->
