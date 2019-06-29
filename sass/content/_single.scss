@@ -1,7 +1,7 @@
 .single {
 
     article {
-        max-width: 800px;
+        
         margin: 0 auto;
 
         .entry-header {
@@ -13,18 +13,23 @@
             
            
             .featured-image {      
-                // border-radius: 8px;
                 max-width: 80%;
-                // box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
                 margin: 0 auto;
                 display: block;
             }
            
         }
 
+        .link-to-page {
+           text-align: center;
+           padding: 20px;
+        }
+
         .entry-content {
             margin: 0 auto;
         }
+
+
 
        
     }

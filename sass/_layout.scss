@@ -100,30 +100,16 @@ html {
 	margin: 0 auto;
 
 
+	// Post Navigation 
+
+
 	.navigation {
 		border: 1px solid rgba(0,0,0,0.5);
-		max-width: 1200px;
 		margin: 70px auto;
 		padding: 20px 0;
 		box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
 		-webkit-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
 		-moz-box-shadow: 14px 12px 0px -8px rgba(0,0,0,0.5);
-
-		svg {
-			width: 10px;
-			fill: rgb(65, 57, 57);
-
-			@media screen and (min-width: $width-small + 1) {
-				width: 20px;
-			}
-		}
-
-		
-
-		.navleft a,
-		.navright a {
-			font-size: 14px;
-		}
 	}
 }
 

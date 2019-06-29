@@ -25,13 +25,21 @@
 		</header><!-- .entry-header -->
 		<?php //portfolio_the_category_list(); ?>
 
-		<?php if ( has_post_thumbnail() ) { ?>
-			<figure class="featured-image">
-				<a href="<?php esc_url( the_permalink() ) ?>">
-					<?php the_post_thumbnail(); ?>
-				</a>
-			</figure>
-		<?php } ?>
+		<?php 
+
+			//get custom field titled "alternative-image"
+			$alternative_post_image = get_post_meta($post->ID, 'alternative-image', $single = true);
+
+		
+			//if custom field isn't blank
+			
+			if ($alternative_post_image !== '' ) { ?>
+	
+				<img src="<?php echo $alternative_post_image; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+		
+			<?php } ?>
+
+		
 		
 		<div class="card-content">
 			<?php
@@ -49,15 +57,16 @@
 			<?php endif; ?>
 		</div> <!-- .card-content -->
 
-			
+
 		
-			<?php if (is_page( 'mywork' ) ): ?>
-				<footer class="entry-footer">
-				<a class="button" href="<?php esc_url( the_permalink() ) ?>">
-				see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
-				</footer><!-- .entry-footer --> 
-			<?php endif;
-			?>
+		<footer class="entry-footer">
+			<a class="button" href="<?php esc_url( the_permalink() ) ?>">see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
+		</footer><!-- .entry-footer --> 
+		
+		<a class="card-permalink" href="<?php esc_url( the_permalink() ) ?>"></a>
+		
+				
+		
 			
 
 		

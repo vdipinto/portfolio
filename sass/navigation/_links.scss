@@ -56,19 +56,26 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 .navleft,
-.navright{
+.navright {
+	padding: 4px;
 
 	svg {
-		width: 20px;
+		width: 10px;
+		fill: rgb(65, 57, 57);
+
+		@media screen and (min-width: $width-small + 1) {
+			width: 20px;
+		}
 	}
 	
 
 	a {
 		display: inline-block;
 		position: relative;
-		bottom: 8px;
+		bottom: 6px;
 		text-decoration: none;
 		padding: 0 5px;
+		font-size: 14px;
 		
 
 		&:hover {

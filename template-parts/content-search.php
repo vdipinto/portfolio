@@ -9,8 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('search-card'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('search-card clearfix'); ?>>
 	<div class="search-content">
+		
+	<div class="textual-search-content">
+		
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -23,10 +26,11 @@
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
+	</div><!-- .textual-search-content -->
 
-		<a class="button" href="<?php esc_url( the_permalink() ) ?>">
-				see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
-	</div><!-- .search-content -->
+		
+	
+	
 
 
 
@@ -37,6 +41,12 @@
 			</a>
 		</figure>
 	<?php } ?>
+	</div><!-- .search-content -->
+
+	<footer class="entry-footer">
+			<a class="button" href="<?php esc_url( the_permalink() ) ?>">see more <?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
+	</footer><!-- .entry-footer -->
+	
 
 	
 </article><!-- #post-<?php the_ID(); ?> -->

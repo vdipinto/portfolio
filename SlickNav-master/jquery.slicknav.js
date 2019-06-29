@@ -2,7 +2,7 @@
     var
     // default settings object.
         defaults = {
-            label: 'MENU',
+            label: '',
             duplicate: true,
             duration: 200,
             easingOpen: 'swing',
@@ -19,7 +19,7 @@
             removeIds: true,
             removeClasses: false,
             removeStyles: false,
-            brand: '<a href="www.google.com" rel="home"><img src="<?php header_image(); ?>" alt="Vito Dipinto Logo"></a>',
+            brand: '<a href="www.google.com" rel="home"><img src="<?php header_image(); ?>" alt="Vito Dipinto"></a>',
             animations: 'jquery',
             init: function () {},
             beforeOpen: function () {},

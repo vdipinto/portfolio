@@ -201,6 +201,9 @@ function portfolio_scripts() {
 
 	wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 
+	// JS
+	wp_enqueue_script('jquery');
+
 
 
 
@@ -210,8 +213,7 @@ function portfolio_scripts() {
 	wp_register_style( 'slicknav-css', get_stylesheet_directory_uri() . '/SlickNav-master/scss/slicknav.scss');
 	wp_enqueue_style( 'slicknav-css' );
 
-	// JS
-	wp_enqueue_script('jquery');
+
 	// Load Custom JS File
 	wp_register_script('siteJs', get_template_directory_uri().'/js/site.js', array('jquery'), '', false );
     wp_enqueue_script('siteJs');
@@ -347,7 +349,7 @@ function portfolio_courses_custom_columns ($columns) {
 	unset($columns['date']);
 	$cols = array(
 		$columns['university'] = __( 'University or School', 'portfolio' ),
-		$columns['period'] = __( 'Period of study', 'portfolio' ),
+		$columns['period-of-study'] = __( 'Period of study', 'portfolio' ),
 		$columns['city'] = __( 'City', 'portfolio' ),
 	);
 
@@ -374,21 +376,21 @@ function portfolio_courses_custom_columns ($columns) {
 add_filter( 'manage_courses_posts_columns', 'portfolio_courses_custom_columns' );
 
 
-// Add the data to the custom columns for the book post type:
+// Add the data to the custom columns for the course post type:
 
 function custom_course_column( $column, $post_id ) {
 	switch ( $column ) {
 
 		case 'period' :
-			echo get_post_meta( $post_id, 'period_of_study', true );
+			echo get_post_meta( $post_id, 'period-of-study', true );
 			break;
 
 		case 'university' :
-			echo get_post_meta( $post_id , 'university_or_school' , true ); 
+			echo get_post_meta( $post_id , 'university' , true ); 
 			break;
 
 		case 'city' :
-			echo get_post_meta( $post_id, 'City', true );
+			echo get_post_meta( $post_id, 'city', true );
 			break;
 
 		case 'course-of-study' :
@@ -410,9 +412,8 @@ function portfolio_jobs_custom_columns ($columns) {
 	unset($columns['date']);
 	$cols = array(
 		$columns['city'] = __( 'City', 'portfolio' ),
-		$columns['employer'] = __( 'Employer', 'portfolio' ),
+		$columns['company'] = __( 'Employer', 'portfolio' ),
 		$columns['period-of-work'] = __( 'Period of work', 'portfolio' ),
-		$columns['key-achievements'] = __( 'Period of work', 'portfolio' ),
 	);
 
 
@@ -444,20 +445,17 @@ function custom_job_column( $column, $post_id ) {
 	switch ( $column ) {
 
 		case 'city' :
-			echo get_post_meta( $post_id, 'City', true );
+			echo get_post_meta( $post_id, 'city', true );
 			break;
 
-		case 'employer' :
-			echo get_post_meta( $post_id , 'employer' , true ); 
+		case 'company' :
+			echo get_post_meta( $post_id , 'company' , true ); 
 			break;
 
 		case 'period-of-work' :
-			echo get_post_meta( $post_id, 'period_of_work', true );
+			echo get_post_meta( $post_id, 'period-of-work', true );
 			break;
 
-		case 'key-achievements' :
-			echo get_post_meta( $post_id, 'key_achievements', true );
-			break;
 
 		case 'job-title' :
 			$oldtitle = get_the_title();
@@ -490,7 +488,7 @@ return $query;
 function change_wp_search_size($query) {
     if ( $query->is_search && !is_admin() ) {
         	//Exclude posts by ID
-		$post_ids = array(900,903,685,8,746,748,750,3);
+		$post_ids = array(900,903,685,8,746,748,742,750,3,112);
 		$query->set('post__not_in', $post_ids);
 		$query->set( 'posts_per_page', 10 );
     }

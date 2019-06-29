@@ -1,6 +1,6 @@
 <?php
 /**
- * default search form HEy
+ * default search form for Desktop 
  */
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">

@@ -20,24 +20,20 @@
 		?>
 		<p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
 
-<?php
+		<?php if ( has_post_thumbnail() ) { ?>
+			<figure class="featured-image">
+				<a href="<?php esc_url( the_permalink() ) ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			</figure>
+		<?php } ?>
 
-if( class_exists('Dynamic_Featured_Image') ):
-    global $dynamic_featured_image;
-    global $post;
-     $featured_images = $dynamic_featured_image->get_featured_images( $post->ID );
-
-     if ( $featured_images ):
-        ?>
-            <?php foreach( $featured_images as $images ): ?>
-               <img class="featured-image" src="<?php echo $images['full'] ?>" alt="<?php echo $dynamic_featured_image->get_image_alt($images['full']) ?>">
-            <?php endforeach; ?>
-        <?php
-		endif;
-	endif;
-
-		?>
-
+		<?php if ( get_post_meta($post->ID, 'linkedpageurl', true) )  : ?>
+			<div class="link-to-page">			
+				<a class="button" href="<?php echo get_post_meta($post->ID, 'linkedpageurl', true); ?>"><?php echo get_post_meta($post->ID, 'linkedpagename', true); ?>
+				<?php get_template_part( 'assets/inline', 'right_icon.svg' );?></a>
+			</div><!-- .link-to-page -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	

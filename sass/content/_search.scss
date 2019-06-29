@@ -8,15 +8,27 @@
 
    
     .search-card {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 0;
-        padding: 20px;
+        margin: 20px 15px;
+        border-radius: 8px;
+		background: $white;
+        cursor:pointer;
+        padding: 5px;
+
+        .entry-footer {
+            float: right;
+            padding: 5px;
+        }
+
+     
+
+        
+
+		&:hover {
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.42);
+        }
 
         .search-content {
-            flex: 2 1 100px;
-            margin: 0;
-            padding: 5px;
+            
 
             @media only screen and (max-width: $width-small)  {
 
@@ -35,17 +47,28 @@
                 .entry-summary {
                     margin: 0;
                 }
-            
-            
             }
-        }
 
-        .featured-image {
-            flex: 1 1 200px;
-
-            img {
-                border-radius: 10px;
+            .featured-image {
+                max-width: 400px;
+                margin:0 auto;
             }
+        
+            @media only screen and (min-width: $width-small) {
+                display: flex;
+                flex-direction: row;
+            }
+
         }
     }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    
 }
+ 
+
+      
