@@ -19,7 +19,7 @@
             removeIds: true,
             removeClasses: false,
             removeStyles: false,
-            brand: '<a href="www.google.com" rel="home"><img src="<?php header_image(); ?>" alt="Vito Dipinto"></a>',
+            brand: '',
             animations: 'jquery',
             init: function () {},
             beforeOpen: function () {},

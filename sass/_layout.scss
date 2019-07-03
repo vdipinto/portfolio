@@ -41,9 +41,75 @@ html {
 .site-header {
 	display: none;
 
-	
+	.site-branding-and-search {
+		display: flex;
+		padding: 20px 20px 10px 20px;
+		
 
-	
+		.search-icon {
+			width: 30px;
+			color: $white;
+		}
+	}
+
+
+
+	.search-form {
+		// display: none;
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
+		background: #b06f4c;
+		
+
+		input[type="search"] {
+			box-sizing: border-box;
+			background: #E9E9E9;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin: 0;
+			border: none;
+			font-size: 1.1em;
+			text-decoration: none;
+			line-height: normal;
+			width: 50%;
+			padding: 21px;
+			height: 50px;
+
+			@media screen and (min-width: $width-medium) {
+				width: 80%;
+			}
+
+		}
+
+		input[type="submit"] {
+			cursor: pointer;
+			font-weight: 300;
+			padding: 0;
+			text-transform: uppercase;
+			border: none;
+			font-size: 1.1em;
+			text-decoration: none;
+			border: 0;
+			border-radius: 0;
+			position: relative;
+			right: 20px;
+			height: 50px;
+
+		}
+
+		input[type="submit"]:hover {
+			background: #C17CCF;
+		}
+
+
+
+		
+	}
+
+
 
 	@media screen and (min-width: $width-small + 1) {
 		background: $orange;
@@ -54,11 +120,6 @@ html {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			padding: 20px 20px 10px 20px;
-
-			.search-form {
-				align-self: center;
-			}
 		}
 
 		.custom-logo {

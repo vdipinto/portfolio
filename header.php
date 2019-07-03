@@ -42,8 +42,11 @@
 				?>
 				<p class="site-description"><?php echo $portfolio_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-			<?php get_search_form(); ?>
+			
+			<?php get_template_part( 'assets/inline', 'search-solid.svg' );?>
 		</div><!-- .site-branding and search-->
+
+		<?php get_search_form(); ?>
 
 
 		
