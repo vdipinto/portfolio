@@ -27,7 +27,7 @@ var $j = jQuery.noConflict();
 			$j('.navigation').css("display", "flex").css("flex-direction", "row").css("justify-content", "flex-start");
 		}
 
-		$j('.slicknav_menu').prepend('<a href="index.php"><img class="vitodipintome_brand" src="http://localhost:8888/portfolio/wp-content/uploads/2019/06/vitodipinto.logo_-1.svg" alt="Website Logo" /></a>');
+		$j('.slicknav_menu').prepend('<a href="http://localhost:8888/portfolio/"><img class="vitodipintome_brand" src="http://localhost:8888/portfolio/wp-content/uploads/2019/06/vitodipinto.logo_-1.svg" alt="vitodipinto.me Logo" /></a>');
 
 
 		$j('.search-icon').on('click', function() {
@@ -37,7 +37,7 @@ var $j = jQuery.noConflict();
 
 
 		$j(document).keyup(function(e) {
-			// Ref https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery
+
 			// Close search if esc key pressed
 			if (e.key == "Escape") {
 				$j(".search-form").hide();

@@ -23,9 +23,14 @@
     $ck = get_post_custom_keys($post_id); //Array
 
         // drop keys starting with '_'
+        // should be return keys that do not contain '_'
         $ck = array_filter($ck, function($key){
         return strpos($key, '_') !== 0;
+
         });
+
+        // Print the result of $ck
+        // print_r($ck);
 
         // store your root keys here
         $data = array();

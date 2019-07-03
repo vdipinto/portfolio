@@ -44,12 +44,14 @@ get_header();
 				<?php
 
 				$post_types = array('courses', 'jobs', 'interests'); 
+				// $post_keys = array('period-of-study', 'period-of-work');
 
 				$args = array(
 					'post_type'		=> $post_types,
 					'post_per_page' => '-1',
-					'orderby'       => 'post_type',
-					'order'         => 'ASC'
+					'orderby' => 'meta_value',
+                    'meta_key' => 'order',
+                    'order' => 'ASC'
 				);
 				
 				$resume_items = new WP_Query( $args );
@@ -87,6 +89,7 @@ get_header();
 					<?php endforeach;
 
 				wp_reset_postdata();
+				
 				
 				else :
 				get_template_part( 'template-parts/content', 'none' );

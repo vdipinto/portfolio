@@ -381,8 +381,8 @@ add_filter( 'manage_courses_posts_columns', 'portfolio_courses_custom_columns' )
 function custom_course_column( $column, $post_id ) {
 	switch ( $column ) {
 
-		case 'period' :
-			echo get_post_meta( $post_id, 'period-of-study', true );
+		case 'period-of-study' :
+			echo get_post_meta( $post_id, 'period', true );
 			break;
 
 		case 'university' :
@@ -453,7 +453,7 @@ function custom_job_column( $column, $post_id ) {
 			break;
 
 		case 'period-of-work' :
-			echo get_post_meta( $post_id, 'period-of-work', true );
+			echo get_post_meta( $post_id, 'period', true );
 			break;
 
 
@@ -468,7 +468,6 @@ function custom_job_column( $column, $post_id ) {
 
 
 add_action( 'manage_jobs_posts_custom_column' , 'custom_job_column', 10, 2 );
-
 
 
 

@@ -457,40 +457,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 34, ../sass/_typography.scss */
-.description {
-  font-family: futura-pt, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* line 41, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: futura-pt-bold, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-/* line 48, ../sass/_typography.scss */
+/* line 41, ../sass/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 52, ../sass/_typography.scss */
+/* line 45, ../sass/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 56, ../sass/_typography.scss */
+/* line 49, ../sass/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 60, ../sass/_typography.scss */
+/* line 53, ../sass/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 64, ../sass/_typography.scss */
+/* line 57, ../sass/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -503,26 +496,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 76, ../sass/_typography.scss */
+/* line 69, ../sass/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 82, ../sass/_typography.scss */
+/* line 75, ../sass/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 87, ../sass/_typography.scss */
+/* line 80, ../sass/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 92, ../sass/_typography.scss */
+/* line 85, ../sass/_typography.scss */
 big {
   font-size: 125%;
 }
@@ -765,16 +758,18 @@ footer {
 .site-header .site-branding-and-search .search-icon {
   width: 30px;
   color: #fff;
+  cursor: pointer;
 }
-/* line 57, ../sass/_layout.scss */
+/* line 58, ../sass/_layout.scss */
 .site-header .search-form {
+  display: none;
   margin: 0 auto;
   text-align: center;
   width: 100%;
   padding: 20px 0;
   background: #b06f4c;
 }
-/* line 66, ../sass/_layout.scss */
+/* line 67, ../sass/_layout.scss */
 .site-header .search-form input[type="search"] {
   box-sizing: border-box;
   background: #E9E9E9;
@@ -791,12 +786,12 @@ footer {
   height: 50px;
 }
 @media screen and (min-width: 770px) {
-  /* line 66, ../sass/_layout.scss */
+  /* line 67, ../sass/_layout.scss */
   .site-header .search-form input[type="search"] {
     width: 80%;
   }
 }
-/* line 87, ../sass/_layout.scss */
+/* line 88, ../sass/_layout.scss */
 .site-header .search-form input[type="submit"] {
   cursor: pointer;
   font-weight: 300;
@@ -810,8 +805,12 @@ footer {
   position: relative;
   right: 20px;
   height: 50px;
+  width: 100px;
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-/* line 103, ../sass/_layout.scss */
+/* line 107, ../sass/_layout.scss */
 .site-header .search-form input[type="submit"]:hover {
   background: #C17CCF;
 }
@@ -822,33 +821,33 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  /* line 119, ../sass/_layout.scss */
+  /* line 123, ../sass/_layout.scss */
   .site-header .site-branding-and-search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  /* line 125, ../sass/_layout.scss */
+  /* line 129, ../sass/_layout.scss */
   .site-header .custom-logo {
     width: 120px;
   }
-  /* line 129, ../sass/_layout.scss */
+  /* line 133, ../sass/_layout.scss */
   .site-header .main-navigation {
     background: #ff9b66;
     width: 100%;
     padding: 5px 0 5px 20px;
   }
-  /* line 134, ../sass/_layout.scss */
+  /* line 138, ../sass/_layout.scss */
   .site-header .main-navigation .menu {
     float: right;
   }
 }
-/* line 142, ../sass/_layout.scss */
+/* line 146, ../sass/_layout.scss */
 .site-header .main-navigation {
   grid-column: 4 / 5;
   grid-row: 2;
 }
-/* line 146, ../sass/_layout.scss */
+/* line 150, ../sass/_layout.scss */
 .site-header .main-navigation .menu a {
   font-family: sofia-pro-soft, sans-serif;
   font-weight: 700;
@@ -859,12 +858,12 @@ footer {
 /*
  *Content area 
 */
-/* line 159, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 .site-main {
   max-width: 1300px;
   margin: 0 auto;
 }
-/* line 167, ../sass/_layout.scss */
+/* line 171, ../sass/_layout.scss */
 .site-main .navigation {
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin: 70px auto;
@@ -874,7 +873,7 @@ footer {
   -moz-box-shadow: 14px 12px 0px -8px rgba(0, 0, 0, 0.5);
 }
 
-/* line 179, ../sass/_layout.scss */
+/* line 183, ../sass/_layout.scss */
 .page-header {
   grid-column: 1 / 18;
   align-self: center;
@@ -1081,12 +1080,12 @@ a:hover, a:active {
   font-style: normal;
   background-color: #e95d2a;
 }
-/* line 87, ../sass/_mixins.scss */
+/* line 30, ../sass/_mixins.scss */
 .button:visited {
   background-color: #e95d2a;
   color: #fff;
 }
-/* line 95, ../sass/_mixins.scss */
+/* line 38, ../sass/_mixins.scss */
 .button:hover {
   background: #d34e2a;
   color: #fff;
@@ -1273,40 +1272,41 @@ a:hover, a:active {
   display: block;
   vertical-align: middle;
   float: right;
-  padding: 0.438em 0.625em 0.438em 0.625em;
+  top: 5px;
+  padding: 0.638em 0.625em 0.438em 0.625em;
   line-height: 1.125em;
   cursor: pointer;
 }
-/* line 9, ../sass/slickNav/_core.scss */
+/* line 10, ../sass/slickNav/_core.scss */
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
   margin-top: 0.188em;
 }
 
-/* line 13, ../sass/slickNav/_core.scss */
+/* line 14, ../sass/slickNav/_core.scss */
 .slicknav_menu {
   *zoom: 1;
 }
-/* line 15, ../sass/slickNav/_core.scss */
+/* line 16, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_menutxt {
   display: block;
   line-height: 1.188em;
   float: left;
 }
-/* line 21, ../sass/slickNav/_core.scss */
+/* line 22, ../sass/slickNav/_core.scss */
 .slicknav_menu .vitodipintome_brand {
   float: left;
   width: 10%;
   /*or whatever size you would like*/
   height: auto;
 }
-/* line 28, ../sass/slickNav/_core.scss */
+/* line 29, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon {
   float: left;
   width: 1.125em;
   height: 0.875em;
   margin: 0.188em 0 0 0.438em;
 }
-/* line 33, ../sass/slickNav/_core.scss */
+/* line 34, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon:before {
   background: transparent;
   width: 1.125em;
@@ -1315,11 +1315,11 @@ a:hover, a:active {
   content: "";
   position: absolute;
 }
-/* line 42, ../sass/slickNav/_core.scss */
+/* line 43, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_no-text {
   margin: 0;
 }
-/* line 45, ../sass/slickNav/_core.scss */
+/* line 46, ../sass/slickNav/_core.scss */
 .slicknav_menu .slicknav_icon-bar {
   display: block;
   width: 1.125em;
@@ -1331,57 +1331,57 @@ a:hover, a:active {
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
-/* line 56, ../sass/slickNav/_core.scss */
+/* line 57, ../sass/slickNav/_core.scss */
 .slicknav_menu:before {
   content: " ";
   display: table;
 }
-/* line 60, ../sass/slickNav/_core.scss */
+/* line 61, ../sass/slickNav/_core.scss */
 .slicknav_menu:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-/* line 66, ../sass/slickNav/_core.scss */
+/* line 67, ../sass/slickNav/_core.scss */
 .slicknav_nav {
   clear: both;
 }
-/* line 68, ../sass/slickNav/_core.scss */
+/* line 69, ../sass/slickNav/_core.scss */
 .slicknav_nav ul {
   display: block;
 }
-/* line 71, ../sass/slickNav/_core.scss */
+/* line 72, ../sass/slickNav/_core.scss */
 .slicknav_nav li {
   display: block;
 }
-/* line 74, ../sass/slickNav/_core.scss */
+/* line 75, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_arrow {
   font-size: 0.8em;
   margin: 0 0 0 0.4em;
 }
-/* line 78, ../sass/slickNav/_core.scss */
+/* line 79, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_item {
   cursor: pointer;
 }
-/* line 80, ../sass/slickNav/_core.scss */
+/* line 81, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_item a {
   display: inline;
 }
-/* line 84, ../sass/slickNav/_core.scss */
+/* line 85, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_row {
   display: block;
 }
-/* line 87, ../sass/slickNav/_core.scss */
+/* line 88, ../sass/slickNav/_core.scss */
 .slicknav_nav a {
   display: block;
 }
-/* line 90, ../sass/slickNav/_core.scss */
+/* line 91, ../sass/slickNav/_core.scss */
 .slicknav_nav .slicknav_parent-link a {
   display: inline;
 }
 
-/* line 94, ../sass/slickNav/_core.scss */
+/* line 95, ../sass/slickNav/_core.scss */
 .slicknav_brand {
   float: left;
 }
@@ -1390,7 +1390,7 @@ a:hover, a:active {
 .slicknav_menu {
   font-size: 16px;
   box-sizing: border-box;
-  background: #4c4c4c;
+  background: #e95d2a;
   padding: 5px;
 }
 /* line 15, ../sass/slickNav/_theme.scss */
@@ -1453,9 +1453,12 @@ a:hover, a:active {
   padding: 5px 10px;
   margin: 2px 5px;
   text-decoration: none;
+  font-family: futura-pt-bold, sans-serif;
+  font-style: normal;
+  font-weight: 600;
   color: #fff;
 }
-/* line 65, ../sass/slickNav/_theme.scss */
+/* line 68, ../sass/slickNav/_theme.scss */
 .slicknav_nav a:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -1463,22 +1466,67 @@ a:hover, a:active {
   background: #ccc;
   color: #222;
 }
-/* line 73, ../sass/slickNav/_theme.scss */
+/* line 76, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_txtnode {
   margin-left: 15px;
 }
-/* line 76, ../sass/slickNav/_theme.scss */
+/* line 79, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_item a {
   padding: 0;
   margin: 0;
 }
-/* line 80, ../sass/slickNav/_theme.scss */
+/* line 83, ../sass/slickNav/_theme.scss */
 .slicknav_nav .slicknav_parent-link a {
   padding: 0;
   margin: 0;
 }
+/* line 88, ../sass/slickNav/_theme.scss */
+.slicknav_nav .search-mobile .searchform {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 94, ../sass/slickNav/_theme.scss */
+.slicknav_nav .search-mobile .searchform input[type="text"] {
+  box-sizing: border-box;
+  background: #E9E9E9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  border: none;
+  font-size: 1.1em;
+  text-decoration: none;
+  line-height: normal;
+  width: 70%;
+  height: 30px;
+  border-radius: 0;
+  padding: 5px;
+}
+/* line 111, ../sass/slickNav/_theme.scss */
+.slicknav_nav .search-mobile .searchform input[type="submit"] {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  right: 10px;
+  font-family: futura-pt-bold, sans-serif;
+  font-style: normal;
+  height: 30px;
+  padding: 5px;
+}
+/* line 129, ../sass/slickNav/_theme.scss */
+.slicknav_nav .search-mobile .searchform input[type="submit"]:hover {
+  background: #C17CCF;
+}
 
-/* line 85, ../sass/slickNav/_theme.scss */
+/* line 137, ../sass/slickNav/_theme.scss */
 .slicknav_brand {
   color: #fff;
   font-size: 18px;
@@ -1778,12 +1826,12 @@ a:hover, a:active {
   font-style: normal;
   background-color: #e95d2a;
 }
-/* line 87, ../sass/_mixins.scss */
+/* line 30, ../sass/_mixins.scss */
 .button:visited {
   background-color: #e95d2a;
   color: #fff;
 }
-/* line 95, ../sass/_mixins.scss */
+/* line 38, ../sass/_mixins.scss */
 .button:hover {
   background: #d34e2a;
   color: #fff;
@@ -2361,12 +2409,16 @@ a:hover, a:active {
   -moz-box-shadow: 14px 12px 0px -8px #4191c4;
   padding: 10px;
 }
+/* line 40, ../sass/content/_page-resume.scss */
+.resume .resume-container .resume-meta li:nth-of-type(4n) {
+  display: none;
+}
 @media only screen and (min-width: 770px) {
   /* line 14, ../sass/content/_page-resume.scss */
   .resume .resume-container {
     flex-direction: row;
   }
-  /* line 46, ../sass/content/_page-resume.scss */
+  /* line 51, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-1 {
     /* This will be twice as */
     /* big as the small item. */
@@ -2374,43 +2426,43 @@ a:hover, a:active {
     padding: 20px;
     margin: 0 20px;
   }
-  /* line 53, ../sass/content/_page-resume.scss */
+  /* line 58, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-2 {
     flex: 1 0 0;
     margin-top: 0;
   }
-  /* line 58, ../sass/content/_page-resume.scss */
+  /* line 63, ../sass/content/_page-resume.scss */
   .resume .resume-container .column-2 #secondary-sidebar {
     padding: 20px;
   }
 }
-/* line 89, ../sass/content/_page-resume.scss */
+/* line 94, ../sass/content/_page-resume.scss */
 .resume .resume-container p {
   font-size: 12px;
 }
-/* line 91, ../sass/content/_page-resume.scss */
+/* line 96, ../sass/content/_page-resume.scss */
 .resume .resume-container h3 {
   font-size: 14px;
 }
-/* line 95, ../sass/content/_page-resume.scss */
+/* line 100, ../sass/content/_page-resume.scss */
 .resume .resume-container h2 {
   font-size: 16px;
   text-align: center;
 }
-/* line 100, ../sass/content/_page-resume.scss */
+/* line 105, ../sass/content/_page-resume.scss */
 .resume .resume-container .title {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
-/* line 114, ../sass/content/_page-resume.scss */
+/* line 119, ../sass/content/_page-resume.scss */
 .resume .resume-container #courses section,
 .resume .resume-container #jobs section,
 .resume .resume-container #interests section {
   background: rgba(238, 119, 75, 0.256);
   padding: 3px;
 }
-/* line 121, ../sass/content/_page-resume.scss */
+/* line 126, ../sass/content/_page-resume.scss */
 .resume .resume-container #courses section .resume-content ul:nth-of-type(1) li,
 .resume .resume-container #jobs section .resume-content ul:nth-of-type(1) li,
 .resume .resume-container #interests section .resume-content ul:nth-of-type(1) li {
@@ -2420,23 +2472,23 @@ a:hover, a:active {
   margin-bottom: 12px;
   line-height: 1.1;
 }
-/* line 133, ../sass/content/_page-resume.scss */
+/* line 138, ../sass/content/_page-resume.scss */
 .resume .resume-container ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 12px;
 }
-/* line 163, ../sass/content/_page-resume.scss */
+/* line 168, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar {
   max-width: 230px;
 }
-/* line 168, ../sass/content/_page-resume.scss */
+/* line 173, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar .social-button::before {
   margin-left: 8px;
   margin-top: -1.3px;
 }
-/* line 174, ../sass/content/_page-resume.scss */
+/* line 179, ../sass/content/_page-resume.scss */
 .resume #menu-social-bar .social-button a {
   border: 2px solid #000;
   height: 44px;
@@ -2514,12 +2566,12 @@ a:hover, a:active {
   background-color: #e95d2a;
   height: 48px;
 }
-/* line 87, ../sass/_mixins.scss */
+/* line 30, ../sass/_mixins.scss */
 .contact .wpcf7-form .wpcf7-submit:visited {
   background-color: #e95d2a;
   color: #fff;
 }
-/* line 95, ../sass/_mixins.scss */
+/* line 38, ../sass/_mixins.scss */
 .contact .wpcf7-form .wpcf7-submit:hover {
   background: #d34e2a;
   color: #fff;

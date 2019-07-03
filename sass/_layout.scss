@@ -49,13 +49,14 @@ html {
 		.search-icon {
 			width: 30px;
 			color: $white;
+			cursor: pointer;
 		}
 	}
 
 
 
 	.search-form {
-		// display: none;
+		display: none;
 		margin: 0 auto;
 		text-align: center;
 		width: 100%;
@@ -97,7 +98,10 @@ html {
 			position: relative;
 			right: 20px;
 			height: 50px;
-
+			width: 100px;
+			font-family: futura-pt-bold, sans-serif;
+			font-weight: 700;
+			font-style: normal;
 		}
 
 		input[type="submit"]:hover {

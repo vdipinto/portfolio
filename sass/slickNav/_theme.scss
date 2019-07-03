@@ -3,7 +3,7 @@ $color_0: rgba(255, 255, 255, 0.75);
 $color_btn: #222;
 $color_text: #fff;
 $color_shadow: #000;
-$color_bg: #4c4c4c;
+$color_bg: #e95d2a;;
 $color_hover_bg: #ccc;
 $color_hover_text: #222;
 
@@ -61,6 +61,9 @@ $color_hover_text: #222;
 		padding: 5px 10px;
 		margin: 2px 5px;
 		text-decoration: none;
+		font-family: futura-pt-bold, sans-serif;
+		font-style: normal;
+		font-weight: 600;
 		color: $color_text;
 		&:hover {
 			-webkit-border-radius: 6px;
@@ -81,6 +84,55 @@ $color_hover_text: #222;
 		padding: 0;
 		margin: 0;
 	}
+	.search-mobile {
+		.searchform {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			
+
+			input[type="text"] {
+				box-sizing: border-box;
+				background: #E9E9E9;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin: 0;
+				border: none;
+				font-size: 1.1em;
+				text-decoration: none;
+				line-height: normal;
+				width: 70%;
+				height: 30px;
+				border-radius: 0;
+				padding: 5px;
+			}
+
+			input[type="submit"] {
+				cursor: pointer;
+				font-weight: bold;
+				padding: 0;
+				text-transform: uppercase;
+				border: none;
+				font-size: 16px;
+				text-decoration: none;
+				border: 0;
+				border-radius: 0;
+				position: relative;
+				right: 10px;;
+				font-family: futura-pt-bold, sans-serif;
+				font-style: normal;
+				height: 30px;
+				padding: 5px;
+		
+
+				&:hover {
+					background: #C17CCF;
+				}
+
+			}
+		}
+	}
 }
 .slicknav_brand {
 	color: $color_text;
@@ -89,3 +141,5 @@ $color_hover_text: #222;
 	// padding: 7px 12px;
 	// height: 44px;
 }
+
+
